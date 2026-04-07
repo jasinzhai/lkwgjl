@@ -1,0 +1,15 @@
+# WorkBuddy 内部数据
+.workbuddy/
+
+# 临时/抓取脚本
+fetch_*.py
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

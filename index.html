@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>洛克王国世界 - 精灵图鉴数据库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6C5CE7;
+            --primary-light: #A29BFE;
+            --secondary: #00CEC9;
+            --bg-dark: #1A1A2E;
+            --bg-card: #16213E;
+            --bg-hover: #1F3460;
+            --text-primary: #EAEAEA;
+            --text-secondary: #A0A0B0;
+            --border-color: #2D3A5A;
+            --success: #00B894;
+            --warning: #FDCB6E;
+            --danger: #E17055;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #0F0F23 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* 背景动画 */
+        .bg-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(108, 92, 231, 0.4);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* 头部 */
+        header {
+            position: relative;
+            z-index: 10;
+            background: linear-gradient(180deg, rgba(26, 26, 46, 0.98) 0%, rgba(26, 26, 46, 0.85) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-text p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item .num {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-light);
+        }
+
+        .stat-item .label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 2px;
+        }
+
+        /* 主容器 */
+        main {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* 搜索和筛选区 */
+        .filter-section {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 24px 16px 52px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--border-color);
+            border-radius: 14px;
+            color: var(--text-primary);
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(108, 92, 231, 0.2);
+        }
+
+        .search-box input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .btn-search {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 8px 22px;
+            background: linear-gradient(135deg, var(--primary), #7c6cf0);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            letter-spacing: 1px;
+        }
+
+        .btn-search:hover {
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 4px 16px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-search:active {
+            transform: translateY(-50%) scale(0.97);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            color: var(--text-secondary);
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        /* 高级筛选行（身高体重） */
+        .advanced-filters {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+            padding: 14px 16px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            align-items: flex-end;
+        }
+
+        .range-filter-group {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            min-width: 280px;
+            flex: 1;
+        }
+
+        .range-filter-group label {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .range-filter-group input[type="number"] {
+            width: 100%;
+            max-width: 260px;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .range-filter-group input[type="number"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 12px rgba(108, 92, 231, 0.15);
+        }
+
+        .range-filter-group input::placeholder {
+            color: #555;
+            font-size: 12px;
+        }
+
+        .filter-group {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .filter-group label {
+            display: block;
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23A0A0B0' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .btn-reset {
+            padding: 12px 28px;
+            background: transparent;
+            border: 2px solid var(--danger);
+            color: var(--danger);
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-end;
+        }
+
+        .btn-reset:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        .btn-filter-range {
+            padding: 10px 22px;
+            background: linear-gradient(135deg, var(--secondary), #00b3ae);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-filter-range:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 16px rgba(0, 206, 201, 0.4);
+        }
+
+        .btn-filter-range:active {
+            transform: scale(0.97);
+        }
+
+        /* 结果信息 */
+        .results-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .results-count {
+            font-size: 15px;
+            color: var(--text-secondary);
+        }
+
+        .results-count span {
+            color: var(--primary-light);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .view-toggle {
+            display: flex;
+            gap: 8px;
+        }
+
+        .view-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+        }
+
+        .view-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        /* 精灵卡片网格 */
+        .spirits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .spirits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .spirit-card {
+            background: var(--bg-card);
+            border-radius: 18px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .spirit-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(108, 92, 231, 0.2);
+        }
+
+        .spirit-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--attr-color, var(--primary));
+        }
+
+        .card-header {
+            padding: 20px 20px 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .spirit-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 2px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .spirit-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 14px;
+        }
+
+        .spirit-avatar .avatar-fallback {
+            font-size: 32px;
+        }
+
+        .spirit-info h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .spirit-info .ename {
+            font-size: 12px;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .spirit-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .tag-attr {
+            background: var(--attr-bg, rgba(108, 92, 231, 0.2));
+            color: var(--attr-color, var(--primary-light));
+        }
+
+        .tag-stage {
+            background: rgba(0, 206, 201, 0.15);
+            color: var(--secondary);
+        }
+
+        .tag-boss {
+            background: rgba(225, 112, 85, 0.2);
+            color: var(--danger);
+        }
+
+        .tag-shiny {
+            background: rgba(253, 203, 110, 0.2);
+            color: var(--warning);
+        }
+
+        .card-body {
+            padding: 0 20px 16px;
+        }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .data-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .data-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(108, 92, 231, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .data-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .data-value {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .egg-groups {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .egg-tag {
+            padding: 3px 10px;
+            background: rgba(162, 155, 254, 0.12);
+            border: 1px solid rgba(162, 155, 254, 0.25);
+            border-radius: 15px;
+            font-size: 11px;
+            color: var(--primary-light);
+        }
+
+        .card-footer {
+            padding: 14px 20px;
+            background: rgba(0, 0, 0, 0.15);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .desc-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 列表视图 */
+        .list-view .spirit-card {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .list-view .card-header {
+            flex: 1;
+            padding: 16px 20px;
+            min-width: 280px;
+        }
+
+        .list-view .card-body {
+            flex: 1;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .list-view .data-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .list-view .card-footer {
+            flex: 1;
+            max-width: 300px;
+            display: flex;
+            align-items: center;
+            border-left: 1px solid var(--border-color);
+            border-top: none;
+        }
+
+        /* 详情弹窗 */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal {
+            background: var(--bg-card);
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            width: 100%;
+            max-width: 720px;
+            max-height: 85vh;
+            overflow-y: auto;
+            transform: scale(0.9) translateY(20px);
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-header {
+            padding: 28px 28px 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .modal-spirit-info {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .modal-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .modal-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 19px;
+        }
+
+        .modal-title h2 {
+            font-size: 26px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+
+        .modal-title .id-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 14px;
+            background: rgba(108, 92, 231, 0.2);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .modal-close {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--danger);
+            border-color: var(--danger);
+            color: white;
+        }
+
+        .modal-body {
+            padding: 24px 28px;
+        }
+
+        .detail-section {
+            margin-bottom: 24px;
+        }
+
+        .detail-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .detail-item {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 14px;
+            padding: 16px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .detail-item .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .detail-item .label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .detail-item .value {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .evolution-chain {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            overflow-x: auto;
+            padding: 8px 0;
+        }
+
+        .evo-node {
+            flex-shrink: 0;
+            width: 80px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .evo-node:hover {
+            transform: scale(1.08);
+        }
+
+        .evo-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 2px solid var(--border-color);
+            margin: 0 auto 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .evo-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 14px;
+        }
+
+        .evo-name {
+            font-size: 11px;
+            color: var(--text-primary);
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .evo-arrow {
+            font-size: 20px;
+            color: var(--text-secondary);
+            flex-shrink: 0;
+        }
+
+        .desc-full {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            padding: 16px 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* 无结果 */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+        }
+
+        .no-results .icon {
+            font-size: 64px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .no-results p {
+            font-size: 16px;
+        }
+
+        /* 加载动画 */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px;
+            gap: 8px;
+        }
+
+        .loading-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            animation: loadingBounce 1.4s ease-in-out infinite both;
+        }
+
+        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loadingBounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .stats-bar {
+                justify-content: center;
+            }
+
+            .spirits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .detail-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .list-view .card-body .data-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .list-view .spirit-card {
+                flex-direction: column;
+            }
+
+            .list-view .card-body {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .list-view .card-footer {
+                max-width: 100%;
+                border-left: none;
+                border-top: 1px solid var(--border-color);
+            }
+        }
+
+        /* 滚动条美化 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary);
+        }
+
+        /* 属性颜色类 */
+        .attr-normal { --attr-bg: rgba(168, 168, 120, 0.2); --attr-color: #C6C6A7; }
+        .attr-grass { --attr-bg: rgba(120, 200, 80, 0.2); --attr-color: #78C850; }
+        .attr-fire { --attr-bg: rgba(240, 128, 48, 0.2); --attr-color: #F08030; }
+        .attr-water { --attr-bg: rgba(104, 144, 240, 0.2); --attr-color: #6890F0; }
+        .attr-light { --attr-bg: rgba(248, 208, 48, 0.2); --attr-color: #FFD700; }
+        .attr-ground { --attr-bg: rgba(224, 192, 104, 0.2); --attr-color: #E0C068; }
+        .attr-ice { --attr-bg: rgba(152, 216, 216, 0.2); --attr-color: #98D8D8; }
+        .attr-dragon { --attr-bg: rgba(112, 56, 248, 0.2); --attr-color: #7038F8; }
+        .attr-electric { --attr-bg: rgba(248, 208, 48, 0.2); --attr-color: #F8D030; }
+        .attr-poison { --attr-bg: rgba(160, 64, 160, 0.2); --attr-color: #A040A0; }
+        .attr-bug { --attr-bg: rgba(168, 184, 32, 0.2); --attr-color: #A8B820; }
+        .attr-fighting { --attr-bg: rgba(192, 48, 40, 0.2); --attr-color: #C03028; }
+        .attr-flying { --attr-bg: rgba(168, 144, 240, 0.2); --attr-color: #A890F0; }
+        .attr-cute { --attr-bg: rgba(238, 153, 172, 0.2); --attr-color: #EE99AC; }
+        .attr-ghost { --attr-bg: rgba(112, 88, 152, 0.2); --attr-color: #705898; }
+        .attr-dark { --attr-bg: rgba(112, 88, 72, 0.2); --attr-color: #705848; }
+        .attr-machine { --attr-bg: rgba(184, 160, 56, 0.2); --attr-color: #B8A038; }
+        .attr-illusion { --attr-bg: rgba(199, 125, 255, 0.2); --attr-color: #C77DFF; }
+
+        /* 页脚 */
+        footer {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 32px 24px;
+            color: var(--text-secondary);
+            font-size: 13px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景粒子 -->
+    <div class="bg-particles" id="particles"></div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <div class="logo-icon">🎮</div>
+                <div class="logo-text">
+                    <h1>洛克王国世界（手游）</h1>
+                    <p>精灵图鉴数据库 · 公测版 347只精灵 · 2026.04</p>
+                </div>
+            </div>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="num" id="totalSpirits">0</div>
+                    <div class="label">收录精灵</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">18</div>
+                    <div class="label">属性种类</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num">13</div>
+                    <div class="label">蛋组分类</div>
+                </div>
+                <div class="stat-item">
+                    <div class="num" id="currentResults">0</div>
+                    <div class="label">当前筛选</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main>
+        <!-- 筛选区 -->
+        <section class="filter-section">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="输入名称/编号后点搜索...（如：迪莫、001、火）" autocomplete="off">
+                <button class="btn-search" id="searchBtn" onclick="doSearch()" title="点击搜索">🔎 搜索</button>
+            </div>
+
+            <!-- 高级筛选行：身高体重 -->
+            <div class="advanced-filters">
+                <div class="range-filter-group">
+                    <label>📏 身高 (m)</label>
+                    <input type="number" id="heightInput" placeholder="输入数值匹配身高，如 0.4" step="0.1" min="0">
+                </div>
+                <div class="range-filter-group">
+                    <label>⚖️ 体重 (kg)</label>
+                    <input type="number" id="weightInput" placeholder="输入数值匹配体重，如 10" step="0.1" min="0">
+                </div>
+                <button class="btn-filter-range" onclick="doFilter()" title="按身高/体重筛选">🔍 筛选</button>
+            </div>
+
+            <div class="filters-row">
+                <div class="filter-group">
+                    <label>🔮 属性筛选</label>
+                    <select id="attrFilter">
+                        <option value="all">全部属性</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>🥚 蛋组筛选</label>
+                    <select id="eggFilter">
+                        <option value="all">全部蛋组</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>⬆️ 进化阶段</label>
+                    <select id="stageFilter">
+                        <option value="0">全部阶段</option>
+                        <option value="1">Ⅰ阶（初始）</option>
+                        <option value="2">Ⅱ阶（中间）</option>
+                        <option value="3">Ⅲ阶（最终）</option>
+                    </select>
+                </div>
+                <button class="btn-reset" id="resetBtn">🔄 重置筛选</button>
+            </div>
+        </section>
+
+        <!-- 结果信息 -->
+        <div class="results-info">
+            <div class="results-count">
+                找到 <span id="resultCount">0</span> 只精灵
+            </div>
+            <div class="view-toggle">
+                <button class="view-btn active" data-view="grid" title="网格视图">⊞</button>
+                <button class="view-btn" data-view="list" title="列表视图">☰</button>
+            </div>
+        </div>
+
+        <!-- 精灵展示区 -->
+        <div class="spirits-grid" id="spiritsContainer"></div>
+
+        <!-- 加载状态 -->
+        <div class="loading" id="loadingEl" style="display:none;">
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+            <div class="loading-dot"></div>
+        </div>
+    </main>
+
+    <!-- 详情弹窗 -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modalContent"></div>
+    </div>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>数据来源：洛克王国:手游WIKI_BWIKI (wiki.biligame.com/rocom) · GameKee Wiki · 17173公测攻略 | 更新时间：2026年4月7日</p>
+        <p style="margin-top: 8px;">⚠️ 本页面仅收录《洛克王国：世界》（腾讯手游）精灵数据，不含页游内容。游戏版权归腾讯所有 🎮</p>
+        <p style="margin-top: 8px; font-size: 12px; color: #666;">共收录 347 只公测精灵 · 18 种属性 · 15 个蛋组分类（含无法孵蛋组）</p>
+    </footer>
+
+    <script src="roco-data.js"></script>
+    <script>
+        // ===== 全局状态 =====
+        var currentView = 'grid';
+        var filteredData = [];
+
+        // ========== 暴露到全局的搜索入口（按钮onclick调用） ==========
+        function doSearch() {
+            doFilter();
+        }
+
+        // ========== 核心筛选函数 ==========
+        function doFilter() {
+            try {
+                var keyword = (document.getElementById('searchInput').value || '').trim();
+                var attrId = document.getElementById('attrFilter').value;
+                var eggId = document.getElementById('eggFilter').value;
+                var stageVal = document.getElementById('stageFilter').value;
+                var heightStr = document.getElementById('heightInput').value;
+                var weightStr = document.getElementById('weightInput').value;
+
+                var hVal = heightStr !== '' ? parseFloat(heightStr) : null;
+                var wVal = weightStr !== '' ? parseFloat(weightStr) : null;
+
+                console.log('[筛选] keyword=' + keyword + ' attr=' + attrId + ' egg=' + eggId +
+                            ' stage=' + stageVal + ' h=' + hVal + ' w=' + wVal);
+
+                // 从全部数据开始过滤
+                var data = RocoData.spirits.slice();
+                var totalBefore = data.length;
+
+                // ---- 搜索词过滤 ----
+                if (keyword && keyword.length > 0) {
+                    var kw = keyword.toLowerCase();
+                    data = data.filter(function(s) {
+                        // 1. 编号
+                        if (String(s.id).indexOf(kw) !== -1) return true;
+                        // 2. 中文名包含
+                        if (s.name.indexOf(keyword) !== -1) return true;
+                        if (s.name.indexOf(kw) !== -1) return true;
+                        // 3. 英文名
+                        if (s.ename && typeof s.ename === 'string' && s.ename.toLowerCase().indexOf(kw) !== -1) return true;
+                        // 4. 属性名
+                        var a = RocoData.getAttribute(s.attribute);
+                        if (a && (a.name.indexOf(keyword) !== -1 || a.id.indexOf(kw) !== -1)) return true;
+                        // 5. 蛋组名
+                        if (Array.isArray(s.eggGroup)) {
+                            for (var ei = 0; ei < s.eggGroup.length; ei++) {
+                                var eg = RocoData.getEggGroup(s.eggGroup[ei]);
+                                if (eg && (eg.name.indexOf(keyword) !== -1)) return true;
+                            }
+                        }
+                        // 6. 数值匹配身高体重
+                        var n = parseFloat(kw);
+                        if (!isNaN(n)) {
+                            if (n >= s.heightMin && n <= s.heightMax) return true;
+                            if (n >= s.weightMin && n <= s.weightMax) return true;
+                        }
+                        return false;
+                    });
+                }
+
+                // ---- 属性筛选 ----
+                if (attrId && attrId !== 'all') {
+                    data = data.filter(function(s) {
+                        var attr = s.attribute;
+                        if (Array.isArray(attr)) return attr.includes(attrId);
+                        return attr === attrId;
+                    });
+                }
+
+                // ---- 蛋组筛选 ----
+                if (eggId && eggId !== 'all') {
+                    data = data.filter(function(s) {
+                        return s.eggGroup && s.eggGroup.indexOf(eggId) !== -1;
+                    });
+                }
+
+                // ---- 阶段筛选 ----
+                if (stageVal && stageVal !== '0') {
+                    var st = parseInt(stageVal);
+                    data = data.filter(function(s) { return s.stage === st; });
+                }
+
+                // ---- 身高单值匹配 ----
+                if (hVal !== null && !isNaN(hVal)) {
+                    data = data.filter(function(s) { return hVal >= s.heightMin && hVal <= s.heightMax; });
+                }
+
+                // ---- 体重单值匹配 ----
+                if (wVal !== null && !isNaN(wVal)) {
+                    data = data.filter(function(s) { return wVal >= s.weightMin && wVal <= s.weightMax; });
+                }
+
+                filteredData = data;
+                console.log('[筛选结果] ' + totalBefore + ' -> ' + filteredData.length + ' 只');
+                renderAll();
+                updateCount();
+
+            } catch(err) {
+                console.error('[筛选错误]', err.message, err.stack);
+                alert('筛选出错: ' + err.message);
+            }
+        }
+
+        // ========== 重置 ==========
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('attrFilter').value = 'all';
+            document.getElementById('eggFilter').value = 'all';
+            document.getElementById('stageFilter').value = '0';
+            document.getElementById('heightInput').value = '';
+            document.getElementById('weightInput').value = '';
+            doFilter();
+        }
+
+        // ========== 更新计数 ==========
+        function updateCount() {
+            document.getElementById('resultCount').textContent = filteredData.length;
+            document.getElementById('currentResults').textContent = filteredData.length;
+        }
+
+        // ========== 渲染全部 ==========
+        function renderAll() {
+            const container = document.getElementById('spiritsContainer');
+
+            if (filteredData.length === 0) {
+                container.innerHTML = `
+                    <div class="no-results" style="grid-column: 1/-1;">
+                        <div class="icon">🔍</div>
+                        <p>没有找到匹配的精灵</p>
+                        <p style="font-size: 13px; margin-top: 8px;">试试调整筛选条件吧~</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.className = currentView === 'grid' ? 'spirits-grid' : 'spirits-list';
+
+            container.innerHTML = filteredData.map(spirit => createSpiritCard(spirit)).join('');
+
+            // 绑定卡片点击事件
+            var cards = container.querySelectorAll('.spirit-card');
+            for (var ci = 0; ci < cards.length; ci++) {
+                (function(idx) {
+                    cards[idx].onclick = function() { openModal(filteredData[idx]); };
+                })(ci);
+            }
+        }
+
+        // 创建精灵卡片HTML
+        function createSpiritCard(spirit) {
+            const attrs = Array.isArray(spirit.attribute) ? spirit.attribute : [spirit.attribute];
+            const attrObjects = attrs.map(a => RocoData.getAttribute(a)).filter(Boolean);
+            const primaryAttr = RocoData.getPrimaryAttribute(spirit);
+            const attrClass = `attr-${primaryAttr}`;
+            const heightRange = `${spirit.heightMin}-${spirit.heightMax}m`;
+            const weightRange = `${spirit.weightMin}-${spirit.weightMax}kg`;
+
+            // 生成属性标签HTML（支持多个）
+            const attrTagsHtml = attrObjects.map(a =>
+                `<span class="tag tag-attr" style="background:${a.color}22;border-color:${a.color}44;color:${a.color};">${a.icon} ${a.name}</span>`
+            ).join('');
+
+            // 头像: 有图片用img，无图片回退到emoji
+            const avatarHtml = spirit.image
+                ? `<img src="${spirit.image}" alt="${spirit.name}" loading="lazy" onerror="this.parentElement.innerHTML='<span class=\\'avatar-fallback\\'>${getSpiritEmoji(spirit)}</span>'">`
+                : `<span class="avatar-fallback">${getSpiritEmoji(spirit)}</span>`;
+
+            return `
+                <div class="spirit-card ${attrClass}">
+                    <div class="card-header">
+                        <div class="spirit-avatar">${avatarHtml}</div>
+                        <div class="spirit-info">
+                            <h3>${spirit.name}</h3>
+                            <div class="ename">#${String(spirit.id).padStart(3, '0')} ${spirit.ename}</div>
+                            <div class="spirit-meta">
+                                ${attrTagsHtml}
+                                <span class="tag tag-stage">${getStageLabel(spirit.stage)}</span>
+                                ${spirit.isBoss ? '<span class="tag tag-boss">👑 首领</span>' : ''}
+                                ${spirit.isShiny ? '<span class="tag tag-shiny">✨ 异色</span>' : ''}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="data-grid">
+                            <div class="data-item">
+                                <div class="data-icon">📏</div>
+                                <div>
+                                    <div class="data-label">身高</div>
+                                    <div class="data-value">${heightRange}</div>
+                                </div>
+                            </div>
+                            <div class="data-item">
+                                <div class="data-icon">⚖️</div>
+                                <div>
+                                    <div class="data-label">体重</div>
+                                    <div class="data-value">${weightRange}</div>
+                                </div>
+                            </div>
+                            <div class="data-item" style="grid-column: 1/-1;">
+                                <div class="data-icon">🥚</div>
+                                <div style="flex:1;">
+                                    <div class="data-label">蛋组</div>
+                                    <div class="egg-groups">
+                                        ${(spirit.eggGroup || []).map(g => `<span class="egg-tag">${RocoData.getEggGroup(g)?.name || g}</span>`).join('')}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="desc-text">${spirit.desc}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // 获取精灵emoji图标
+        function getSpiritEmoji(spirit) {
+            const attrIcons = {
+                normal: '⭐', grass: '🌿', fire: '🔥', water: '💧',
+                light: '✨', ground: '🌍', ice: '❄️', dragon: '🐉',
+                electric: '⚡', poison: '☠️', bug: '🐛', fighting: '👊',
+                flying: '🦅', cute: '💕', ghost: '👻', dark: '😈',
+                machine: '⚙️', illusion: '🔮'
+            };
+            return attrIcons[spirit.attribute] || '🎮';
+        }
+
+        // 获取阶段标签
+        function getStageLabel(stage) {
+            const labels = { 1: 'Ⅰ阶', 2: 'Ⅱ阶', 3: 'Ⅲ阶' };
+            return labels[stage] || `${stage}阶`;
+        }
+
+        // 切换视图
+        function switchView(view) {
+            currentView = view;
+            document.querySelectorAll('.view-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.view === view);
+            });
+            renderSpirits();
+        }
+
+        // 打开详情弹窗
+        function openModal(spirit) {
+            const attrs = Array.isArray(spirit.attribute) ? spirit.attribute : [spirit.attribute];
+            const attrObjects = attrs.map(a => RocoData.getAttribute(a)).filter(Boolean);
+            const primaryAttr = RocoData.getPrimaryAttribute(spirit);
+            const attr = attrObjects[0] || RocoData.attributes[0];
+            const attrClass = `attr-${primaryAttr}`;
+            const evolutionChain = RocoData.getEvolutionChain(spirit.id);
+
+            // 生成属性标签HTML（多个）
+            const attrTagsHtml = attrObjects.map((a, i) =>
+                `<span class="tag tag-attr" style="background:${a.color}22;border-color:${a.color}44;color:${a.color};${i>0?'margin-left:4px':''}">${a.icon} ${a.name}</span>`
+            ).join('');
+
+            // 弹窗头像
+            const modalAvatarHtml = spirit.image
+                ? `<img src="${spirit.image}" alt="${spirit.name}" onerror="this.style.display='none';this.insertAdjacentHTML('afterend','<span style=\\'font-size:48px\\'>${getSpiritEmoji(spirit)}</span>')">`
+                : `<span style="font-size:48px">${getSpiritEmoji(spirit)}</span>`;
+
+            const modal = document.getElementById('modalContent');
+            modal.innerHTML = `
+                <div class="modal-header">
+                    <div class="modal-spirit-info">
+                        <div class="modal-avatar ${attrClass}" style="border-color: ${attr.color};background: linear-gradient(135deg, ${attr.color}22, ${attr.color}11);">
+                            ${modalAvatarHtml}
+                        </div>
+                        <div class="modal-title">
+                            <h2>${spirit.name}</h2>
+                            <div style="display:flex;align-items:center;">
+                                <span class="id-badge">#${String(spirit.id).padStart(3, '0')}</span>
+                                ${attrTagsHtml}
+                            </div>
+                            ${spirit.isBoss ? '<span class="tag tag-boss" style="margin-left:8px;">👑 首领形态</span>' : ''}
+                            ${spirit.isShiny ? '<span class="tag tag-shiny" style="margin-left:8px;">✨ 异色稀有</span>' : ''}
+                        </div>
+                    </div>
+                    <button class="modal-close" onclick="closeModal()">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="detail-section">
+                        <div class="section-title">📊 基础数据</div>
+                        <div class="detail-grid">
+                            <div class="detail-item">
+                                <div class="icon">📏</div>
+                                <div class="label">身高范围</div>
+                                <div class="value">${spirit.heightMin}-${spirit.heightMax} <small>m</small></div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="icon">⚖️</div>
+                                <div class="label">体重范围</div>
+                                <div class="value">${spirit.weightMin}-${spirit.weightMax} <small>kg</small></div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="icon">🆙</div>
+                                <div class="label">进化阶段</div>
+                                <div class="value">${getStageLabel(spirit.stage)}</div>
+                            </div>
+                            <div class="detail-item" style="grid-column: 1/-1;">
+                                <div class="icon">🥚</div>
+                                <div class="label">蛋组分类</div>
+                                <div class="egg-groups" style="margin-top: 8px; justify-content: center;">
+                                    ${(spirit.eggGroup || []).map(g => {
+                                        const eg = RocoData.getEggGroup(g);
+                                        return `<span class="egg-tag" title="${eg?.description || ''}">${eg?.name || g}</span>`;
+                                    }).join('')}
+                                    ${(!spirit.eggGroup || spirit.eggGroup.length === 0) ? '<span style="color:var(--text-secondary)">未发现组（无法孵蛋）</span>' : ''}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    ${evolutionChain.length > 1 ? `
+                    <div class="detail-section">
+                        <div class="section-title">🔄 进化链</div>
+                        <div class="evolution-chain">
+                            ${evolutionChain.map((evo, idx) => {
+                                const evoImg = evo.image
+                                    ? `<img src="${evo.image}" alt="${evo.name}" onerror="this.style.display='none'">`
+                                    : '';
+                                return `
+                                <div class="evo-node" onclick="openModal(RocoData.getSpirit(${evo.id}))" onclick="event.stopPropagation();">
+                                    <div class="evo-avatar">${evoImg}<span class="avatar-fallback" style="${evo.image ? 'display:none' : ''}">${getSpiritEmoji(evo)}</span></div>
+                                    <div class="evo-name">${evo.name}</div>
+                                </div>
+                                ${idx < evolutionChain.length - 1 ? '<div class="evo-arrow">→</div>' : ''}
+                            `}).join('')}
+                        </div>
+                    </div>
+                    ` : ''}
+                    <div class="detail-section">
+                        <div class="section-title">📖 精灵简介</div>
+                        <div class="desc-full">${spirit.desc}</div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('modalOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 关闭弹窗
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // ESC关闭弹窗
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // ========== 初始化 ==========
+        function init() {
+            createParticles();
+            populateSelects();
+            doFilter();
+            bindAllEvents();
+            console.log('[初始化] 完成，共 ' + RocoData.spirits.length + ' 只精灵');
+        }
+
+        function createParticles() {
+            var c = document.getElementById('particles');
+            for (var i = 0; i < 25; i++) {
+                var p = document.createElement('div');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (10 + Math.random() * 20) + 's';
+                p.style.animationDelay = Math.random() * 15 + 's';
+                p.style.width = (2 + Math.random() * 4) + 'px';
+                p.style.height = p.style.width;
+                c.appendChild(p);
+            }
+        }
+
+        function populateSelects() {
+            var attrSel = document.getElementById('attrFilter');
+            RocoData.attributes.forEach(function(a) {
+                var o = document.createElement('option');
+                o.value = a.id;
+                o.textContent = a.icon + ' ' + a.name;
+                attrSel.appendChild(o);
+            });
+            var eggSel = document.getElementById('eggFilter');
+            RocoData.eggGroups.forEach(function(g) {
+                var o = document.createElement('option');
+                o.value = g.id;
+                o.textContent = g.name;
+                eggSel.appendChild(o);
+            });
+            document.getElementById('totalSpirits').textContent = RocoData.spirits.length;
+        }
+
+        function bindAllEvents() {
+            // 搜索框回车
+            document.getElementById('searchInput').onkeydown = function(e) {
+                if (e.key === 'Enter') doSearch();
+            };
+            // 筛选器变化
+            document.getElementById('attrFilter').onchange = doFilter;
+            document.getElementById('eggFilter').onchange = doFilter;
+            document.getElementById('stageFilter').onchange = doFilter;
+            // 身高体重
+            ['heightInput','weightInput'].forEach(function(id) {
+                var el = document.getElementById(id);
+                el.onkeydown = function(e) { if (e.key === 'Enter') doSearch(); };
+                el.onblur = doFilter;
+            });
+            // 重置按钮
+            document.getElementById('resetBtn').onclick = resetFilters;
+            // 视图切换
+            var viewBtns = document.querySelectorAll('.view-btn');
+            for (var v = 0; v < viewBtns.length; v++) {
+                viewBtns[v].onclick = function() { switchView(this.dataset.view); };
+            }
+            // 弹窗关闭
+            document.getElementById('modalOverlay').onclick = function(e) {
+                if (e.target === this) closeModal();
+            };
+        }
+
+        // 启动
+        init();
+    </script>
+</body>
+</html>
