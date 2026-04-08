@@ -8,7 +8,7 @@
 // 重要说明：
 // - 本数据库仅收录《洛克王国：世界》（腾讯手游）的精灵
 // - 不包含《洛克王国》（页游/Flash端）任何内容
-// - 公测版本共366只精灵（含地区形态、异色等变体）
+// - 公测版本共347只精灵
 // - 更新时间: 2026-04-08
 // - 数据源: BWIKI + game-walkthrough.com API
 // ============================================================
@@ -58,7 +58,7 @@ const RocoData = {
   ],
 
   // ========== 精灵数据 ==========
-  // 基于BWIKI手游WIKI公测版本(2026.04) NO.001~NO.347
+  // 公测版本(2026.04) 共347只精灵 (NO.001~NO.347)
   spirits: [
 
     // ══════════════ 001-010 初始三主宠 & 基础精灵 ══════════════
@@ -1096,27 +1096,6 @@ const RocoData = {
       image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'ShiningStarlight',attribute: ['illusion','flying'],eggGroup: ['fairy'], heightMin:0.88,heightMax:1.05,weightMin:3.0,weightMax:4.5, stage: 3, region: '-', trait: '-', evolvesTo: [347], evolvesFrom: 345, desc: '耀眼光芒的星辰。' },
     { id:347, name: '暮星辰',
       image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'DuskStar',     attribute: ['illusion','flying'],eggGroup: ['fairy'], heightMin:1.85,heightMax:2.05,weightMin:7.5,weightMax:10.5, stage: 3, region: '-', trait: '-', evolvesTo: null, evolvesFrom: 346,       desc: '暮色中最亮的星辰。' },
-    // ══════════════ 公测更新精灵 (NO.348~366) ══════════════
-    // 数据来源: game-walkthrough.com API · 更新时间: 2026-04-08
-    { id:348,name:'烈火战神',  image:'https://rocom.game-walkthrough.com/pokemon/NO.007_烈火战神.webp',  ename:'BlazingGod',   attribute:'fire',  eggGroup:['none'],    heightMin:1.6,heightMax:2.2,weightMin:65,weightMax:95, stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'传说中的火焰战神，拥有焚尽一切的威能。' },
-    { id:349,name:'叶冕魔力猫',image:'https://rocom.game-walkthrough.com/pokemon/NO.004_叶冕魔力猫.webp',  ename:'MagicCat',    attribute:'grass',eggGroup:['fairy'],  heightMin:0.4,heightMax:0.6,weightMin:4,weightMax:7,   stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'头戴叶冠的魔力猫咪，能操控自然之力。' },
-    { id:350,name:'圣水守护',  image:'https://rocom.game-walkthrough.com/pokemon/NO.010_圣水守护.webp',  ename:'HolyWaterGuardian',attribute:'water',eggGroup:['none'],   heightMin:1.5,heightMax:2.0,weightMin:50,weightMax:75, stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'守护圣水的神圣精灵，拥有净化一切的能力。' },
-    { id:351,name:'奇丽果',    image:'https://rocom.game-walkthrough.com/pokemon/NO.043_奇丽果.webp',    ename:'BeautifulFruit',attribute:'grass',eggGroup:['plant'],  heightMin:0.35,heightMax:0.5,weightMin:2,weightMax:4, stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'外表奇特的果实系精灵，味道甜美但不可食用。' },
-    { id:352,name:'奇梦咪',    image:'https://rocom.game-walkthrough.com/pokemon/NO.200_奇梦咪.webp',    ename:'DreamMimi',  attribute:'cute', eggGroup:['fairy'],  heightMin:0.3,heightMax:0.45,weightMin:1.5,weightMax:3,stage:1,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'总是沉浸在美梦中的可爱精灵。' },
-    { id:353,name:'迷障布莱克',image:'https://rocom.game-walkthrough.com/pokemon/NO.029_迷障布莱克.webp',ename:'DazeBlack',  attribute:'normal',eggGroup:['monster'],heightMin:1.2,heightMax:1.6,weightMin:40,weightMax:58,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'制造迷雾陷阱的黑暗精灵。' },
-    { id:354,name:'霜翼领主',  image:'https://rocom.game-walkthrough.com/pokemon/NO.020_霜翼领主.webp',  ename:'FrostWingLord',attribute:'flying',eggGroup:['flying'],heightMin:1.4,heightMax:1.9,weightMin:45,weightMax:68,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'统领冰霜飞禽的王者，羽翼如冰晶般闪耀。' },
-    { id:355,name:'鸭吉吉国王',image:'https://rocom.game-walkthrough.com/pokemon/NO.011_鸭吉吉国王.webp',ename:'KingDucky',  attribute:'normal',eggGroup:['animal'],heightMin:0.8,heightMax:1.1,weightMin:15,weightMax:25,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'鸭子王国的统治者，深受子民爱戴。' },
-    { id:356,name:'幻影荆棘',  image:'https://rocom.game-walkthrough.com/pokemon/NO.035_幻影荆棘.webp',  ename:'PhantomThorn',attribute:['ghost','grass'],eggGroup:['plant'],heightMin:0.7,heightMax:1.0,weightMin:12,weightMax:22,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'在暗处生长的荆棘精灵，被其刺中会产生幻觉。' },
-    { id:357,name:'彩虹独角兽',image:'https://rocom.game-walkthrough.com/pokemon/NO.117_彩虹独角兽.webp',ename:'RainbowUnicorn',attribute:'light',eggGroup:['magic'],heightMin:1.1,heightMax:1.5,weightMin:25,weightMax:42,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'身披彩虹光辉的独角兽，象征希望与奇迹。' },
-    { id:358,name:'恶魔狼王',  image:'https://rocom.game-walkthrough.com/pokemon/NO.131_恶魔狼王.webp',  ename:'DevilWolfKing',attribute:'dark',eggGroup:['monster'],heightMin:1.8,heightMax:2.4,weightMin:80,weightMax:120,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'统御群狼的恶魔领主，咆哮声震慑四方。' },
-    { id:359,name:'祭礼巨像',  image:'https://rocom.game-walkthrough.com/pokemon/NO.115_祭礼巨像.webp',  ename:'RitualColossus',attribute:['normal','illusion'],eggGroup:['mech'],heightMin:2.5,heightMax:3.5,weightMin:200,weightMax:350,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'古老仪式中召唤的巨型石像，蕴含神秘力量。' },
-    { id:360,name:'花魁蜂后',  image:'https://rocom.game-walkthrough.com/pokemon/NO.084_花魁蜂后.webp',  ename:'QueenBeeBeauty',attribute:['bug','flying'],eggGroup:['insect'],heightMin:0.5,heightMax:0.7,weightMin:8,weightMax:15,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'蜂群中最美丽的女王，魅力与毒刺并存。' },
-    { id:361,name:'神谕鲨',    image:'https://rocom.game-walkthrough.com/pokemon/NO.110_神谕鲨.webp',    ename:'OracleShark', attribute:['water','flying'],eggGroup:['ocean'],heightMin:2.0,heightMax:2.8,weightMin:90,weightMax:140,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'传达海洋神谕的圣兽，游弋于深海之中。' },
-    { id:362,name:'雪影冰灵',  image:'https://rocom.game-walkthrough.com/pokemon/NO.144_雪影冰灵.webp',  ename:'SnowShadowSpirit',attribute:['ice','cute'],eggGroup:['fairy'],heightMin:0.9,heightMax:1.3,weightMin:18,weightMax:32,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'雪地中若隐若现的冰之精魂。' },
-    { id:363,name:'波普鹿',    image:'https://rocom.game-walkthrough.com/pokemon/NO.228_波普鹿.webp',    ename:'PopDeer',    attribute:'electric',eggGroup:['animal'],heightMin:0.6,heightMax:0.85,weightMin:10,weightMax:18,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'充满活力的电系小鹿，奔跑时带起电流火花。' },
-    { id:364,name:'风暴战犬',  image:'https://rocom.game-walkthrough.com/pokemon/NO.048_风暴战犬.webp',  ename:'StormWarDog',attribute:'fire',eggGroup:['animal'],heightMin:0.9,heightMax:1.25,weightMin:28,weightMax:45,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'冲锋于战场前线的不屈战犬。' },
-    { id:365,name:'圣剑骑士',  image:'https://rocom.game-walkthrough.com/pokemon/NO.286_圣剑骑士.webp',  ename:'HolySwordKnight',attribute:'machine',eggGroup:['humanoid'],heightMin:1.7,heightMax:2.2,weightMin:70,weightMax:100,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'手持圣剑的荣耀骑士，誓死捍卫正义。' },
-    { id:366,name:'伊兰亚龙',  image:'https://rocom.game-walkthrough.com/pokemon/NO.204_伊兰亚龙.webp',  ename:'YilanDragon',attribute:'dragon',eggGroup:['dragon'],heightMin:2.2,heightMax:3.0,weightMin:110,weightMax:170,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'来自遥远东方的亚龙种精灵。' }
   ],
 
 
