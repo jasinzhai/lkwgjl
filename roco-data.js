@@ -83,6 +83,7 @@ const RocoData = {
     {
       id: 3, name: '喵呜',
       image:'https://patchwiki.biligame.com/images/rocom/3/34/swx8tx6o3mpyfnqrkxu1kth6sgzott2.png', ename: 'MiaoWu',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.003_喵呜.webp',
       attribute: 'grass', eggGroup: ['animal', 'humanoid'],
       heightMin:0.65,heightMax:0.92,weightMin:14.2,weightMax:15.6,
       stage: 2, region: '-',
@@ -176,12 +177,15 @@ const RocoData = {
       desc: '走路摇摇摆摆的小鸭子，有6种不同的表情/形态变化。'
     },
     { id: 12, name: '板板壳', ename: 'PlateShell',  attribute:'water',eggGroup:['amphibian','soft'], heightMin:0.53,heightMax:0.76,weightMin:7.5,weightMax:10.5,stage:1,region:'-',trait:'-',forms:['本来的样子','蜕皮时的样子'],evolvesTo:[13],evolvesFrom:null,desc:'背着重重外壳的水系精灵，行动缓慢但防御力极强。' },
-    { id: 13, name: '咔咔壳', ename: 'KaKaShell',  attribute:'water',eggGroup:['amphibian','soft'], heightMin:0.65,heightMax:0.92,weightMin:19.5,weightMax:24.5,stage:2,region:'-',trait:'-',forms:['本来的样子','蜕皮时的样子'],evolvesTo:[14],evolvesFrom:12,desc:'板板壳进化而来，壳变得更坚硬，钳子也有力量了。' },
-    { id: 14, name: '水泡壳', ename: 'BubbleShell',  attribute:'water',eggGroup:['amphibian','soft'], heightMin:1.23,heightMax:1.75,weightMin:83.5,weightMax:94.5,stage:3,region:'-',trait:'-',forms:['本来的样子','蜕皮时的样子'],evolvesTo:null,evolvesFrom:13,desc:'咔咔壳最终进化，巨大的水泡壳能抵御强力的攻击。' },
+    { id: 13, name: '咔咔壳', ename: 'KaKaShell',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.013_咔咔壳（本来的样子）.webp',  attribute:'water',eggGroup:['amphibian','soft'], heightMin:0.65,heightMax:0.92,weightMin:19.5,weightMax:24.5,stage:2,region:'-',trait:'-',forms:['本来的样子','蜕皮时的样子'],evolvesTo:[14],evolvesFrom:12,desc:'板板壳进化而来，壳变得更坚硬，钳子也有力量了。' },
+    { id: 14, name: '水泡壳', ename: 'BubbleShell',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.014_水泡壳（本来的样子）.webp',  attribute:'water',eggGroup:['amphibian','soft'], heightMin:1.23,heightMax:1.75,weightMin:83.5,weightMax:94.5,stage:3,region:'-',trait:'-',forms:['本来的样子','蜕皮时的样子'],evolvesTo:null,evolvesFrom:13,desc:'咔咔壳最终进化，巨大的水泡壳能抵御强力的攻击。' },
 
     // 锥尾羊进化链 (NO.015~017) - 手游独有
     { id: 15, name: '锥尾羊',
-      image:'https://patchwiki.biligame.com/images/rocom/0/0b/c9kn29sskgdppe1ipgd7ooyioj90dyt.png', ename: 'ConicTailSheep',attribute:'ghost',eggGroup:['animal'],heightMin:0.57,heightMax:0.81,weightMin:13.3,weightMax:16.5,stage:1,region:'-',trait:'-',evolvesTo:[16],evolvesFrom:null,desc:'尾巴呈锥状的小绵羊，性格温顺可爱。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/0b/c9kn29sskgdppe1ipgd7ooyioj90dyt.png', ename: 'ConicTailSheep',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.015_锥尾羊.webp',attribute:'ghost',eggGroup:['animal'],heightMin:0.57,heightMax:0.81,weightMin:13.3,weightMax:16.5,stage:1,region:'-',trait:'-',evolvesTo:[16],evolvesFrom:null,desc:'尾巴呈锥状的小绵羊，性格温顺可爱。' },
     { id: 16, name: '铃兰羊',
       image:'https://patchwiki.biligame.com/images/rocom/0/0b/c9kn29sskgdppe1ipgd7ooyioj90dyt.png', ename: 'LilySheep',    attribute:'ghost',eggGroup:['animal'],heightMin:0.7,heightMax:1.01,weightMin:29.0,weightMax:36.0,stage:2,region:'-',trait:'-',evolvesTo:[17],evolvesFrom:15,desc:'铃兰花装饰的羊儿，身上散发着淡淡的清香。' },
     { id: 17, name: '花影羚羊',
@@ -189,12 +193,15 @@ const RocoData = {
 
     // 雪绒鸟进化链 + 四季形态 (NO.018~020)
     { id: 18, name: '雪绒鸟',ename:'SnowfluffBird',attribute:'flying',eggGroup:['flying','amphibian'],heightMin:0.38,heightMax:0.51,weightMin:2.77,weightMax:4.5,stage:1,region:'-',trait:'-',forms:['本来的样子','春天的样子','夏天的样子','秋天的样子'],evolvesTo:[19],evolvesFrom:null,desc:'全身覆盖着如雪般洁白羽毛的小鸟，有4种季节形态。' },
-    { id: 19, name: '冬羽雀',ename:'WinterfeatherSparrow',attribute:'flying',eggGroup:['flying','amphibian'],heightMin:0.62,heightMax:0.71,weightMin:8.92,weightMax:12.7,stage:2,region:'-',trait:'-',forms:['本来的样子','春天的样子','夏天的样子','秋天的样子'],evolvesTo:[20],evolvesFrom:18,desc:'羽毛如同冬日冰晶般闪耀的雀鸟。' },
-    { id: 20, name: '岚鸟',  ename:'LanBird',         attribute:'flying',eggGroup:['flying','amphibian'],heightMin:1.43,heightMax:2.04,weightMin:27.08,weightMax:32.7,stage:3,region:'-',trait:'-',forms:['本来的样子','春天的样子','夏天的样子','秋天的样子'],evolvesTo:null,evolvesFrom:19,desc:'掌控风雪的冰雪之鸟，四季皆有其独特姿态。' },
+    { id: 19, name: '冬羽雀',ename:'WinterfeatherSparrow',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.019_冬羽雀（本来的样子）.webp',attribute:'flying',eggGroup:['flying','amphibian'],heightMin:0.62,heightMax:0.71,weightMin:8.92,weightMax:12.7,stage:2,region:'-',trait:'-',forms:['本来的样子','春天的样子','夏天的样子','秋天的样子'],evolvesTo:[20],evolvesFrom:18,desc:'羽毛如同冬日冰晶般闪耀的雀鸟。' },
+    { id: 20, name: '岚鸟',  ename:'LanBird',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.020_岚鸟（本来的样子）.webp',         attribute:'flying',eggGroup:['flying','amphibian'],heightMin:1.43,heightMax:2.04,weightMin:27.08,weightMax:32.7,stage:3,region:'-',trait:'-',forms:['本来的样子','春天的样子','夏天的样子','秋天的样子'],evolvesTo:null,evolvesFrom:19,desc:'掌控风雪的冰雪之鸟，四季皆有其独特姿态。' },
 
     // ══════════════ 021-030 小灵菇 / 石肤蜥 / 布是石 ══════════════
     { id: 21, name: '小灵菇',
-      image:'https://patchwiki.biligame.com/images/rocom/b/b8/ltybffbpudghq5tx60h70gy1vdj5xpa.png',ename:'XiaoLingGu',   attribute:'ghost',eggGroup:['plant','magic'],heightMin:0.43,heightMax:0.61,weightMin:5.4,weightMax:7.1,stage:1,region:'-',trait:'-',evolvesTo:[22],evolvesFrom:null,desc:'会发光的小蘑菇，在夜晚能指引方向。' },
+      image:'https://patchwiki.biligame.com/images/rocom/b/b8/ltybffbpudghq5tx60h70gy1vdj5xpa.png',ename:'XiaoLingGu',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.021_小灵菇.webp',   attribute:'ghost',eggGroup:['plant','magic'],heightMin:0.43,heightMax:0.61,weightMin:5.4,weightMax:7.1,stage:1,region:'-',trait:'-',evolvesTo:[22],evolvesFrom:null,desc:'会发光的小蘑菇，在夜晚能指引方向。' },
     { id: 22, name: '幻灵菇',
       image:'https://patchwiki.biligame.com/images/rocom/b/b8/ltybffbpudghq5tx60h70gy1vdj5xpa.png',ename:'HuanLingGu',   attribute:['ghost','grass'],eggGroup:['plant','magic'],heightMin:0.64,heightMax:0.92,weightMin:13.2,weightMax:16.5,stage:2,region:'-',trait:'-',evolvesTo:[23],evolvesFrom:21,desc:'释放孢子能让敌人陷入幻觉。' },
     { id: 23, name: '幻影灵菇',
@@ -202,12 +209,15 @@ const RocoData = {
 
     // 石肤蜥进化链 (NO.024~026)
     { id: 24, name: '石肤蜥',ename:'StoneSkinLizard',attribute:'ground',eggGroup:['amphibian','mineral'],heightMin:0.49,heightMax:0.7,weightMin:21.0,weightMax:34.0,stage:1,region:'-',trait:'-',forms:['本来的样子','球球尾巴的样子'],evolvesTo:[25],evolvesFrom:null,desc:'皮肤像岩石一样坚硬的小蜥蜴。' },
-    { id: 25, name: '石刺蜥',ename:'StoneSpikeLizard',attribute:'ground',eggGroup:['amphibian','mineral'],heightMin:0.67,heightMax:0.96,weightMin:59.5,weightMax:70.5,stage:2,region:'-',trait:'-',forms:['本来的样子','球球尾巴的样子'],evolvesTo:[26],evolvesFrom:24,desc:'身上长出尖刺的石质蜥蜴。' },
-    { id: 26, name: '石冠王蜥',ename:'StoneCrownKingLizard',attribute:'ground',eggGroup:['amphibian','mineral'],heightMin:0.94,heightMax:1.18,weightMin:78.5,weightMax:98.5,stage:3,region:'-',trait:'-',forms:['本来的样子','球球尾巴的样子'],evolvesTo:null,evolvesFrom:25,desc:'头顶石冠的蜥蜴王者。' },
+    { id: 25, name: '石刺蜥',ename:'StoneSpikeLizard',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.025_石刺蜥（本来的样子）.webp',attribute:'ground',eggGroup:['amphibian','mineral'],heightMin:0.67,heightMax:0.96,weightMin:59.5,weightMax:70.5,stage:2,region:'-',trait:'-',forms:['本来的样子','球球尾巴的样子'],evolvesTo:[26],evolvesFrom:24,desc:'身上长出尖刺的石质蜥蜴。' },
+    { id: 26, name: '石冠王蜥',ename:'StoneCrownKingLizard',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.026_石冠王蜥（本来的样子）.webp',attribute:'ground',eggGroup:['amphibian','mineral'],heightMin:0.94,heightMax:1.18,weightMin:78.5,weightMax:98.5,stage:3,region:'-',trait:'-',forms:['本来的样子','球球尾巴的样子'],evolvesTo:null,evolvesFrom:25,desc:'头顶石冠的蜥蜴王者。' },
 
     // 布是石进化链 (NO.027~029)
     { id: 27, name: '布是石',
-      image:'https://patchwiki.biligame.com/images/rocom/8/89/n2olozya089rge7wuokp3nazl44xqst.png',ename:'BuShiShi',      attribute:'ground',eggGroup:['monster','mineral'],heightMin:0.42,heightMax:0.6,weightMin:18.5,weightMax:32.5,stage:1,region:'-',trait:'-',evolvesTo:[28],evolvesFrom:null,desc:'由布料和石头构成的奇妙精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/8/89/n2olozya089rge7wuokp3nazl44xqst.png',ename:'BuShiShi',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.027_布是石.webp',      attribute:'ground',eggGroup:['monster','mineral'],heightMin:0.42,heightMax:0.6,weightMin:18.5,weightMax:32.5,stage:1,region:'-',trait:'-',evolvesTo:[28],evolvesFrom:null,desc:'由布料和石头构成的奇妙精灵。' },
     { id: 28, name: '布是岩',
       image:'https://patchwiki.biligame.com/images/rocom/8/89/n2olozya089rge7wuokp3nazl44xqst.png',ename:'BuShiYan',      attribute:'ground',eggGroup:['monster','mineral'],heightMin:0.93,heightMax:1.34,weightMin:97.5,weightMax:115.0,stage:2,region:'-',trait:'-',evolvesTo:[29],evolvesFrom:27,desc:'身体变得更加岩石化。' },
     { id: 29, name: '布克棱岩',
@@ -225,7 +235,8 @@ const RocoData = {
       image:'https://patchwiki.biligame.com/images/rocom/a/af/owgmiaowlsk52x3cjatoiowp9hq4d4u.png',  ename:'PaPa',   attribute:['bug','cute'],eggGroup:['insect','soft'],heightMin:0.35,heightMax:0.51,weightMin:5.5,weightMax:8.4,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:32,desc:'缓慢爬行的幼虫阶段。' },
     { id: 34, name: '化蝶',  ename:'Butterfly',attribute:['bug','cute'],eggGroup:['insect','flying'],heightMin:0.76,heightMax:1.08,weightMin:15.6,weightMax:17.8,stage:2,region:'-',trait:'-',forms:['平常的样子','幽冥眼的样子','喵喵的样子','奇丽花的样子'],evolvesTo:null,evolvesFrom:32,desc:'破茧成蝶的美丽形态！有多种拟态外观。' },
     { id: 35, name: '幽影树',
-      image:'https://patchwiki.biligame.com/images/rocom/4/42/h8x8d49z7tbq02dibjv2lgnvk344pb7.png',ename:'GhostTree',   attribute:['ghost','grass'],eggGroup:['fairy','plant'],heightMin:0.64,heightMax:0.92,weightMin:29.5,weightMax:37.5,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'被黑暗力量侵蚀的树木精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/42/h8x8d49z7tbq02dibjv2lgnvk344pb7.png',ename:'GhostTree',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.035_幽影树.webp',   attribute:['ghost','grass'],eggGroup:['fairy','plant'],heightMin:0.64,heightMax:0.92,weightMin:29.5,weightMax:37.5,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'被黑暗力量侵蚀的树木精灵。' },
 
     { id: 36, name: '小鼠獭',
       image:'https://patchwiki.biligame.com/images/rocom/7/71/mhtudimorxc3o9un25icovvi9lahiza.png',ename:'XiaoShuTa',   attribute:['normal','water'],eggGroup:['animal','amphibian'],heightMin:0.37,heightMax:0.53,weightMin:6.7,weightMax:7.5,stage:1,region:'-',trait:'-',evolvesTo:[37],evolvesFrom:null,desc:'机灵的小型水獭精灵，游泳技术一流。' },
@@ -240,7 +251,8 @@ const RocoData = {
 
     // 奇丽草进化链
     { id: 41, name: '奇丽草',
-      image:'https://patchwiki.biligame.com/images/rocom/1/1f/kv2w95rommythz2es62viqib0edez2m.png',ename:'BeautifulGrass',attribute:'grass',eggGroup:['plant'],heightMin:0.38,heightMax:0.55,weightMin:4.1,weightMax:5.7,stage:1,region:'-',trait:'-',hasShiny:true,evolvesTo:[42],evolvesFrom:null,desc:'花朵异常艳丽的草系精灵。存在异色形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/1/1f/kv2w95rommythz2es62viqib0edez2m.png',ename:'BeautifulGrass',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.041_奇丽草.webp',attribute:'grass',eggGroup:['plant'],heightMin:0.38,heightMax:0.55,weightMin:4.1,weightMax:5.7,stage:1,region:'-',trait:'-',hasShiny:true,evolvesTo:[42],evolvesFrom:null,desc:'花朵异常艳丽的草系精灵。存在异色形态。' },
     { id: 42, name: '奇丽叶',
       image:'https://patchwiki.biligame.com/images/rocom/1/1f/kv2w95rommythz2es62viqib0edez2m.png',ename:'BeautifulLeaf', attribute:'grass',eggGroup:['plant'],heightMin:0.62,heightMax:0.89,weightMin:24.0,weightMax:31.0,stage:2,region:'-',trait:'-',evolvesTo:[43],evolvesFrom:41,desc:'叶片如宝石般闪耀的植物战士。' },
     { id: 43, name: '奇丽花',
@@ -248,11 +260,14 @@ const RocoData = {
 
     // 丢丢系列 - 地区形态 (NO.044~046)
     { id: 44, name: '丢丢',  ename:'DiuDiu', attribute:'grass',eggGroup:['plant','amphibian'],heightMin:0.35,heightMax:0.51,weightMin:4.3,weightMax:6.1,stage:1,region:'-',trait:'-',forms:['草地附近的样子','沙地附近的样子','雪山附近的样子','火山附近的样子'],evolvesTo:[45],evolvesFrom:null,desc:'总是丢三落四的小种子精灵。有4种地区形态。' },
-    { id: 45, name: '卡卡虫',ename:'KaKaChong',   attribute:'grass',eggGroup:['insect','amphibian'],heightMin:0.53,heightMax:0.76,weightMin:18.5,weightMax:21.6,stage:1,region:'-',trait:'-',forms:['草地附近的样子','沙地附近的样子','雪山附近的样子','火山附近的样子'],evolvesTo:[46],evolvesFrom:null,desc:'发出咔咔声的小甲虫。同样有4种地区形态。' },
-    { id: 46, name: '卡瓦重',ename:'KaWaZhong',   attribute:'grass',eggGroup:['insect','amphibian'],heightMin:0.76,heightMax:1.09,weightMin:29.0,weightMax:35.85,stage:2,region:'-',trait:'-',forms:['草地附近的样子','沙地附近的样子','雪山附近的样子','火山附近的样子'],evolvesTo:null,evolvesFrom:45,desc:'外骨骼极其厚重的甲虫战士。' },
+    { id: 45, name: '卡卡虫',ename:'KaKaChong',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.045_卡卡虫（草地附近的样子）.webp',   attribute:'grass',eggGroup:['insect','amphibian'],heightMin:0.53,heightMax:0.76,weightMin:18.5,weightMax:21.6,stage:1,region:'-',trait:'-',forms:['草地附近的样子','沙地附近的样子','雪山附近的样子','火山附近的样子'],evolvesTo:[46],evolvesFrom:null,desc:'发出咔咔声的小甲虫。同样有4种地区形态。' },
+    { id: 46, name: '卡瓦重',ename:'KaWaZhong',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.046_卡瓦重（草地附近的样子）.webp',   attribute:'grass',eggGroup:['insect','amphibian'],heightMin:0.76,heightMax:1.09,weightMin:29.0,weightMax:35.85,stage:2,region:'-',trait:'-',forms:['草地附近的样子','沙地附近的样子','雪山附近的样子','火山附近的样子'],evolvesTo:null,evolvesFrom:45,desc:'外骨骼极其厚重的甲虫战士。' },
 
     { id: 47, name: '护主犬',
-      image:'https://patchwiki.biligame.com/images/rocom/6/64/t29c2r5ooabyzne8dt5uu9bzq10ibtz.png',ename:'HuZhuQuan',   attribute:'fire',eggGroup:['animal'],heightMin:0.64,heightMax:0.92,weightMin:13.6,weightMax:17.5,stage:1,region:'-',trait:'-',evolvesTo:[48],evolvesFrom:null,desc:'忠诚可靠的守护犬，拼死保护主人。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/64/t29c2r5ooabyzne8dt5uu9bzq10ibtz.png',ename:'HuZhuQuan',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.047_护主犬.webp',   attribute:'fire',eggGroup:['animal'],heightMin:0.64,heightMax:0.92,weightMin:13.6,weightMax:17.5,stage:1,region:'-',trait:'-',evolvesTo:[48],evolvesFrom:null,desc:'忠诚可靠的守护犬，拼死保护主人。' },
     { id: 48, name: '音速犬',
       image:'https://patchwiki.biligame.com/images/rocom/6/64/t29c2r5ooabyzne8dt5uu9bzq10ibtz.png',ename:'YinSuQuan',   attribute:'fire',eggGroup:['animal'],heightMin:1.13,heightMax:1.62,weightMin:39.5,weightMax:51.5,stage:2,region:'-',trait:'-',evolvesTo:null,evolvesFrom:47,desc:'奔跑速度极快，能追上疾驰车辆的神犬。' },
 
@@ -273,15 +288,19 @@ const RocoData = {
     { id: 54, name: '小灵面',
       image:'https://patchwiki.biligame.com/images/rocom/c/ce/60arfjew3ryqzrh5dqh8mi6axn595h4.png',ename:'XiaoLingMian', attribute:'ghost',eggGroup:['none'],heightMin:0.38,heightMax:0.55,weightMin:0.1,weightMax:0.55,stage:1,region:'-',trait:'-',evolvesTo:[55],evolvesFrom:null,desc:'漂浮在空中的面具状幽灵。' },
     { id: 55, name: '暗影灵面',ename:'AnYingLingMian',attribute:'ghost',eggGroup:['none'],heightMin:0.75,heightMax:0.86,weightMin:0.12,weightMax:1.16,stage:2,region:'-',trait:'-',forms:['睁眼的样子','闭眼的样子'],evolvesTo:[56],evolvesFrom:54,desc:'被黑暗侵蚀的面具幽灵。' },
-    { id: 56, name: '幽冥眼',ename:'YouMingYan',   attribute:['��','normal'],eggGroup:['none'],heightMin:1.55,heightMax:1.65,weightMin:1.5,weightMax:2.86,stage:3,region:'-',trait:'-',forms:['睁眼的样子','闭眼的样子'],evolvesTo:null,evolvesFrom:55,desc:'独眼能看穿生死的冥界使者。' },
+    { id: 56, name: '幽冥眼',ename:'YouMingYan',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.056_幽冥眼（睁眼的样子）.webp',   attribute:['��','normal'],eggGroup:['none'],heightMin:1.55,heightMax:1.65,weightMin:1.5,weightMax:2.86,stage:3,region:'-',trait:'-',forms:['睁眼的样子','闭眼的样子'],evolvesTo:null,evolvesFrom:55,desc:'独眼能看穿生死的冥界使者。' },
 
     // 梦游系列 (NO.057~058)
-    { id: 57, name: '梦游',  ename:'SleepWalk',    attribute:'ghost',eggGroup:['fairy'],heightMin:0.5,heightMax:0.6,weightMin:0.6,weightMax:1.87,stage:1,region:'-',trait:'-',forms:['穿旧睡衣','穿星星睡衣的样子'],evolvesTo:[58],evolvesFrom:null,desc:'永远睡眼惺忪的梦游精灵。' },
-    { id: 58, name: '梦悠悠',ename:'DreamFloat',   attribute:'ghost',eggGroup:['fairy'],heightMin:1.0,heightMax:1.2,weightMin:1.25,weightMax:3.1,stage:2,region:'-',trait:'-',forms:['穿旧睡衣','穿星星睡衣的样子'],evolvesTo:null,evolvesFrom:57,desc:'漂浮在梦境边缘的神秘存在。' },
+    { id: 57, name: '梦游',  ename:'SleepWalk',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.057_梦游（穿旧睡衣的样子）.webp',    attribute:'ghost',eggGroup:['fairy'],heightMin:0.5,heightMax:0.6,weightMin:0.6,weightMax:1.87,stage:1,region:'-',trait:'-',forms:['穿旧睡衣','穿星星睡衣的样子'],evolvesTo:[58],evolvesFrom:null,desc:'永远睡眼惺忪的梦游精灵。' },
+    { id: 58, name: '梦悠悠',ename:'DreamFloat',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.058_梦悠悠（穿旧睡衣的样子）.webp',   attribute:'ghost',eggGroup:['fairy'],heightMin:1.0,heightMax:1.2,weightMin:1.25,weightMax:3.1,stage:2,region:'-',trait:'-',forms:['穿旧睡衣','穿星星睡衣的样子'],evolvesTo:null,evolvesFrom:57,desc:'漂浮在梦境边缘的神秘存在。' },
 
     // 兽花蕾 → 伏地兽 → 贪食鼹 → 巨噬针鼹 (NO.059~062)
     { id: 59, name: '兽花蕾',
-      image:'https://patchwiki.biligame.com/images/rocom/f/fb/40ew1mdy3j3km17nwkdvlit9es9y39b.png',ename:'BeastBud',     attribute:['light','grass'],eggGroup:['plant'],heightMin:0.38,heightMax:0.45,weightMin:4.25,weightMax:6.5,stage:1,region:'-',trait:'-',evolvesTo:[60],evolvesFrom:null,desc:'像花朵一样的兽型幼崽。' },
+      image:'https://patchwiki.biligame.com/images/rocom/f/fb/40ew1mdy3j3km17nwkdvlit9es9y39b.png',ename:'BeastBud',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.059_兽花蕾.webp',     attribute:['light','grass'],eggGroup:['plant'],heightMin:0.38,heightMax:0.45,weightMin:4.25,weightMax:6.5,stage:1,region:'-',trait:'-',evolvesTo:[60],evolvesFrom:null,desc:'像花朵一样的兽型幼崽。' },
     { id: 60, name: '伏地兽',
       image:'https://patchwiki.biligame.com/images/rocom/5/5c/tspudx138x6hgz6dth0361r383pr0ha.png',ename:'GroundBeast',   attribute:'normal',eggGroup:['monster'],heightMin:0.52,heightMax:0.74,weightMin:12.4,weightMax:15.8,stage:2,region:'-',trait:'-',evolvesTo:[61],evolvesFrom:59,desc:'擅长潜伏在地下的猛兽。' },
     { id: 61, name: '贪食鼹',
@@ -289,13 +308,17 @@ const RocoData = {
     { id: 62, name: '巨噬针鼹',ename:'GiantEchidna',attribute:'normal',eggGroup:['monster'],heightMin:1.52,heightMax:1.79,weightMin:87.3,weightMax:105.0,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:61,desc:'全身覆盖巨大尖刺的超强防御型怪兽。' },
 
     // 蹦蹦种子系列 - 多形态 (NO.063~065)
-    { id: 63, name: '蹦蹦种子',ename:'BengBengSeed',attribute:['grass','poison'],eggGroup:['plant'],heightMin:0.46,heightMax:0.67,weightMin:4.3,weightMax:5.6,stage:1,region:'-',trait:'-',forms:['海神球形态','彩玉球形态','短毛球形态','象牙球形态'],evolvesTo:[64],evolvesFrom:null,desc:'会弹跳的神奇种子，有4种不同球体形态！' },
-    { id: 64, name: '蹦蹦草',ename:'BengBengGrass', attribute:['grass','poison'],eggGroup:['plant'],heightMin:0.59,heightMax:0.85,weightMin:34.3,weightMax:42.9,stage:2,region:'-',trait:'-',forms:['海神球形态','彩玉球形态','短毛球形态','象牙球形态'],evolvesTo:[65],evolvesFrom:63,desc:'蹦蹦种子的进化形态。' },
-    { id: 65, name: '蹦蹦花',ename:'BengBengFlower',attribute:['grass','poison'],eggGroup:['plant'],heightMin:1.33,heightMax:1.9,weightMin:75.0,weightMax:86.0,stage:3,region:'-',trait:'-',forms:['海神球形态','彩玉球形态','短毛球形态','象牙球形态'],evolvesTo:null,evolvesFrom:64,desc:'蹦蹦系列的最终进化，开出绚烂的花朵。' },
+    { id: 63, name: '蹦蹦种子',ename:'BengBengSeed',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.063_蹦蹦种子（海神球形态）.webp',attribute:['grass','poison'],eggGroup:['plant'],heightMin:0.46,heightMax:0.67,weightMin:4.3,weightMax:5.6,stage:1,region:'-',trait:'-',forms:['海神球形态','彩玉球形态','短毛球形态','象牙球形态'],evolvesTo:[64],evolvesFrom:null,desc:'会弹跳的神奇种子，有4种不同球体形态！' },
+    { id: 64, name: '蹦蹦草',ename:'BengBengGrass',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.064_蹦蹦草（海神球形态）.webp', attribute:['grass','poison'],eggGroup:['plant'],heightMin:0.59,heightMax:0.85,weightMin:34.3,weightMax:42.9,stage:2,region:'-',trait:'-',forms:['海神球形态','彩玉球形态','短毛球形态','象牙球形态'],evolvesTo:[65],evolvesFrom:63,desc:'蹦蹦种子的进化形态。' },
+    { id: 65, name: '蹦蹦花',ename:'BengBengFlower',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.065_蹦蹦花（海神球形态）.webp',attribute:['grass','poison'],eggGroup:['plant'],heightMin:1.33,heightMax:1.9,weightMin:75.0,weightMax:86.0,stage:3,region:'-',trait:'-',forms:['海神球形态','彩玉球形态','短毛球形态','象牙球形态'],evolvesTo:null,evolvesFrom:64,desc:'蹦蹦系列的最终进化，开出绚烂的花朵。' },
 
     // 电咩咩系列 (NO.066~068)
     { id: 66, name: '电咩咩',
-      image:'https://patchwiki.biligame.com/images/rocom/5/57/rrzi4lxo68m4mmhokly3l8z4t2ti2r7.png',ename:'ElectricMimi',  attribute:'electric',eggGroup:['animal'],heightMin:0.58,heightMax:0.83,weightMin:7.17,weightMax:9.1,stage:1,region:'-',trait:'-',evolvesTo:[67],evolvesFrom:null,desc:'发出"咩咩"叫声的带电小羊。' },
+      image:'https://patchwiki.biligame.com/images/rocom/5/57/rrzi4lxo68m4mmhokly3l8z4t2ti2r7.png',ename:'ElectricMimi',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.066_电咩咩.webp',  attribute:'electric',eggGroup:['animal'],heightMin:0.58,heightMax:0.83,weightMin:7.17,weightMax:9.1,stage:1,region:'-',trait:'-',evolvesTo:[67],evolvesFrom:null,desc:'发出"咩咩"叫声的带电小羊。' },
     { id: 67, name: '粉咩咩',
       image:'https://patchwiki.biligame.com/images/rocom/5/57/rrzi4lxo68m4mmhokly3l8z4t2ti2r7.png',ename:'PinkMimi',    attribute:'electric',eggGroup:['animal'],heightMin:0.8,heightMax:1.14,weightMin:15.3,weightMax:18.6,stage:2,region:'-',trait:'-',evolvesTo:[68],evolvesFrom:67,desc:'电咩咩进化后变成粉红色。' },
     { id: 68, name: '电球咩咩',
@@ -323,26 +346,32 @@ const RocoData = {
 
     // 海盔虫进化链 - 首领形态 (NO.076~078)
     { id: 76, name: '海盔虫',ename:'HelmetBug',    attribute:['water','poison'],eggGroup:['ocean'],heightMin:0.55,heightMax:0.7,weightMin:7.4,weightMax:8.6,stage:1,region:'-',trait:'-',forms:['本来的样子','磨损的样子'],evolvesTo:[77],evolvesFrom:null,desc:'戴着海螺头盔的水生虫族。' },
-    { id: 77, name: '刺盔虫',ename:'SpikyHelmetBug',attribute:['water','poison'],eggGroup:['ocean'],heightMin:0.83,heightMax:1.19,weightMin:22.5,weightMax:29.8,stage:2,region:'-',trait:'-',forms:['本来的样子','磨损的样子'],evolvesTo:[78],evolvesFrom:76,desc:'头盔长满尖刺的危险形态。' },
-    { id: 78, name: '千棘盔',ename:'ThornArmor',   attribute:['water','poison'],eggGroup:['ocean'],heightMin:1.11,heightMax:1.33,weightMin:98.6,weightMax:115.0,stage:3,isBoss:true,region:'-',trait:'-',forms:['本来的样子','磨损的样子'],evolvesTo:null,evolvesFrom:77,desc:'首领形态的海底虫族王者！全身覆盖千根棘刺。' },
+    { id: 77, name: '刺盔虫',ename:'SpikyHelmetBug',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.077_刺盔虫（本来的样子）.webp',attribute:['water','poison'],eggGroup:['ocean'],heightMin:0.83,heightMax:1.19,weightMin:22.5,weightMax:29.8,stage:2,region:'-',trait:'-',forms:['本来的样子','磨损的样子'],evolvesTo:[78],evolvesFrom:76,desc:'头盔长满尖刺的危险形态。' },
+    { id: 78, name: '千棘盔',ename:'ThornArmor',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.078_千棘盔（本来的样子）.webp',   attribute:['water','poison'],eggGroup:['ocean'],heightMin:1.11,heightMax:1.33,weightMin:98.6,weightMax:115.0,stage:3,isBoss:true,region:'-',trait:'-',forms:['本来的样子','磨损的样子'],evolvesTo:null,evolvesFrom:77,desc:'首领形态的海底虫族王者！全身覆盖千根棘刺。' },
 
     // ══════════════ 079-100 更多精灵 ══════════════
     { id: 79, name: '菊花梨',
-      image:'https://patchwiki.biligame.com/images/rocom/d/db/qitqnhdvjw8gwhnvvapfuqv6g0qgaef.png',ename:'ChrysanthemumPear',attribute:'cute',eggGroup:['plant'],heightMin:0.63,heightMax:0.9,weightMin:4.2,weightMax:5.8,stage:1,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'外形像菊花的果实精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/db/qitqnhdvjw8gwhnvvapfuqv6g0qgaef.png',ename:'ChrysanthemumPear',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.079_菊花梨.webp',attribute:'cute',eggGroup:['plant'],heightMin:0.63,heightMax:0.9,weightMin:4.2,weightMax:5.8,stage:1,region:'-',trait:'-',evolvesTo:null,evolvesFrom:null,desc:'外形像菊花的果实精灵。' },
 
     { id: 80, name: '小星光',ename:'LittleStarlight',attribute:'electric',eggGroup:['animal','monster'],heightMin:0.78,heightMax:1.12,weightMin:27.5,weightMax:36.2,stage:1,region:'-',trait:'-',forms:['星光能量的样子','月光能量的样子'],evolvesTo:[81],evolvesFrom:null,desc:'身上闪烁星光的小狮子幼崽。' },
-    { id: 81, name: '星光狮',ename:'StarlightLion', attribute:'electric',eggGroup:['animal','monster'],heightMin:1.08,heightMax:1.54,weightMin:49.5,weightMax:58.1,stage:2,region:'-',trait:'-',forms:['星光能量的样子','月光能量的样子'],evolvesTo:null,evolvesFrom:80,desc:'鬃毛如星河般闪耀的光之雄狮。' },
+    { id: 81, name: '星光狮',ename:'StarlightLion',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.081_星光狮（星光能量的样子）.webp', attribute:'electric',eggGroup:['animal','monster'],heightMin:1.08,heightMax:1.54,weightMin:49.5,weightMax:58.1,stage:2,region:'-',trait:'-',forms:['星光能量的样子','月光能量的样子'],evolvesTo:null,evolvesFrom:80,desc:'鬃毛如星河般闪耀的光之雄狮。' },
 
     // 一窝蜂进化链 (NO.082~084)
     { id: 82, name: '一窝蜂',
-      image:'https://patchwiki.biligame.com/images/rocom/d/de/drnf14ybuu1j1ulcxyktvpr52tlw89x.png',ename:'SwarmBee',    attribute:['bug','flying'],eggGroup:['insect','flying'],heightMin:0.37,heightMax:0.52,weightMin:4.0,weightMax:5.5,stage:1,region:'-',trait:'-',evolvesTo:[83],evolvesFrom:null,desc:'成群结队的蜜蜂精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/de/drnf14ybuu1j1ulcxyktvpr52tlw89x.png',ename:'SwarmBee',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.082_一窝蜂.webp',    attribute:['bug','flying'],eggGroup:['insect','flying'],heightMin:0.37,heightMax:0.52,weightMin:4.0,weightMax:5.5,stage:1,region:'-',trait:'-',evolvesTo:[83],evolvesFrom:null,desc:'成群结队的蜜蜂精灵。' },
     { id: 83, name: '黄蜂后',
       image:'https://patchwiki.biligame.com/images/rocom/d/de/drnf14ybuu1j1ulcxyktvpr52tlw89x.png',ename:'YellowQueenBee',attribute:['bug','flying'],eggGroup:['insect','flying'],heightMin:0.81,heightMax:1.16,weightMin:31.7,weightMax:39.21,stage:2,region:'-',trait:'-',evolvesTo:[84],evolvesFrom:82,desc:'一窝蜂进化的蜂群女王。' },
     { id: 84, name: '女王蜂',ename:'QueenBee',     attribute:['bug','flying'],eggGroup:['insect','flying'],heightMin:1.54,heightMax:2.12,weightMin:98.5,weightMax:137.0,stage:3,region:'-',trait:'-',evolvesTo:null,evolvesFrom:83,desc:'统领整个蜂群的至高女王。' },
 
     // 小夜 → 紫夜 → 朔夜伊芙 (NO.085~087)
     { id: 85, name: '小夜',
-      image:'https://patchwiki.biligame.com/images/rocom/7/72/482iqm8394vdtee3ylwiwyndj9tr8vq.png',  ename:'LittleNight',   attribute:'dark',eggGroup:['fairy','humanoid'],heightMin:0.51,heightMax:0.73,weightMin:4.5,weightMax:7.6,stage:1,region:'-',trait:'-',evolvesTo:[86],evolvesFrom:null,desc:'从黑夜中诞生的小女孩精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/7/72/482iqm8394vdtee3ylwiwyndj9tr8vq.png',  ename:'LittleNight',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.085_小夜.webp',   attribute:'dark',eggGroup:['fairy','humanoid'],heightMin:0.51,heightMax:0.73,weightMin:4.5,weightMax:7.6,stage:1,region:'-',trait:'-',evolvesTo:[86],evolvesFrom:null,desc:'从黑夜中诞生的小女孩精灵。' },
     { id: 86, name: '紫夜',
       image:'https://patchwiki.biligame.com/images/rocom/7/72/482iqm8394vdtee3ylwiwyndj9tr8vq.png',  ename:'PurpleNight',   attribute:'dark',eggGroup:['fairy','humanoid'],heightMin:0.72,heightMax:1.03,weightMin:17.6,weightMax:22.5,stage:2,region:'-',trait:'-',evolvesTo:[87],evolvesFrom:85,desc:'身披紫色夜纱的暗夜使者。' },
     { id: 87, name: '朔夜伊芙',
@@ -432,12 +461,15 @@ const RocoData = {
 
     // 旋叶虫进化链 (NO.118~120)
     { id:118, name: '旋叶虫',ename:'SpinningLeafBug',attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.1,heightMax:0.15,weightMin:0.1,weightMax:0.85,stage:1,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[119],evolvesFrom:null,desc:'旋转叶片的虫族精灵。' },
-    { id:119, name: '蓬叶虫',ename:'FluffyLeafBug', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.53,heightMax:0.76,weightMin:0.65,weightMax:1.68,stage:2,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[120],evolvesFrom:118,desc:'叶片蓬松的虫族精灵。' },
-    { id:120, name: '风滚暮虫',ename:'TumblebugDusk', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.6,heightMax:0.7,weightMin:1.45,weightMax:3.43,stage:3,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:null,evolvesFrom:119,desc:'随风滚动的暮色虫族。' },
+    { id:119, name: '蓬叶虫',ename:'FluffyLeafBug',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.119_蓬叶虫（金黄的样子）.webp', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.53,heightMax:0.76,weightMin:0.65,weightMax:1.68,stage:2,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[120],evolvesFrom:118,desc:'叶片蓬松的虫族精灵。' },
+    { id:120, name: '风滚暮虫',ename:'TumblebugDusk',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.120_风滚暮虫（金黄的样子）.webp', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.6,heightMax:0.7,weightMin:1.45,weightMax:3.43,stage:3,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:null,evolvesFrom:119,desc:'随风滚动的暮色虫族。' },
 
     // 黑猫系列 (NO.121~124)
     { id:121, name: '小黑猫',
-      image:'https://patchwiki.biligame.com/images/rocom/c/c9/8rrqybxt78i08ws9ztf6iqrhpbf61fi.png',ename:'LittleBlackCat', attribute:'normal',eggGroup:['animal','humanoid'],heightMin:0.55,heightMax:0.65,weightMin:3.1,weightMax:4.5,stage:1,region:'-',trait:'-',evolvesTo:[122],evolvesFrom:null,desc:'神秘的黑猫，夜行性很强。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/c9/8rrqybxt78i08ws9ztf6iqrhpbf61fi.png',ename:'LittleBlackCat',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.121_小黑猫.webp', attribute:'normal',eggGroup:['animal','humanoid'],heightMin:0.55,heightMax:0.65,weightMin:3.1,weightMax:4.5,stage:1,region:'-',trait:'-',evolvesTo:[122],evolvesFrom:null,desc:'神秘的黑猫，夜行性很强。' },
     { id:122, name: '黑猫巫师',
       image:'https://patchwiki.biligame.com/images/rocom/c/c9/8rrqybxt78i08ws9ztf6iqrhpbf61fi.png',ename:'BlackCatWizard',attribute:'normal',eggGroup:['animal','humanoid','fairy'],heightMin:0.85,heightMax:0.97,weightMin:8.1,weightMax:9.5,stage:2,region:'-',trait:'-',evolvesTo:[123],evolvesFrom:121,desc:'掌握巫术的黑猫法师。' },
     { id:123, name: '忽幽狸',
@@ -506,7 +538,8 @@ const RocoData = {
 
     // 灵狐系列 (NO.147~149)
     { id:147, name: '灵狐',
-      image:'https://patchwiki.biligame.com/images/rocom/0/0a/nmkg7ux0y9xb2o2q92ircdz5t11die4.png',  ename:'SpiritFox',     attribute:['fire','ice'],eggGroup:['animal'],heightMin:0.56,heightMax:0.8,weightMin:7.4,weightMax:8.9,stage:1,region:'-',trait:'-',evolvesTo:[148],evolvesFrom:null,desc:'通灵性的狐狸精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/0a/nmkg7ux0y9xb2o2q92ircdz5t11die4.png',  ename:'SpiritFox',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.147_灵狐.webp',     attribute:['fire','ice'],eggGroup:['animal'],heightMin:0.56,heightMax:0.8,weightMin:7.4,weightMax:8.9,stage:1,region:'-',trait:'-',evolvesTo:[148],evolvesFrom:null,desc:'通灵性的狐狸精灵。' },
     { id:148, name: '九尾狐',
       image:'https://patchwiki.biligame.com/images/rocom/0/0a/nmkg7ux0y9xb2o2q92ircdz5t11die4.png',ename:'NineTailFox',   attribute:['fire','ice'],eggGroup:['animal'],heightMin:0.77,heightMax:1.11,weightMin:13.08,weightMax:21.05,stage:2,region:'-',trait:'-',evolvesTo:[149],evolvesFrom:147,desc:'拥有九条尾巴的狐仙。' },
     { id:149, name: '尖嘴狐仙',
@@ -555,12 +588,15 @@ const RocoData = {
 
     // 小狮鹫 → 神圣狮鹫 → 皇家狮鹫 (NO.165~167) - 含地区形态
     { id:165, name: '小狮鹫',ename:'LittleGriffin', attribute:'flying',eggGroup:['flying','animal'],heightMin:0.71,heightMax:1.02,weightMin:11.5,weightMax:17.5,stage:1,region:'-',trait:'-',forms:['崖间地的样子','高山地的样子'],evolvesTo:[166],evolvesFrom:null,desc:'狮身鹰首的神话生物幼崽。' },
-    { id:166, name: '神圣狮鹫',ename:'HolyGriffin',  attribute:'flying',eggGroup:['flying','animal'],heightMin:1.01,heightMax:1.44,weightMin:49.5,weightMax:56.8,stage:2,region:'-',trait:'-',forms:['崖间地的样子','高山地的样子'],evolvesTo:[167],evolvesFrom:165,desc:'散发神圣光芒的狮鹫。' },
-    { id:167, name: '皇家狮鹫',ename:'RoyalGriffin', attribute:'flying',eggGroup:['flying','animal'],heightMin:1.72,heightMax:2.45,weightMin:125.0,weightMax:170.5,stage:3,region:'-',trait:'-',forms:['崖间地的样子','高山地的样子'],evolvesTo:null,evolvesFrom:166,desc:'翱翔天际的王者坐骑。' },
+    { id:166, name: '神圣狮鹫',ename:'HolyGriffin',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.166_神圣狮鹫（崖间地的样子）.webp',  attribute:'flying',eggGroup:['flying','animal'],heightMin:1.01,heightMax:1.44,weightMin:49.5,weightMax:56.8,stage:2,region:'-',trait:'-',forms:['崖间地的样子','高山地的样子'],evolvesTo:[167],evolvesFrom:165,desc:'散发神圣光芒的狮鹫。' },
+    { id:167, name: '皇家狮鹫',ename:'RoyalGriffin',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.167_皇家狮鹫（崖间地的样子）.webp', attribute:'flying',eggGroup:['flying','animal'],heightMin:1.72,heightMax:2.45,weightMin:125.0,weightMax:170.5,stage:3,region:'-',trait:'-',forms:['崖间地的样子','高山地的样子'],evolvesTo:null,evolvesFrom:166,desc:'翱翔天际的王者坐骑。' },
 
     // 圆眼蜘蛛进化链 (NO.168~170)
     { id:168, name: '圆眼蜘蛛',
-      image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'RoundEyedSpider',attribute:'bug',eggGroup:['insect'],heightMin:0.48,heightMax:0.68,weightMin:3.5,weightMax:5.0,stage:1,region:'-',trait:'-',evolvesTo:[169],evolvesFrom:null,desc:'有着圆圆大眼睛的小蜘蛛。' },
+      image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'RoundEyedSpider',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.168_圆眼蜘蛛.webp',attribute:'bug',eggGroup:['insect'],heightMin:0.48,heightMax:0.68,weightMin:3.5,weightMax:5.0,stage:1,region:'-',trait:'-',evolvesTo:[169],evolvesFrom:null,desc:'有着圆圆大眼睛的小蜘蛛。' },
     { id:169, name: '尖角蜘蛛',
       image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'HornedSpider',  attribute:['bug','poison'],eggGroup:['insect'],heightMin:0.68,heightMax:0.98,weightMin:7.75,weightMax:9.6,stage:2,region:'-',trait:'-',evolvesTo:[170],evolvesFrom:168,desc:'头上长出尖角。' },
     { id:170, name: '芋香巨角蛛',
@@ -617,14 +653,19 @@ const RocoData = {
 
     // 棋棋系列 - 多职业分支 (NO.188~192)
     { id:188, name: '棋棋',  ename: 'ChessPiece',   attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.35,heightMax:0.47,weightMin:10.7,weightMax:14.5, stage: 1, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: [189], evolvesFrom: null, desc: '像棋子一样的可爱精灵，分黑白两种形态。' },
-    { id:189, name: '棋骑士',ename: 'ChessKnight',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:43.06,weightMax:60.09, stage: 2, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: [190,191,192], evolvesFrom: 188, desc: '骑士棋子的进化，可向多个职业发展。' },
-    { id:190, name: '棋齐垒',ename: 'ChessFortress', attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.45,heightMax:1.71,weightMin:58.01,weightMax:70.05, stage: 3, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '堡垒型的棋子战士。' },
-    { id:191, name: '棋祈督',ename: 'ChessBishop',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:38.07,weightMax:47.05, stage: 3, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '主教型的棋子法师。' },
-    { id:192, name: '棋绮后',ename: 'ChessQueen',   attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.66,heightMax:1.81,weightMin:30.01,weightMax:41.02, stage: 3, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '女王型的最强棋子精灵。' },
+    { id:189, name: '棋骑士',ename: 'ChessKnight',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.189_棋骑士（白子）.webp',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:43.06,weightMax:60.09, stage: 2, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: [190,191,192], evolvesFrom: 188, desc: '骑士棋子的进化，可向多个职业发展。' },
+    { id:190, name: '棋齐垒',ename: 'ChessFortress',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.190_棋齐垒（白子）.webp', attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.45,heightMax:1.71,weightMin:58.01,weightMax:70.05, stage: 3, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '堡垒型的棋子战士。' },
+    { id:191, name: '棋祈督',ename: 'ChessBishop',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.191_棋祈督（白子）.webp',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:38.07,weightMax:47.05, stage: 3, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '主教型的棋子法师。' },
+    { id:192, name: '棋绮后',ename: 'ChessQueen',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.192_棋绮后（白子）.webp',   attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.66,heightMax:1.81,weightMin:30.01,weightMax:41.02, stage: 3, region: '-', trait: '-', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '女王型的最强棋子精灵。' },
 
     // 奔波鼠 → 流浪鼠 (NO.193~194)
     { id:193, name: '奔波鼠',
-      image:'https://patchwiki.biligame.com/images/rocom/d/d0/qc6wa2f2bpo8uv28uf5hmgw5lmy3evv.png',ename: 'RunningMouse',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.46,heightMax:0.6,weightMin:3.71,weightMax:6.4, stage: 1, region: '-', trait: '-', evolvesTo: [194], evolvesFrom: null, desc: '四处奔波的小老鼠。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/d0/qc6wa2f2bpo8uv28uf5hmgw5lmy3evv.png',ename: 'RunningMouse',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.193_奔波鼠.webp',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.46,heightMax:0.6,weightMin:3.71,weightMax:6.4, stage: 1, region: '-', trait: '-', evolvesTo: [194], evolvesFrom: null, desc: '四处奔波的小老鼠。' },
     { id:194, name: '流浪鼠',
       image:'https://patchwiki.biligame.com/images/rocom/d/d0/qc6wa2f2bpo8uv28uf5hmgw5lmy3evv.png',ename: 'WanderMouse',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.88,heightMax:1.23,weightMin:59.6,weightMax:74.3, stage: 2, region: '-', trait: '-', evolvesTo: null, evolvesFrom: 193, desc: '流浪天涯的鼠族精灵。' },
 
@@ -657,7 +698,8 @@ const RocoData = {
 
     // 拉特 → 酷拉 (NO.205~206)
     { id:205, name: '拉特',
-      image:'https://patchwiki.biligame.com/images/rocom/a/a1/4pqv1u751dss8ff0u87y747ot29b4m9.png',  ename: 'Rate',          attribute: 'electric',eggGroup: ['fairy'], heightMin:0.49,heightMax:0.61,weightMin:7.7,weightMax:8.6, stage: 1, region: '-', trait: '-', evolvesTo: [206], evolvesFrom: null, desc: '冷酷帅气的冰系精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/a1/4pqv1u751dss8ff0u87y747ot29b4m9.png',  ename: 'Rate',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.205_拉特.webp',          attribute: 'electric',eggGroup: ['fairy'], heightMin:0.49,heightMax:0.61,weightMin:7.7,weightMax:8.6, stage: 1, region: '-', trait: '-', evolvesTo: [206], evolvesFrom: null, desc: '冷酷帅气的冰系精灵。' },
     { id:206, name: '酷拉',
       image:'https://patchwiki.biligame.com/images/rocom/a/a1/4pqv1u751dss8ff0u87y747ot29b4m9.png',  ename: 'Coola',         attribute: 'electric',eggGroup: ['fairy'], heightMin:0.99,heightMax:1.24,weightMin:19.5,weightMax:23.5, stage: 2, region: '-', trait: '-', evolvesTo: null, evolvesFrom: 205, desc: '酷拉进化后的更强形态。' },
 
@@ -677,11 +719,13 @@ const RocoData = {
 
     // 古钟蛇 → 寒音蛇 (NO.212~213)
     { id:212, name: '古钟蛇',ename: 'AncientBellSnake',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:0.95,heightMax:1.1,weightMin:6.9,weightMax:7.8,stage:2,region:'-',trait:'-',forms:['本来的样子','本命年的样子'],evolvesTo:[213],evolvesFrom:null,desc:'背负古钟的蛇类精灵。' },
-    { id:213, name: '寒音蛇',ename: 'ColdSoundSnake',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:1.85,heightMax:2.0,weightMin:65.0,weightMax:78.0,stage:3,region:'-',trait:'-',forms:['本来的样子','本命年的样子'],evolvesTo:null,evolvesFrom:212,desc:'发出寒音的蛇类终极形态。' },
+    { id:213, name: '寒音蛇',ename: 'ColdSoundSnake',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.213_寒音蛇（本来的样子）.webp',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:1.85,heightMax:2.0,weightMin:65.0,weightMax:78.0,stage:3,region:'-',trait:'-',forms:['本来的样子','本命年的样子'],evolvesTo:null,evolvesFrom:212,desc:'发出寒音的蛇类终极形态。' },
 
     // 矮脚爬爬 (NO.214)
     { id:214, name: '矮脚爬爬',
-      image:'https://patchwiki.biligame.com/images/rocom/4/4f/40765c203k2jjtugv9tbciczhr4jmxv.png',ename: 'ShortLegCrawl', attribute: 'bug',eggGroup: ['insect'], heightMin:0.28,heightMax:0.44,weightMin:3.3,weightMax:4.2, stage: 1, region: '-', trait: '-', evolvesTo: null, evolvesFrom: null, desc: '腿特别短的虫族精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/4f/40765c203k2jjtugv9tbciczhr4jmxv.png',ename: 'ShortLegCrawl',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.214_矮脚爬爬.webp', attribute: 'bug',eggGroup: ['insect'], heightMin:0.28,heightMax:0.44,weightMin:3.3,weightMax:4.2, stage: 1, region: '-', trait: '-', evolvesTo: null, evolvesFrom: null, desc: '腿特别短的虫族精灵。' },
 
     // 恶魔红钻 → 火尾瓦特 → 火尾战士 → 烈火守护 (NO.215~218)
     { id:215, name: '恶魔红钻',
@@ -700,7 +744,8 @@ const RocoData = {
 
     // 多西 → 库多西 → 波多西 (NO.221~223)
     { id:221, name: '多西',
-      image:'https://patchwiki.biligame.com/images/rocom/9/94/hsqyxfmg0p0gz8s36uzb1b7ldd6etb1.png',  ename: 'Doxie',         attribute: ['machine','ground'],eggGroup: ['monster','mech'], heightMin:0.65,heightMax:0.94,weightMin:5.7,weightMax:7.1, stage: 1, region: '-', trait: '-', evolvesTo: [222], evolvesFrom: null, desc: '方块脑袋的多西精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/94/hsqyxfmg0p0gz8s36uzb1b7ldd6etb1.png',  ename: 'Doxie',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.221_多西.webp',         attribute: ['machine','ground'],eggGroup: ['monster','mech'], heightMin:0.65,heightMax:0.94,weightMin:5.7,weightMax:7.1, stage: 1, region: '-', trait: '-', evolvesTo: [222], evolvesFrom: null, desc: '方块脑袋的多西精灵。' },
     { id:222, name: '库多西',
       image:'https://patchwiki.biligame.com/images/rocom/9/94/hsqyxfmg0p0gz8s36uzb1b7ldd6etb1.png',ename: 'KuDoxie',       attribute: 'ground',eggGroup: ['monster','mech'], heightMin:0.99,heightMax:1.42,weightMin:115.8,weightMax:175.02, stage: 2, region: '-', trait: '-', evolvesTo: [223], evolvesFrom: 221, desc: '库库的多西进化。' },
     { id:223, name: '波多西',
@@ -744,11 +789,13 @@ const RocoData = {
 
     // 刺轮砣 → 月亮砣 (NO.237~238)
     { id:237, name: '刺轮砣',ename: 'ThornWheelDisc', attribute:['poison','cute'],eggGroup: [], heightMin:0.18,heightMax:0.31,weightMin:2.7,weightMax:4.0, stage: 2, region: '-', trait: '-', forms: ['上弦的样子','下弦的样子'], evolvesTo: [238], evolvesFrom: null, desc: '刺轮形的暗黑砣器。' },
-    { id:238, name: '月亮砣',ename: 'MoonDisc',      attribute:['poison','cute'],eggGroup: [], heightMin:1.85,heightMax:2.1,weightMin:137.5,weightMax:182.4, stage: 3, region: '-', trait: '-', forms: ['上弦的样子','下弦的样子'], evolvesTo: null, evolvesFrom: 237, desc: '月亮形状的神秘砣器。' },
+    { id:238, name: '月亮砣',ename: 'MoonDisc',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.238_月亮砣（上弦的样子）.webp',      attribute:['poison','cute'],eggGroup: [], heightMin:1.85,heightMax:2.1,weightMin:137.5,weightMax:182.4, stage: 3, region: '-', trait: '-', forms: ['上弦的样子','下弦的样子'], evolvesTo: null, evolvesFrom: 237, desc: '月亮形状的神秘砣器。' },
 
     // 豆丁鱼 → 快鳍鱼 → 龙鱼 (NO.239~241)
     { id:239, name: '豆丁鱼',
-      image:'https://patchwiki.biligame.com/images/rocom/8/84/l03hb24992kdwomhy0qfjjynend0qdc.png',ename: 'BeanFish',      attribute: ['water','dragon'],eggGroup: ['ocean','dragon'], heightMin:0.31,heightMax:0.44,weightMin:1.2,weightMax:3.4, stage: 1, region: '-', trait: '-', evolvesTo: [240], evolvesFrom: null, desc: '豆粒大小的小鱼。' },
+      image:'https://patchwiki.biligame.com/images/rocom/8/84/l03hb24992kdwomhy0qfjjynend0qdc.png',ename: 'BeanFish',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.239_豆丁鱼.webp',      attribute: ['water','dragon'],eggGroup: ['ocean','dragon'], heightMin:0.31,heightMax:0.44,weightMin:1.2,weightMax:3.4, stage: 1, region: '-', trait: '-', evolvesTo: [240], evolvesFrom: null, desc: '豆粒大小的小鱼。' },
     { id:240, name: '快鳍鱼',
       image:'https://patchwiki.biligame.com/images/rocom/8/84/l03hb24992kdwomhy0qfjjynend0qdc.png',ename: 'FastFinFish',   attribute: ['water','dragon'],eggGroup: ['ocean'], heightMin:0.27,heightMax:0.39,weightMin:14.5,weightMax:16.8, stage: 2, region: '-', trait: '-', evolvesTo: [241], evolvesFrom: 239, desc: '鳍划水极快的鱼类。' },
     { id:241, name: '龙鱼',
@@ -800,12 +847,15 @@ const RocoData = {
 
     // 乌达系列 - 极昼/极夜形态 (NO.258~260)
     { id:258, name: '乌达',  ename: 'Wuda',          attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.44,heightMax:0.58,weightMin:4.6,weightMax:6.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [259], evolvesFrom: null, desc: '随昼夜变化的石头精灵。' },
-    { id:259, name: '迷你乌',ename: 'MiniWuda',      attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.97,heightMax:1.2,weightMin:27.9,weightMax:39.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [260], evolvesFrom: 258, desc: '乌达的小型版。' },
-    { id:260, name: '乌拉塔',ename: 'WulataTower',   attribute: ['dark','fire'],eggGroup: ['monster'], heightMin: 1.10, heightMax: 1.32, weightMin: 48, heightMax: 65, stage: 3, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: null, evolvesFrom: 259, desc: '塔一般巨大的乌达终极形态。' },
+    { id:259, name: '迷你乌',ename: 'MiniWuda',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.259_迷你乌（极昼的样子）.webp',      attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.97,heightMax:1.2,weightMin:27.9,weightMax:39.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [260], evolvesFrom: 258, desc: '乌达的小型版。' },
+    { id:260, name: '乌拉塔',ename: 'WulataTower',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.260_乌拉塔（极昼的样子）.webp',   attribute: ['dark','fire'],eggGroup: ['monster'], heightMin: 1.10, heightMax: 1.32, weightMin: 48, heightMax: 65, stage: 3, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: null, evolvesFrom: 259, desc: '塔一般巨大的乌达终极形态。' },
 
     // 螺旋帕帕 → 帕帕斯卡 (NO.261~262)
     { id:261, name: '螺旋帕帕',
-      image:'https://patchwiki.biligame.com/images/rocom/2/2e/8sya38cbx002fydqgo0u3z0r4wzcmh9.png',ename: 'HelixPapa',   attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:0.35,heightMax:0.45,weightMin:2.08,weightMax:4.35, stage: 2, region: '-', trait: '-', evolvesTo: [262], evolvesFrom: null, desc: '螺旋桨造型的帕帕精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/2/2e/8sya38cbx002fydqgo0u3z0r4wzcmh9.png',ename: 'HelixPapa',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.261_螺旋帕帕.webp',   attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:0.35,heightMax:0.45,weightMin:2.08,weightMax:4.35, stage: 2, region: '-', trait: '-', evolvesTo: [262], evolvesFrom: null, desc: '螺旋桨造型的帕帕精灵。' },
     { id:262, name: '帕帕斯卡',
       image:'https://patchwiki.biligame.com/images/rocom/2/2e/8sya38cbx002fydqgo0u3z0r4wzcmh9.png',ename: 'PapaSkas',    attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:1.05,heightMax:1.47,weightMin:48.7,weightMax:60.1, stage: 3, region: '-', trait: '-', evolvesTo: null, evolvesFrom: 261, desc: '螺旋帕帕的进化形态。' },
 
@@ -848,12 +898,15 @@ const RocoData = {
 
     // 地鼠 → 遁鼠 → 遁地鼠 (NO.277~279) - 含地区形态
     { id:277, name: '地鼠',  ename: 'Mole',          attribute: 'ground',eggGroup: ['animal'], heightMin:0.46,heightMax:0.66,weightMin:1.8,weightMax:2.85, stage: 1, region: '-', trait: '-', forms: ['枯水期','储水期','储水时的样子'], evolvesTo: [278], evolvesFrom: null, desc: '善于挖掘的地鼠。' },
-    { id:278, name: '遁鼠',  ename: 'EscapeMole',    attribute: 'ground',eggGroup: ['animal'], heightMin:0.48,heightMax:0.69,weightMin:3.4,weightMax:4.8, stage: 2, region: '-', trait: '-', forms: ['枯水期','储水期','储水时的样子'], evolvesTo: [279], evolvesFrom: 277, desc: '擅长逃遁的地鼠进化。' },
-    { id:279, name: '遁地鼠',ename: 'UndergroundMole',attribute:'ground',eggGroup:['animal'],heightMin:0.64,heightMax:0.92,weightMin:6.4,weightMax:7.5,stage:3,region:'-',trait:'-',forms:['枯水期','储水期','储水时的样子'],evolvesTo:null,evolvesFrom:278,desc:'遁地能力极强的地鼠终极形态。' },
+    { id:278, name: '遁鼠',  ename: 'EscapeMole',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.278_遁鼠（枯水期的样子）.webp',    attribute: 'ground',eggGroup: ['animal'], heightMin:0.48,heightMax:0.69,weightMin:3.4,weightMax:4.8, stage: 2, region: '-', trait: '-', forms: ['枯水期','储水期','储水时的样子'], evolvesTo: [279], evolvesFrom: 277, desc: '擅长逃遁的地鼠进化。' },
+    { id:279, name: '遁地鼠',ename: 'UndergroundMole',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.279_遁地鼠（枯水期的样子）.webp',attribute:'ground',eggGroup:['animal'],heightMin:0.64,heightMax:0.92,weightMin:6.4,weightMax:7.5,stage:3,region:'-',trait:'-',forms:['枯水期','储水期','储水时的样子'],evolvesTo:null,evolvesFrom:278,desc:'遁地能力极强的地鼠终极形态。' },
 
     // 墨鱿士 → 混乱鱿彩 → 秩序鱿墨 (NO.280~282)
     { id:280, name: '墨鱿士',
-      image:'https://patchwiki.biligame.com/images/rocom/e/ed/ekbfzkhrhoe1i26cq62zv0bdwyws7zg.png',ename: 'InkKnight',     attribute: 'ghost',eggGroup: ['ocean','soft'], heightMin:0.35,heightMax:0.46,weightMin:3.25,weightMax:5.02, stage: 2, region: '-', trait: '-', evolvesTo: [281], evolvesFrom: null, desc: '喷射墨汁的鱿鱼骑士。' },
+      image:'https://patchwiki.biligame.com/images/rocom/e/ed/ekbfzkhrhoe1i26cq62zv0bdwyws7zg.png',ename: 'InkKnight',
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.280_墨鱿士.webp',     attribute: 'ghost',eggGroup: ['ocean','soft'], heightMin:0.35,heightMax:0.46,weightMin:3.25,weightMax:5.02, stage: 2, region: '-', trait: '-', evolvesTo: [281], evolvesFrom: null, desc: '喷射墨汁的鱿鱼骑士。' },
     { id:281, name: '混乱鱿彩',
       image:'https://patchwiki.biligame.com/images/rocom/e/ed/ekbfzkhrhoe1i26cq62zv0bdwyws7zg.png',ename: 'ChaosInkColor', attribute: ['ghost','dark'],eggGroup: ['ocean','soft'], heightMin:1.36,heightMax:1.54,weightMin:36.9,weightMax:48.2, stage: 3, region: '-', trait: '-', evolvesTo: [282], evolvesFrom: 280, desc: '混乱色彩的鱿鱼形态。' },
     { id:282, name: '秩序鱿墨',
