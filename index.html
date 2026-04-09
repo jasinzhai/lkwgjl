@@ -875,6 +875,204 @@
             border: 1px solid var(--border-color);
         }
 
+        /* 配对打法 */
+        .battle-trait {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.03));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            padding: 12px 16px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trait-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        .trait-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* 推荐打法 */
+        .battle-recommend {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            padding: 12px 16px;
+            background: rgba(99, 102, 241, 0.05);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 10px 10px 0;
+            margin-bottom: 14px;
+        }
+
+        /* 子区域 */
+        .battle-subsection {
+            margin-bottom: 14px;
+        }
+
+        .battle-subtitle {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        /* 配对列表 */
+        .pairing-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .pairing-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 12px 7px 7px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pairing-chip:hover {
+            background: rgba(99, 102, 241, 0.1);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        .pairing-avatar {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pairing-avatar img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .pairing-avatar .avatar-fallback {
+            font-size: 13px;
+        }
+
+        .pairing-name {
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        /* 阵容标签 */
+        .teams-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        /* 技能搭配 - 表格 */
+        .skill-table-wrap {
+            margin-bottom: 12px;
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            background: rgba(16, 185, 129, 0.03);
+        }
+        .skill-table-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #10B981;
+            padding: 8px 14px;
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(5, 150, 105, 0.06));
+            border-bottom: 1px solid rgba(16, 185, 129, 0.15);
+        }
+        .skill-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+        }
+        .skill-table thead tr {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .skill-table th {
+            padding: 6px 10px;
+            text-align: left;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+        .skill-table td {
+            padding: 7px 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            vertical-align: top;
+            line-height: 1.45;
+            color: var(--text-primary);
+        }
+        .skill-table tbody tr:hover {
+            background: rgba(16, 185, 129, 0.08);
+        }
+        .sk-name {
+            font-weight: 600;
+            color: #10B981;
+            white-space: nowrap;
+        }
+        .sk-type {
+            display: inline-block;
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            white-space: nowrap;
+            text-align: center;
+            min-width: 28px;
+        }
+        /* 属性颜色 */
+        .sk-光 { background: rgba(255,215,0,0.15); color: #FFD700; }
+        .sk-恶 { background: rgba(120,80,160,0.15); color: #A78BFA; }
+        .sk-普通 { background: rgba(168,168,120,0.15); color: #A8A878; }
+        .sk-水 { background: rgba(59,130,246,0.15); color: #60A5FA; }
+        .sk-火 { background: rgba(239,68,68,0.15); color: #F87171; }
+        .sk-草 { background: rgba(34,197,94,0.15); color: #4ADE80; }
+        .sk-岩 { background: rgba(180,140,90,0.15); color: #D4A574; }
+        .sk-地 { background: rgba(194,138,60,0.15); color: #C9956C; }
+        .sk-冰 { background: rgba(96,165,250,0.18); color: #93C5FD; }
+        .sk-翼 { background: rgba(147,197,253,0.15); color: #93C5FD; }
+        .sk-电 { background: rgba(251,191,36,0.15); color: #FBBF24; }
+        .sk-虫 { background: rgba(163,230,53,0.15); color: #84CC16; }
+        .sk-龙 { background: rgba(167,139,250,0.15); color: #A78BFA; }
+        .sk-幽灵 { background: rgba(139,92,246,0.15); color: #C084FC; }
+        .sk-超能 { background: rgba(236,72,153,0.15); color: #F472B6; }
+        .sk-毒 { background: rgba(167,139,250,0.15); color: #C084FC; }
+        .sk-钢 { background: rgba(156,163,175,0.15); color: #9CA3AF; }
+        .sk-effect {
+            max-width: 240px;
+            color: var(--text-secondary);
+        }
+
+        .team-tag {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--accent-gold);
+            background: rgba(255, 215, 0, 0.08);
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            padding: 5px 14px;
+            border-radius: 20px;
+        }
+
         /* 无结果 */
         .no-results {
             text-align: center;
@@ -1073,6 +1271,13 @@
 
             <div class="filters-row">
                 <div class="filter-group">
+                    <label>🏆 强度推荐</label>
+                    <select id="tierFilter">
+                        <option value="all">全部等级</option>
+                        <option value="battle">⭐ 有配对打法（31只）</option>
+                    </select>
+                </div>
+                <div class="filter-group">
                     <label>🔮 属性筛选</label>
                     <select id="attrFilter">
                         <option value="all">全部属性</option>
@@ -1174,8 +1379,13 @@
                         // 3. 英文名
                         if (s.ename && typeof s.ename === 'string' && s.ename.toLowerCase().indexOf(kw) !== -1) return true;
                         // 4. 属性名
-                        var a = RocoData.getAttribute(s.attribute);
-                        if (a && (a.name.indexOf(keyword) !== -1 || a.id.indexOf(kw) !== -1)) return true;
+                        var attrList = RocoData.getAttribute(s.attribute);
+                        if (Array.isArray(attrList)) {
+                            for (var ai = 0; ai < attrList.length; ai++) {
+                                var av = attrList[ai];
+                                if (av && (av.name.indexOf(keyword) !== -1 || av.id.indexOf(kw) !== -1)) return true;
+                            }
+                        } else if (attrList && (attrList.name.indexOf(keyword) !== -1 || attrList.id.indexOf(kw) !== -1)) return true;
                         // 5. 蛋组名
                         if (Array.isArray(s.eggGroup)) {
                             for (var ei = 0; ei < s.eggGroup.length; ei++) {
@@ -1186,8 +1396,8 @@
                         // 6. 数值匹配身高体重
                         var n = parseFloat(kw);
                         if (!isNaN(n)) {
-                            if (n >= s.heightMin && n <= s.heightMax) return true;
-                            if (n >= s.weightMin && n <= s.weightMax) return true;
+                            if (s.heightMin !== undefined && s.heightMax !== undefined && n >= s.heightMin && n <= s.heightMax) return true;
+                            if (s.weightMin !== undefined && s.weightMax !== undefined && n >= s.weightMin && n <= s.weightMax) return true;
                         }
                         return false;
                     });
@@ -1215,14 +1425,22 @@
                     data = data.filter(function(s) { return s.stage === st; });
                 }
 
+                // ---- 推荐等级筛选（有配对打法的精灵） ----
+                var tierId = document.getElementById('tierFilter').value;
+                if (tierId && tierId !== 'all') {
+                    if (tierId === 'battle') {
+                        data = data.filter(function(s) { return !!s.battle; });
+                    }
+                }
+
                 // ---- 身高单值匹配 ----
                 if (hVal !== null && !isNaN(hVal)) {
-                    data = data.filter(function(s) { return hVal >= s.heightMin && hVal <= s.heightMax; });
+                    data = data.filter(function(s) { return s.heightMin !== undefined && s.heightMax !== undefined && hVal >= s.heightMin && hVal <= s.heightMax; });
                 }
 
                 // ---- 体重单值匹配 ----
                 if (wVal !== null && !isNaN(wVal)) {
-                    data = data.filter(function(s) { return wVal >= s.weightMin && wVal <= s.weightMax; });
+                    data = data.filter(function(s) { return s.weightMin !== undefined && s.weightMax !== undefined && wVal >= s.weightMin && wVal <= s.weightMax; });
                 }
 
                 filteredData = data;
@@ -1242,6 +1460,7 @@
             document.getElementById('attrFilter').value = 'all';
             document.getElementById('eggFilter').value = 'all';
             document.getElementById('stageFilter').value = '0';
+            document.getElementById('tierFilter').value = 'all';
             document.getElementById('heightInput').value = '';
             document.getElementById('weightInput').value = '';
             doFilter();
@@ -1287,8 +1506,8 @@
             const attrObjects = attrs.map(a => RocoData.getAttribute(a)).filter(Boolean);
             const primaryAttr = RocoData.getPrimaryAttribute(spirit);
             const attrClass = `attr-${primaryAttr}`;
-            const heightRange = `${spirit.heightMin}-${spirit.heightMax}m`;
-            const weightRange = `${spirit.weightMin}-${spirit.weightMax}kg`;
+            const heightRange = (spirit.heightMin !== undefined && spirit.heightMax !== undefined) ? spirit.heightMin + '-' + spirit.heightMax + 'm' : '-';
+            const weightRange = (spirit.weightMin !== undefined && spirit.weightMax !== undefined) ? spirit.weightMin + '-' + spirit.weightMax + 'kg' : '-';
 
             // 生成属性标签HTML（支持多个）
             const attrTagsHtml = attrObjects.map(a =>
@@ -1340,6 +1559,15 @@
                                     </div>
                                 </div>
                             </div>
+                            ${(spirit.trait && spirit.trait !== '-') || spirit.battle?.trait ? `
+                            <div class="data-item" style="grid-column: 1/-1; background: linear-gradient(135deg, rgba(255,215,0,0.06), rgba(255,215,0,0.02)); border-color: rgba(255,215,0,0.2);">
+                                <div class="data-icon" style="background: rgba(255,215,0,0.15);">✨</div>
+                                <div style="flex:1;">
+                                    <div class="data-label" style="color: var(--accent-gold, #FFD700);">特性</div>
+                                    <div style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">${spirit.trait && spirit.trait !== '-' ? spirit.trait : spirit.battle?.trait || '-'}</div>
+                                </div>
+                            </div>
+                            ` : ''}
                         </div>
                     </div>
                     <div class="card-footer">
@@ -1421,12 +1649,12 @@
                             <div class="detail-item">
                                 <div class="icon">📏</div>
                                 <div class="label">身高范围</div>
-                                <div class="value">${spirit.heightMin}-${spirit.heightMax} <small>m</small></div>
+                                <div class="value">${(spirit.heightMin !== undefined && spirit.heightMax !== undefined) ? spirit.heightMin + '-' + spirit.heightMax + ' <small>m</small>' : '-'}</div>
                             </div>
                             <div class="detail-item">
                                 <div class="icon">⚖️</div>
                                 <div class="label">体重范围</div>
-                                <div class="value">${spirit.weightMin}-${spirit.weightMax} <small>kg</small></div>
+                                <div class="value">${(spirit.weightMin !== undefined && spirit.weightMax !== undefined) ? spirit.weightMin + '-' + spirit.weightMax + ' <small>kg</small>' : '-'}</div>
                             </div>
                             <div class="detail-item">
                                 <div class="icon">🆙</div>
@@ -1468,6 +1696,79 @@
                         <div class="section-title">📖 精灵简介</div>
                         <div class="desc-full">${spirit.desc}</div>
                     </div>
+                    ${spirit.battle || (spirit.trait && spirit.trait !== '-') ? `
+                    <div class="detail-section">
+                        <div class="section-title">⚔️ 配对打法</div>
+                        ${(spirit.battle?.trait || (spirit.trait && spirit.trait !== '-')) ? `<div class="battle-trait"><span class="trait-label">✨ 核心特性</span><span class="trait-text">${spirit.trait && spirit.trait !== '-' ? spirit.trait : spirit.battle?.trait || ''}</span></div>` : ''}
+                        ${spirit.battle.recommend ? `<div class="battle-recommend">${spirit.battle.recommend}</div>` : ''}
+                        ${spirit.battle.pairing && spirit.battle.pairing.length > 0 ? `
+                        <div class="battle-subsection">
+                            <div class="battle-subtitle">🤝 推荐配对</div>
+                            <div class="pairing-list">
+                                ${spirit.battle.pairing.map(p => {
+                                    const pairSpirit = RocoData.spirits.find(s => s.name === p || s.ename === p);
+                                    const pairImg = pairSpirit?.image
+                                        ? `<img src="${pairSpirit.image}" alt="${p}">`
+                                        : '';
+                                    return `
+                                    <div class="pairing-chip" onclick="openModal(RocoData.spirits.find(s => s.id === ${pairSpirit?.id || 0}))">
+                                        <div class="pairing-avatar">${pairImg}<span class="avatar-fallback" style="${pairSpirit?.image ? 'display:none' : ''}">${p.charAt(0)}</span></div>
+                                        <span class="pairing-name">${p}</span>
+                                    </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+                        ${spirit.battle.teams && spirit.battle.teams.length > 0 ? `
+                        <div class="battle-subsection">
+                            <div class="battle-subtitle">🏆 推荐阵容</div>
+                            <div class="teams-tags">
+                                ${spirit.battle.teams.map(t => `<span class="team-tag">${t}</span>`).join('')}
+                            </div>
+                        </div>
+                        ` : ''}
+                        ${spirit.battle.skills ? `
+                        <div class="battle-subsection">
+                            <div class="battle-subtitle">🎯 技能搭配</div>
+                            ${spirit.battle.skills.pve ? `
+                            <div class="skill-table-wrap">
+                                <div class="skill-table-title">PVE 技能</div>
+                                <table class="skill-table">
+                                    <thead>
+                                        <tr><th>技能</th><th>属性</th><th>耗能</th><th>威力</th><th>效果</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        ${(() => { try {
+                                          return (Array.isArray(spirit.battle.skills.pve) && typeof spirit.battle.skills.pve[0] === 'object' && spirit.battle.skills.pve[0].type
+                                            ? spirit.battle.skills.pve.map(function(sk){ return '<tr><td class="sk-name">'+sk.name+'</td><td class="sk-type sk-'+sk.type+'">'+sk.type+'</td><td>'+sk.pp+'</td><td>'+sk.power+'</td><td class="sk-effect">'+sk.effect+'</td></tr>'; }).join('')
+                                            : spirit.battle.skills.pve.map(function(sk){ return '<tr><td class="sk-name">'+(typeof sk==='string'?sk:sk.name)+'</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>'; }).join('')
+                                          ); } catch(e) { return ''; } })()
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>` : ''}
+                            ${spirit.battle.skills.pvp ? `
+                            <div class="skill-table-wrap">
+                                <div class="skill-table-title">PVP 技能</div>
+                                <table class="skill-table">
+                                    <thead>
+                                        <tr><th>技能</th><th>属性</th><th>耗能</th><th>威力</th><th>效果</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        ${(() => { try {
+                                          return (Array.isArray(spirit.battle.skills.pvp) && typeof spirit.battle.skills.pvp[0] === 'object' && spirit.battle.skills.pvp[0].type
+                                            ? spirit.battle.skills.pvp.map(function(sk){ return '<tr><td class="sk-name">'+sk.name+'</td><td class="sk-type sk-'+sk.type+'">'+sk.type+'</td><td>'+sk.pp+'</td><td>'+sk.power+'</td><td class="sk-effect">'+sk.effect+'</td></tr>'; }).join('')
+                                            : spirit.battle.skills.pvp.map(function(sk){ return '<tr><td class="sk-name">'+(typeof sk==='string'?sk:sk.name)+'</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>'; }).join('')
+                                          ); } catch(e) { return ''; } })()
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>` : ''}
+                        </div>
+                        ` : ''}
+                    </div>
+                    ` : ''}
                 </div>
             `;
 
@@ -1536,6 +1837,7 @@
             document.getElementById('attrFilter').onchange = doFilter;
             document.getElementById('eggFilter').onchange = doFilter;
             document.getElementById('stageFilter').onchange = doFilter;
+            document.getElementById('tierFilter').onchange = doFilter;
             // 身高体重
             ['heightInput','weightInput'].forEach(function(id) {
                 var el = document.getElementById(id);
