@@ -1,6 +1,15 @@
 # WorkBuddy 内部数据
 .workbuddy/
 
+# 依赖
+node_modules/
+
+# 本地测试脚本
+scripts/
+package.json
+package-lock.json
+roco-data.js.bak
+
 # 临时/抓取脚本
 fetch_*.py
 

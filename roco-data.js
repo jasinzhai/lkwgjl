@@ -694,9 +694,162 @@ const RocoData = {
 
     // 风铃鲨进化链 (NO.108~110)
     { id:108, name: '风铃鲨',
-      image:'https://patchwiki.biligame.com/images/rocom/f/fe/88nqs9bcxmqlj6ad7xoyz36k5fxw4qe.png',ename:'WindBellShark', attribute:['water','flying'],eggGroup:['ocean','flying'],heightMin:0.41,heightMax:0.59,weightMin:13.07,weightMax:16.8,stage:1,region:'-',trait: '水翼推进 — 己方精灵每使用1次水系技能，自己入场时获得全技能能耗-1。',evolvesTo:[109],evolvesFrom:null,desc:'背鳍如风铃般响亮的鲨鱼。' },
+      image:'https://patchwiki.biligame.com/images/rocom/f/fe/88nqs9bcxmqlj6ad7xoyz36k5fxw4qe.png',ename:'WindBellShark', attribute:['water','flying'],eggGroup:['ocean','flying'],heightMin:0.41,heightMax:0.59,weightMin:13.07,weightMax:16.8,stage:1,region:'-',trait: '水翼推进 — 己方精灵每使用1次水系技能，自己入场时获得全技能能耗-1。',evolvesTo:[109],evolvesFrom:null,desc:'背鳍如风铃般响亮的鲨鱼。',
+        battle: {
+          "trait": "水翼推进降耗",
+          "tier": "T2",
+          "recommend": "PVP水系降耗中转。队友频繁使用水系技能后自己入场时全技能能耗-1，越后期越强。",
+          "pairing": [
+          "蓝蝶鲨",
+          "蓝漪水灵",
+          "深蓝鲸"
+          ],
+          "teams": [
+          "水系联攻队",
+          "降耗队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "稳定水系输出，后期几乎零能耗。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "高威水系必杀。"
+          },
+          {
+          "name": "泡泡围困",
+          "type": "水",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "困住+伤害。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "减免伤害。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "后期低能耗高威爆发。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "主攻技能，降耗后可连续放。"
+          },
+          {
+          "name": "泡泡围困",
+          "type": "水",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "控制+伤害。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "生存保障。"
+        }
+          ]
+        }
+        }
+    },
     { id:109, name: '蓝蝶鲨',
-      image:'https://patchwiki.biligame.com/images/rocom/f/fe/88nqs9bcxmqlj6ad7xoyz36k5fxw4qe.png',ename:'BlueButterflyShark',attribute:['water','flying'],eggGroup:['ocean','flying'],heightMin:0.81,heightMax:1.16,weightMin:34.82,weightMax:48.6,stage:2,region:'-',trait: '水翼推进 — 己方精灵每使用1次水系技能，自己入场时获得全技能能耗-1。',evolvesTo:[110],evolvesFrom:108,desc:'鳍部如蝴蝶翅膀般美丽的鲨鱼。' },
+      image:'https://patchwiki.biligame.com/images/rocom/f/fe/88nqs9bcxmqlj6ad7xoyz36k5fxw4qe.png',ename:'BlueButterflyShark',attribute:['water','flying'],eggGroup:['ocean','flying'],heightMin:0.81,heightMax:1.16,weightMin:34.82,weightMax:48.6,stage:2,region:'-',trait: '水翼推进 — 己方精灵每使用1次水系技能，自己入场时获得全技能能耗-1。',evolvesTo:[110],evolvesFrom:108,desc:'鳍部如蝴蝶翅膀般美丽的鲨鱼。',
+        battle: {
+          "trait": "水翼进化形态",
+          "tier": "T2",
+          "recommend": "PVP水翼推进主力。进化后属性更高，降耗收益更大。",
+          "pairing": [
+          "风铃鲨",
+          "深蓝鲸",
+          "蓝漪水灵"
+          ],
+          "teams": [
+          "水系联攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "巨浪滔天",
+          "type": "水",
+          "pp": 3,
+          "power": "115(魔攻)",
+          "effect": "超高威水系必杀。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "稳定高威输出。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "85(魔攻)",
+          "effect": "低能耗连发。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复生命值。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "巨浪滔天",
+          "type": "水",
+          "pp": 3,
+          "power": "115(魔攻)",
+          "effect": "降耗后一发入魂。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "稳定主攻。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航恢复。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "85(魔攻)",
+          "effect": "低能耗填充。"
+        }
+          ]
+        }
+        }
+    },
     { id:110, name: '彩蝶鲨',
       image:'https://patchwiki.biligame.com/images/rocom/f/fe/88nqs9bcxmqlj6ad7xoyz36k5fxw4qe.png',ename:'ColorButterflyShark',attribute:['water','flying'],eggGroup:['ocean','flying'],heightMin:1.18,heightMax:1.68,weightMin:80.5,weightMax:96.5,stage:3,region:'-',trait: '水翼推进 — 己方精灵每使用1次水系技能，自己入场时获得全技能能耗-1。',evolvesTo:null,evolvesFrom:109,desc:'鳍部七彩斑斓的梦幻鲨鱼。' },
 
@@ -743,20 +896,553 @@ const RocoData = {
       },
 
     // 旋叶虫进化链 (NO.118~120)
-    { id:118, name: '旋叶虫',ename:'SpinningLeafBug',attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.1,heightMax:0.15,weightMin:0.1,weightMax:0.85,stage:1,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[119],evolvesFrom:null,desc:'旋转叶片的虫族精灵。' },
+    { id:118, name: '旋叶虫',ename:'SpinningLeafBug',attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.1,heightMax:0.15,weightMin:0.1,weightMax:0.85,stage:1,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[119],evolvesFrom:null,desc:'旋转叶片的虫族精灵。',
+        battle: {
+          "trait": "普通系初始形态",
+          "tier": "T3",
+          "recommend": "PVE普通系草系混合过渡。旋叶虫为风滚暮虫前置形态。",
+          "pairing": [
+          "蓬叶虫",
+          "风滚暮虫",
+          "可爱猿"
+          ],
+          "teams": [
+          "普通系过渡"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "叶片斩",
+          "type": "草",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "草系物攻。"
+          },
+          {
+          "name": "普通撞击",
+          "type": "普通",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "普通系基础输出。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸取敌方生命。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "叶片斩",
+          "type": "草",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "草系主攻。"
+          },
+          {
+          "name": "普通撞击",
+          "type": "普通",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "普通系补充。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航吸血。"
+        }
+          ]
+        }
+        }
+    },
     { id:119, name: '蓬叶虫',ename:'FluffyLeafBug',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.119_蓬叶虫（金黄的样子）.webp', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.53,heightMax:0.76,weightMin:0.65,weightMax:1.68,stage:2,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[120],evolvesFrom:118,desc:'叶片蓬松的虫族精灵。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.119_蓬叶虫（金黄的样子）.webp', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.53,heightMax:0.76,weightMin:0.65,weightMax:1.68,stage:2,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:[120],evolvesFrom:118,desc:'叶片蓬松的虫族精灵。',
+        battle: {
+          "trait": "蓬叶虫进阶",
+          "tier": "T3",
+          "recommend": "PVP普通草系中转。属性略高于旋叶虫，等待进化风滚暮虫。",
+          "pairing": [
+          "旋叶虫",
+          "风滚暮虫",
+          "格兰球"
+          ],
+          "teams": [
+          "普通草系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "草系先手物攻。"
+          },
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "草系高威物攻。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "持续吸取生命。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "主攻技能。"
+          },
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "先手选择。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航来源。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站位。"
+        }
+          ]
+        }
+        }
+    },
     { id:120, name: '风滚暮虫',ename:'TumblebugDusk',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.120_风滚暮虫（金黄的样子）.webp', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.6,heightMax:0.7,weightMin:1.45,weightMax:3.43,stage:3,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:null,evolvesFrom:119,desc:'随风滚动的暮色虫族。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.120_风滚暮虫（金黄的样子）.webp', attribute:['normal','bug'],eggGroup:['plant','insect'],heightMin:0.6,heightMax:0.7,weightMin:1.45,weightMax:3.43,stage:3,region:'-',trait:'-',forms:['金黄的样子','枯叶的样子'],evolvesTo:null,evolvesFrom:119,desc:'随风滚动的暮色虫族。',
+        battle: {
+          "trait": "普通系基础形态",
+          "tier": "T3",
+          "recommend": "PVE普通系过渡输出。风滚暮虫无特殊特性，走常规物攻路线。",
+          "pairing": [
+          "迪莫",
+          "帕尔萨斯",
+          "音速犬"
+          ],
+          "teams": [
+          "普通系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "普通撞击",
+          "type": "普通",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "普通系基础物攻。",
+        battle: {
+          "trait": "风滚暮虫终极",
+          "tier": "T2",
+          "recommend": "PVP普通系物攻手。最终形态属性较高，走纯物攻路线。",
+          "pairing": [
+          "旋叶虫",
+          "蓬叶虫",
+          "迪莫"
+          ],
+          "teams": [
+          "普通物攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          " name": "强力撞击",
+          "type": "普通",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "普通系高威物攻。"
+          },
+          {
+          " name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "草系魔法AOE。"
+          },
+          {
+          " name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "持续吸取生命。"
+          },
+          {
+          " name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅提升防御。"
+        }
+          ],
+          "pvp": [
+          {
+          " name": "强力撞击",
+          "type": "普通",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "普通系主力输出。"
+          },
+          {
+          " name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "魔法AOE补盲。"
+          },
+          {
+          " name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航吸血。"
+          },
+          {
+          " name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守保命。"
+        }
+          ]
+        }
+        }
+              },
+          {
+          "name": "沙尘暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地持续伤害。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "虫系群体伤害。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "普通撞击",
+          "type": "普通",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "主攻技能。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场。"
+          },
+          {
+          "name": "沙尘暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "环境压制。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "补盲输出。"
+        }
+          ]
+        }
+        }
+    },
 
     // 黑猫系列 (NO.121~124)
     { id:121, name: '小黑猫',
       image:'https://patchwiki.biligame.com/images/rocom/c/c9/8rrqybxt78i08ws9ztf6iqrhpbf61fi.png',ename:'LittleBlackCat',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.121_小黑猫.webp', attribute:'normal',eggGroup:['animal','humanoid'],heightMin:0.55,heightMax:0.65,weightMin:3.1,weightMax:4.5,stage:1,region:'-',trait: '预警 — 若敌方技能足够击败自己，回合开始时自己获得速度+50。',evolvesTo:[122],evolvesFrom:null,desc:'神秘的黑猫，夜行性很强。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.121_小黑猫.webp', attribute:'normal',eggGroup:['animal','humanoid'],heightMin:0.55,heightMax:0.65,weightMin:3.1,weightMax:4.5,stage:1,region:'-',trait: '预警 — 若敌方技能足够击败自己，回合开始时自己获得速度+50。',evolvesTo:[122],evolvesFrom:null,desc:'神秘的黑猫，夜行性很强。',
+        battle: {
+          "trait": "预警折返速攻",
+          "tier": "T2",
+          "recommend": "PVP普通系预警折返。检测到致命攻击时速度+50先手换人或反击。",
+          "pairing": [
+          "黑猫巫师",
+          "迪莫",
+          "帕尔萨斯"
+          ],
+          "teams": [
+          "预警折返队",
+          "速攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暗影拳",
+          "type": "暗",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "暗系物攻输出。"
+          },
+          {
+          "name": "普通撞击",
+          "type": "普通",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "基础物攻。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "安全退场配合预警。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御避免被秒。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "预警触发+50速安全退场。"
+          },
+          {
+          "name": "暗影拳",
+          "type": "暗",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "暗系主攻。"
+          },
+          {
+          "name": "普通撞击",
+          "type": "普通",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "普攻补刀。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防止预警触发。"
+        }
+          ]
+        }
+        }
+    },
     { id:122, name: '黑猫巫师',
-      image:'https://patchwiki.biligame.com/images/rocom/c/c9/8rrqybxt78i08ws9ztf6iqrhpbf61fi.png',ename:'BlackCatWizard',attribute:'normal',eggGroup:['animal','humanoid','fairy'],heightMin:0.85,heightMax:0.97,weightMin:8.1,weightMax:9.5,stage:2,region:'-',trait: '预警 — 若敌方技能足够击败自己，回合开始时自己获得速度+50。',evolvesTo:[123],evolvesFrom:121,desc:'掌握巫术的黑猫法师。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/c9/8rrqybxt78i08ws9ztf6iqrhpbf61fi.png',ename:'BlackCatWizard',attribute:'normal',eggGroup:['animal','humanoid','fairy'],heightMin:0.85,heightMax:0.97,weightMin:8.1,weightMax:9.5,stage:2,region:'-',trait: '预警 — 若敌方技能足够击败自己，回合开始时自己获得速度+50。',evolvesTo:[123],evolvesFrom:121,desc:'掌握巫术的黑猫法师。',
+        battle: {
+          "trait": "黑猫巫师预警",
+          "tier": "T2",
+          "recommend": "PVP普通系预警中转。进化后属性更高，预警+折返组合更灵活。",
+          "pairing": [
+          "小黑猫",
+          "忽幽狸",
+          "迪莫"
+          ],
+          "teams": [
+          "预警折返队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系魔攻提升。"
+          },
+          {
+          "name": "暗影拳",
+          "type": "暗",
+          "pp": 4,
+          "power": "65(物攻)",
+          "effect": "暗系物攻增强。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "高速退场。"
+          },
+          {
+          "name": "诅咒",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方攻击。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "魔攻主攻。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "预警触发极速退场。"
+          },
+          {
+          "name": "暗影拳",
+          "type": "暗",
+          "pp": 4,
+          "power": "65(物攻)",
+          "effect": "物理选项。"
+          },
+          {
+          "name": "诅咒",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方。"
+        }
+          ]
+        }
+        }
+    },
     { id:123, name: '忽幽狸',
-      image:'https://patchwiki.biligame.com/images/rocom/7/78/2jxh0kfsg1lzfa640r2nyaz03bcr97j.png',ename:'GhostFox',      attribute:['ghost','poison'],eggGroup:['humanoid'],heightMin:0.76,heightMax:1.09,weightMin:8.3,weightMax:9.8,stage:2,region:'-',trait: '下黑手 — 敌方精灵离场后，更换入场的精灵获得5层中毒。',evolvesTo:[124],evolvesFrom:122,desc:'忽隐忽现的狐狸精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/7/78/2jxh0kfsg1lzfa640r2nyaz03bcr97j.png',ename:'GhostFox',      attribute:['ghost','poison'],eggGroup:['humanoid'],heightMin:0.76,heightMax:1.09,weightMin:8.3,weightMax:9.8,stage:2,region:'-',trait: '下黑手 — 敌方精灵离场后，更换入场的精灵获得5层中毒。',evolvesTo:[124],evolvesFrom:122,desc:'忽隐忽现的狐狸精灵。',
+        battle: {
+          "trait": "下黑手毒转场",
+          "tier": "T2",
+          "recommend": "PVP幽灵毒系恶心人。敌方每次换人就吃5层中毒，极大压制换人流。",
+          "pairing": [
+          "黑猫巫师",
+          "裘卡",
+          "紫冥狐"
+          ],
+          "teams": [
+          "毒转场压制队",
+          "幽灵队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系魔攻逼对方换人。"
+          },
+          {
+          "name": "鬼火",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方物攻。"
+          },
+          {
+          "name": "奇异之光",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "混乱敌方。"
+          },
+          {
+          "name": "腐蚀强酸",
+          "type": "毒",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "毒系压血线。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "高压输出逼换人→触发下黑手。"
+          },
+          {
+          "name": "鬼火",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "废掉敌方物攻手。"
+          },
+          {
+          "name": "奇异之光",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "混乱控制。"
+          },
+          {
+          "name": "腐蚀强酸",
+          "type": "毒",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "叠加毒素伤害。"
+        }
+          ]
+        }
+        }
+    },
     { id:124, name: '影狸',
       image:'https://patchwiki.biligame.com/images/rocom/7/78/2jxh0kfsg1lzfa640r2nyaz03bcr97j.png',  ename:'ShadowFox',    attribute:['ghost','poison'],eggGroup:['humanoid'],heightMin:1.11,heightMax:1.59,weightMin:23.5,weightMax:37.5,stage:3,region:'-',trait: '下黑手 — 敌方精灵离场后，更换入场的精灵获得5层中毒。',evolvesTo:null,evolvesFrom:123,desc:'操纵影子的狐狸大师。' },
 
@@ -803,9 +1489,163 @@ const RocoData = {
 
     // 电企鹅系列 (NO.132~133)
     { id:132, name: '小电企鹅',
-      image:'https://patchwiki.biligame.com/images/rocom/d/d6/4seo2uqqap8978sndkvqzoez1nc8nwy.png',ename:'LittleElectricPenguin',attribute:['ice','electric'],eggGroup:['ocean','flying'],heightMin:0.44,heightMax:0.56,weightMin:3.82,weightMax:5.39,stage:1,region:'-',trait: '超负荷 — 攻击技能获得迸发：敌方获得全技能能耗+1。',evolvesTo:[133],evolvesFrom:null,desc:'体内带电的小企鹅。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/d6/4seo2uqqap8978sndkvqzoez1nc8nwy.png',ename:'LittleElectricPenguin',attribute:['ice','electric'],eggGroup:['ocean','flying'],heightMin:0.44,heightMax:0.56,weightMin:3.82,weightMax:5.39,stage:1,region:'-',trait: '超负荷 — 攻击技能获得迸发：敌方获得全技能能耗+1。',evolvesTo:[133],evolvesFrom:null,desc:'体内带电的小企鹅。',
+        battle: {
+          "trait": "超负荷冰电控能",
+          "tier": "T2",
+          "recommend": "PVP冰电系控能型。攻击附带让敌方所有技能能耗+1的debuff，越打越费。",
+          "pairing": [
+          "电企鹅",
+          "酷拉",
+          "闪电鳗鱼"
+          ],
+          "teams": [
+          "冰电控能队",
+          "能耗压制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "电系输出触发超负荷增敌能耗。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "冰系多段输出。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "65(魔攻)",
+          "effect": "电系范围输出。"
+          },
+          {
+          "name": "冰冻之风",
+          "type": "冰",
+          "pp": 4,
+          "power": "50(魔攻)",
+          "effect": "冰系减速+输出。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "每次攻击都让敌方能耗膨胀。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "多段输出多次触发超负荷。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "65(魔攻)",
+          "effect": "AOE全体增能耗。"
+          },
+          {
+          "name": "冰冻之风",
+          "type": "冰",
+          "pp": 4,
+          "power": "50(魔攻)",
+          "effect": "减速控制。"
+        }
+          ]
+        }
+        }
+    },
     { id:133, name: '电企鹅',
-      image:'https://patchwiki.biligame.com/images/rocom/d/d6/4seo2uqqap8978sndkvqzoez1nc8nwy.png',ename:'ElectricPenguin',attribute:['ice','electric'],eggGroup:['ocean','flying'],heightMin:0.9,heightMax:1.14,weightMin:14.6,weightMax:26.9,stage:2,region:'-',trait: '超负荷 — 攻击技能获得迸发：敌方获得全技能能耗+1。',evolvesTo:null,evolvesFrom:132,desc:'释放电流的电企鹅。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/d6/4seo2uqqap8978sndkvqzoez1nc8nwy.png',ename:'ElectricPenguin',attribute:['ice','electric'],eggGroup:['ocean','flying'],heightMin:0.9,heightMax:1.14,weightMin:14.6,weightMax:26.9,stage:2,region:'-',trait: '超负荷 — 攻击技能获得迸发：敌方获得全技能能耗+1。',evolvesTo:null,evolvesFrom:132,desc:'释放电流的电企鹅。',
+        battle: {
+          "trait": "超负荷冰电进阶",
+          "tier": "T2",
+          "recommend": "PVP冰电控能主力。进化后超负荷效果更显著。",
+          "pairing": [
+          "小电企鹅",
+          "闪电鳗鱼",
+          "雪影娃娃"
+          ],
+          "teams": [
+          "冰电队",
+          "能耗压制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "冰系高威AOE触发超负荷。"
+          },
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "75(魔攻)",
+          "effect": "电系主攻。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "范围增能耗。"
+          },
+          {
+          "name": "冰冻打击",
+          "type": "冰",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "冰系物攻。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "高威AOE全员增能耗。"
+          },
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "75(魔攻)",
+          "effect": "单体主攻。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "范围控能。"
+          },
+          {
+          "name": "冰冻打击",
+          "type": "冰",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物理选项。"
+        }
+          ]
+        }
+        }
+    },
 
     // 雪豆丁 → 雪蛮人 → 雪巨人 (NO.134~136)
     { id:134, name: '雪豆丁',
@@ -949,23 +1789,556 @@ const RocoData = {
 
     // 松仔 → 松叶羊 → 针叶巡林 (NO.153~155)
     { id:153, name: '松仔',
-      image:'https://patchwiki.biligame.com/images/rocom/c/ce/mx2ffpj0hb4meeslt3zqap12rr2empf.png',  ename:'PineKid',       attribute:['grass','fighting'],eggGroup:['animal'],heightMin:0.52,heightMax:0.68,weightMin:6.25,weightMax:7.85,stage:1,region:'-',trait: '野性感官 — 应对成功后，下次行动先手+1。',evolvesTo:[154],evolvesFrom:null,desc:'头上顶着松果的小家伙。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/ce/mx2ffpj0hb4meeslt3zqap12rr2empf.png',  ename:'PineKid',       attribute:['grass','fighting'],eggGroup:['animal'],heightMin:0.52,heightMax:0.68,weightMin:6.25,weightMax:7.85,stage:1,region:'-',trait: '野性感官 — 应对成功后，下次行动先手+1。',evolvesTo:[154],evolvesFrom:null,desc:'头上顶着松果的小家伙。',
+        battle: {
+          "trait": "草系先手反击",
+          "tier": "T3",
+          "recommend": "PVE草系过渡。成功应对后获得先手权优势。",
+          "pairing": [
+          "松叶羊",
+          "针叶巡林",
+          "格兰球"
+          ],
+          "teams": [
+          "草系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "叶片斩",
+          "type": "草",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "草系基础物攻。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸取生命续航。"
+          },
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "先手草系攻击。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "叶片斩",
+          "type": "草",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "应对成功后先手+1再放。"
+          },
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "先手草攻。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航恢复。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守应对。"
+        }
+          ]
+        }
+        }
+    },
     { id:154, name: '松叶羊',
-      image:'https://patchwiki.biligame.com/images/rocom/c/ce/mx2ffpj0hb4meeslt3zqap12rr2empf.png',ename:'PineLeafSheep', attribute:['grass','fighting'],eggGroup:['animal'],heightMin:1.08,heightMax:1.33,weightMin:19.09,weightMax:28.06,stage:2,region:'-',trait: '野性感官 — 应对成功后，下次行动先手+1。',evolvesTo:[155],evolvesFrom:153,desc:'松针覆盖身体的羊儿。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/ce/mx2ffpj0hb4meeslt3zqap12rr2empf.png',ename:'PineLeafSheep', attribute:['grass','fighting'],eggGroup:['animal'],heightMin:1.08,heightMax:1.33,weightMin:19.09,weightMax:28.06,stage:2,region:'-',trait: '野性感官 — 应对成功后，下次行动先手+1。',evolvesTo:[155],evolvesFrom:153,desc:'松针覆盖身体的羊儿。',
+        battle: {
+          "trait": "松叶羊进阶",
+          "tier": "T2",
+          "recommend": "PVP草系先手中转。进化后属性提升，野性感官更容易触发先手。",
+          "pairing": [
+          "松仔",
+          "针叶巡林",
+          "抱枕松鼠"
+          ],
+          "teams": [
+          "草系先手队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "草系高威物攻。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "65(魔攻)",
+          "effect": "草系魔攻AOE。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "持续吸血。"
+          },
+          {
+          "name": "甜美香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方双攻。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "先手高威物攻。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "65(魔攻)",
+          "effect": "先手AOE。"
+          },
+          {
+          "name": "甜美香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱后安全应对。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航来源。"
+        }
+          ]
+        }
+        }
+    },
     { id:155, name: '针叶巡林',
-      image:'https://patchwiki.biligame.com/images/rocom/c/ce/mx2ffpj0hb4meeslt3zqap12rr2empf.png',ename:'NeedlePatrol', attribute:['grass','fighting'],eggGroup:['animal'],heightMin:1.86,heightMax:2.14,weightMin:56.8,weightMax:69.02,stage:3,region:'-',trait: '野性感官 — 应对成功后，下次行动先手+1。',evolvesTo:null,evolvesFrom:154,desc:'守护森林的巡林员。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/ce/mx2ffpj0hb4meeslt3zqap12rr2empf.png',ename:'NeedlePatrol', attribute:['grass','fighting'],eggGroup:['animal'],heightMin:1.86,heightMax:2.14,weightMin:56.8,weightMax:69.02,stage:3,region:'-',trait: '野性感官 — 应对成功后，下次行动先手+1。',evolvesTo:null,evolvesFrom:154,desc:'守护森林的巡林员。',
+        battle: {
+          "trait": "针叶巡林草王",
+          "tier": "T2",
+          "recommend": "PVP草系先手核心。最终形态属性优秀，野性感官提供稳定先手机制。",
+          "pairing": [
+          "松叶羊",
+          "抱枕松鼠",
+          "绿耳松鼠"
+          ],
+          "teams": [
+          "草系先手队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "木叶旋风",
+          "type": "草",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "草系超高威物攻必杀。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "草系大范围AOE。"
+          },
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "稳定草系物攻。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "大量吸血续航。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "木叶旋风",
+          "type": "草",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "先手必杀级物攻。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "先手AOE清场。"
+          },
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "稳定主攻。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "恐怖续航量。"
+        }
+          ]
+        }
+        }
+    },
 
     // 小勇狮 → 炽焰狮 → 炽心勇狮 (NO.156~158)
     { id:156, name: '小勇狮',
-      image:'https://patchwiki.biligame.com/images/rocom/a/ae/h52qsm9zkr20bazu590ccljhin1f5ci.png',ename:'BraveLionCub',  attribute:['fire','fighting'],eggGroup:['animal','monster'],heightMin:0.67,heightMax:0.81,weightMin:8.5,weightMax:12.05,stage:1,region:'-',trait: '圣火骑士 — 应对成功后，下次攻击威力翻倍。',evolvesTo:[157],evolvesFrom:null,desc:'勇敢的小狮子幼崽。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/ae/h52qsm9zkr20bazu590ccljhin1f5ci.png',ename:'BraveLionCub',  attribute:['fire','fighting'],eggGroup:['animal','monster'],heightMin:0.67,heightMax:0.81,weightMin:8.5,weightMax:12.05,stage:1,region:'-',trait: '圣火骑士 — 应对成功后，下次攻击威力翻倍。',evolvesTo:[157],evolvesFrom:null,desc:'勇敢的小狮子幼崽。',
+        battle: {
+          "trait": "圣火骑士翻倍",
+          "tier": "T2",
+          "recommend": "PVP火系翻倍输出。成功应对一次后下一次攻击威力×2，爆发潜力极高。",
+          "pairing": [
+          "炽焰狮",
+          "炽心勇狮",
+          "豪炎战神"
+          ],
+          "teams": [
+          "火系翻倍队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "低能耗火系应对用。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "火系物攻应对。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "翻倍后160威爆发！"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方命中率助应对。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "低能耗应对→触发圣火骑士。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "翻倍后140威力爆发。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "应对或翻倍输出皆可。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避助应对成功率。"
+        }
+          ]
+        }
+        }
+    },
     { id:157, name: '炽焰狮',
-      image:'https://patchwiki.biligame.com/images/rocom/a/ae/h52qsm9zkr20bazu590ccljhin1f5ci.png',ename:'BlazeLion',    attribute:['fire','fighting'],eggGroup:['animal','monster'],heightMin:1.12,heightMax:1.45,weightMin:46.02,weightMax:67.05,stage:2,region:'-',trait: '圣火骑士 — 应对成功后，下次攻击威力翻倍。',evolvesTo:[158],evolvesFrom:156,desc:'鬃毛燃烧着烈焰的雄狮。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/ae/h52qsm9zkr20bazu590ccljhin1f5ci.png',ename:'BlazeLion',    attribute:['fire','fighting'],eggGroup:['animal','monster'],heightMin:1.12,heightMax:1.45,weightMin:46.02,weightMax:67.05,stage:2,region:'-',trait: '圣火骑士 — 应对成功后，下次攻击威力翻倍。',evolvesTo:[158],evolvesFrom:156,desc:'鬃毛燃烧着烈焰的雄狮。',
+        battle: {
+          "trait": "炽焰狮进阶",
+          "tier": "T2",
+          "recommend": "PVP火系翻倍中转。进化后属性更高，翻倍伤害更可观。",
+          "pairing": [
+          "小勇狮",
+          "炽心勇狮",
+          "火焰猿"
+          ],
+          "teams": [
+          "火系翻倍队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "翻倍后160威力！"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物攻翻倍选项。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "稳定火系输出。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避辅助。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "翻倍后160威爆发。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物攻翻倍130威。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避助应对。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "常规输出。"
+        }
+          ]
+        }
+        }
+    },
     { id:158, name: '炽心勇狮',
-      image:'https://patchwiki.biligame.com/images/rocom/a/ae/h52qsm9zkr20bazu590ccljhin1f5ci.png',ename:'BlazeHeartBraveLion',attribute:['fire','fighting'],eggGroup:['animal','monster'],heightMin:1.78,heightMax:1.97,weightMin:94.7,weightMax:118.05,stage:3,region:'-',trait: '圣火骑士 — 应对成功后，下次攻击威力翻倍。',evolvesTo:null,evolvesFrom:157,desc:'心中燃着永不熄灭之火的狮子王。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/ae/h52qsm9zkr20bazu590ccljhin1f5ci.png',ename:'BlazeHeartBraveLion',attribute:['fire','fighting'],eggGroup:['animal','monster'],heightMin:1.78,heightMax:1.97,weightMin:94.7,weightMax:118.05,stage:3,region:'-',trait: '圣火骑士 — 应对成功后，下次攻击威力翻倍。',evolvesTo:null,evolvesFrom:157,desc:'心中燃着永不熄灭之火的狮子王。',
+        battle: {
+          "trait": "炽心勇狮火王",
+          "tier": "T1",
+          "recommend": "PVP火系翻倍王牌。最终形态+圣火骑士=单次攻击可达240威力！火系最强爆发之一。",
+          "pairing": [
+          "炽焰狮",
+          "豪炎战神",
+          "武者鸡"
+          ],
+          "teams": [
+          "火系翻倍队",
+          "爆发队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "翻倍后220威力毁灭性必杀。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "翻倍后180威稳定爆发。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "物攻翻倍150威。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避保命等待翻倍时机。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "翻倍220威——火系核弹级别。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "180威稳定爆发。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避等待应对时机。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "物攻选项。"
+        }
+          ]
+        }
+        }
+    },
 
     // 水滴蛇系列 (NO.159~161)
     { id:159, name: '水滴蛇',
-      image:'https://patchwiki.biligame.com/images/rocom/f/f5/77ajklz8fw3oeg6kncdco7txsg5jtv0.png',ename:'WaterDropSnake',attribute:['water','fighting'],eggGroup:['amphibian','fairy'],heightMin:0.53,heightMax:0.69,weightMin:2.25,weightMax:4.1,stage:1,region:'-',trait: '思维之盾 — 应对成功后，下次行动技能能耗-5。',evolvesTo:[160],evolvesFrom:null,desc:'身体如水滴般晶莹的小蛇。' },
+      image:'https://patchwiki.biligame.com/images/rocom/f/f5/77ajklz8fw3oeg6kncdco7txsg5jtv0.png',ename:'WaterDropSnake',attribute:['water','fighting'],eggGroup:['amphibian','fairy'],heightMin:0.53,heightMax:0.69,weightMin:2.25,weightMax:4.1,stage:1,region:'-',trait: '思维之盾 — 应对成功后，下次行动技能能耗-5。',evolvesTo:[160],evolvesFrom:null,desc:'身体如水滴般晶莹的小蛇。',
+        battle: {
+          "trait": "思维之盾降耗",
+          "tier": "T2",
+          "recommend": "PVP水系降耗型。应对成功后下次技能能耗直降5点，大招变平A。",
+          "pairing": [
+          "蓝漪水灵",
+          "风铃鲨",
+          "深蓝鲸"
+          ],
+          "teams": [
+          "水系降耗队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "应对后下次能耗极低。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "降耗后几乎免费的大招。"
+          },
+          {
+          "name": "泡泡围困",
+          "type": "水",
+          "pp": 3,
+          "power": "50(魔攻)",
+          "effect": "控制+应对。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御应对。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "降耗后接近0能耗的95威大招。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "降耗后连发神器。"
+          },
+          {
+          "name": "泡泡围困",
+          "type": "水",
+          "pp": 3,
+          "power": "50(魔攻)",
+          "effect": "控制+应对双重作用。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御应对触发思维之盾。"
+        }
+          ]
+        }
+        }
+    },
     { id:160, name: '水蛇锁',
       image:'https://patchwiki.biligame.com/images/rocom/f/f5/77ajklz8fw3oeg6kncdco7txsg5jtv0.png',ename:'WaterSnakeLock',attribute:['water','fighting'],eggGroup:['amphibian','fairy'],heightMin:0.94,heightMax:1.2,weightMin:18.07,weightMax:27.05,stage:2,region:'-',trait: '思维之盾 — 应对成功后，下次行动技能能耗-5。',evolvesTo:[161],evolvesFrom:159,desc:'身体盘绕如锁链的蛇类精灵。' },
     { id:161, name: '游蛇魔使',
@@ -1012,25 +2385,558 @@ const RocoData = {
     // 圆眼蜘蛛进化链 (NO.168~170)
     { id:168, name: '圆眼蜘蛛',
       image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'RoundEyedSpider',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.168_圆眼蜘蛛.webp',attribute:'bug',eggGroup:['insect'],heightMin:0.48,heightMax:0.68,weightMin:3.5,weightMax:5.0,stage:1,region:'-',trait: '毒腺 — 使用能耗小于等于1的技能时，敌方获得4层中毒。',evolvesTo:[169],evolvesFrom:null,desc:'有着圆圆大眼睛的小蜘蛛。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.168_圆眼蜘蛛.webp',attribute:'bug',eggGroup:['insect'],heightMin:0.48,heightMax:0.68,weightMin:3.5,weightMax:5.0,stage:1,region:'-',trait: '毒腺 — 使用能耗小于等于1的技能时，敌方获得4层中毒。',evolvesTo:[169],evolvesFrom:null,desc:'有着圆圆大眼睛的小蜘蛛。',
+        battle: {
+          "trait": "毒腺幼蛛",
+          "tier": "T3",
+          "recommend": "PVE虫毒过渡形态。芋香巨角蛛的前置体，毒腺机制一致。",
+          "pairing": [
+          "芋香巨角蛛",
+          "黄蜂后",
+          "花影羚羊"
+          ],
+          "teams": [
+          "虫毒过渡队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "35(物攻)",
+          "effect": "低能耗叠毒。"
+          },
+          {
+          "name": "蛛丝缠绕",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方速度。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "虫群集体攻击。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "35(物攻)",
+          "effect": "低能耗触发毒腺叠4层毒。"
+          },
+          {
+          "name": "蛛丝缠绕",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "减速控制。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "补盲输出。"
+        }
+          ]
+        }
+        }
+    },
     { id:169, name: '尖角蜘蛛',
       image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'HornedSpider',  attribute:['bug','poison'],eggGroup:['insect'],heightMin:0.68,heightMax:0.98,weightMin:7.75,weightMax:9.6,stage:2,region:'-',trait: '毒腺 — 使用能耗小于等于1的技能时，敌方获得4层中毒。',evolvesTo:[170],evolvesFrom:168,desc:'头上长出尖角。' },
     { id:170, name: '芋香巨角蛛',
-      image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'TaroHornedSpider',attribute:['bug','poison'],eggGroup:['insect'],heightMin:0.9,heightMax:1.29,weightMin:31.75,weightMax:43.6,stage:3,region:'-',trait: '毒腺 — 使用能耗小于等于1的技能时，敌方获得4层中毒。',evolvesTo:null,evolvesFrom:169,desc:'散发芋头香味的大型蜘蛛。' },
+      image:'https://patchwiki.biligame.com/images/rocom/5/58/rjtkumy4o5iea035omnat6k7rsy4gpj.png',ename:'TaroHornedSpider',attribute:['bug','poison'],eggGroup:['insect'],heightMin:0.9,heightMax:1.29,weightMin:31.75,weightMax:43.6,stage:3,region:'-',trait: '毒腺 — 使用能耗小于等于1的技能时，敌方获得4层中毒。',evolvesTo:null,evolvesFrom:169,desc:'散发芋头香味的大型蜘蛛。',
+        battle: {
+          "trait": "毒腺低能耗叠毒",
+          "tier": "T2",
+          "recommend": "PVP虫毒控制流。使用能耗≤1的技能给敌方叠4层中毒，低成本控场。",
+          "pairing": [
+          "圆眼蜘蛛",
+          "黄蜂后",
+          "花影羚羊"
+          ],
+          "teams": [
+          "虫毒队",
+          "低能耗控制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "低能耗毒系攻击触发毒腺。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "高威力毒系物攻。"
+          },
+          {
+          "name": "蛛网束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "限制敌方行动。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "全场施加中毒。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "核心触发技——0/1能耗叠4层毒！"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "高威追击收割。"
+          },
+          {
+          "name": "蛛网束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "控制敌方无法换人。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "铺毒铺垫。"
+        }
+          ]
+        }
+        }
+    },
 
     // 波波螺系列 (NO.171~173)
     { id:171, name: '波波螺',
-      image:'https://patchwiki.biligame.com/images/rocom/0/00/n1wjd2lnqi3s5qqgpetirog1lcu6y3o.png',ename:'WaveSnail',    attribute:['ground','water'],eggGroup:['amphibian','mineral'],heightMin:0.32,heightMax:0.42,weightMin:4.85,weightMax:5.65,stage:1,region:'-',trait: '消波块 — 每携带1个水系技能进入战斗，地系技能能耗-1。',forms:['被污染的样子'],evolvesTo:[172],evolvesFrom:null,desc:'随波浪起伏的小螺蛳。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/00/n1wjd2lnqi3s5qqgpetirog1lcu6y3o.png',ename:'WaveSnail',    attribute:['ground','water'],eggGroup:['amphibian','mineral'],heightMin:0.32,heightMax:0.42,weightMin:4.85,weightMax:5.65,stage:1,region:'-',trait: '消波块 — 每携带1个水系技能进入战斗，地系技能能耗-1。',forms:['被污染的样子'],evolvesTo:[172],evolvesFrom:null,desc:'随波浪起伏的小螺蛳。',
+        battle: {
+          "trait": "消波块地系降耗",
+          "tier": "T2",
+          "recommend": "PVE地水混合降耗。携带水系技能越多，地系技能能耗越低。",
+          "pairing": [
+          "消波螺",
+          "嗜波螺",
+          "蓝漪水灵"
+          ],
+          "teams": [
+          "地水联攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "地系主攻，带水技能后低能耗。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "水系输出同时触发消波块。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+          },
+          {
+          "name": "沙尘暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地伤害。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "核心输出——消波块降低地系能耗。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "水系副输出+触发特性。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场。"
+          },
+          {
+          "name": "沙尘暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "环境压制。"
+        }
+          ]
+        }
+        }
+    },
     { id:172, name: '消波螺',
-      image:'https://patchwiki.biligame.com/images/rocom/0/00/n1wjd2lnqi3s5qqgpetirog1lcu6y3o.png',ename:'WaveCancellingSnail',attribute:['ground','water'],eggGroup:['amphibian','mineral'],heightMin:0.68,heightMax:0.82,weightMin:46.5,weightMax:69.9,stage:2,region:'-',trait: '消波块 — 每携带1个水系技能进入战斗，地系技能能耗-1。',forms:['被污染的样子'],evolvesTo:[173],evolvesFrom:171,desc:'能消除波浪力量的螺类。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/00/n1wjd2lnqi3s5qqgpetirog1lcu6y3o.png',ename:'WaveCancellingSnail',attribute:['ground','water'],eggGroup:['amphibian','mineral'],heightMin:0.68,heightMax:0.82,weightMin:46.5,weightMax:69.9,stage:2,region:'-',trait: '消波块 — 每携带1个水系技能进入战斗，地系技能能耗-1。',forms:['被污染的样子'],evolvesTo:[173],evolvesFrom:171,desc:'能消除波浪力量的螺类。',
+        battle: {
+          "trait": "消波块进阶",
+          "tier": "T2",
+          "recommend": "PVP地水混合中转。进化后属性提升，消波块效果更强。",
+          "pairing": [
+          "波波螺",
+          "嗜波螺",
+          "深蓝鲸"
+          ],
+          "teams": [
+          "地水联攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "地系物攻增强。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威水系必杀。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "地系魔攻。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威爆发+触发消波块。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物攻选择。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "地系稳定输出。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守。"
+        }
+          ]
+        }
+        }
+    },
     { id:173, name: '嗜波螺',
-      image:'https://patchwiki.biligame.com/images/rocom/0/00/n1wjd2lnqi3s5qqgpetirog1lcu6y3o.png',ename:'WaveDevourerSnail',attribute:['ground','water'],eggGroup:['amphibian','mineral'],heightMin:1.2,heightMax:1.6,weightMin:86.8,weightMax:113.0,stage:3,region:'-',trait: '消波块 — 每携带1个水系技能进入战斗，地系技能能耗-1。',forms:['被污染的样子'],evolvesTo:null,evolvesFrom:172,desc:'嗜吞噬波浪的巨型螺类。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/00/n1wjd2lnqi3s5qqgpetirog1lcu6y3o.png',ename:'WaveDevourerSnail',attribute:['ground','water'],eggGroup:['amphibian','mineral'],heightMin:1.2,heightMax:1.6,weightMin:86.8,weightMax:113.0,stage:3,region:'-',trait: '消波块 — 每携带1个水系技能进入战斗，地系技能能耗-1。',forms:['被污染的样子'],evolvesTo:null,evolvesFrom:172,desc:'嗜吞噬波浪的巨型螺类。',
+        battle: {
+          "trait": "消波块终极形态",
+          "tier": "T1",
+          "recommend": "PVP地水双修王牌。最终形态+满水系技能=地系几乎零能耗。",
+          "pairing": [
+          "消波螺",
+          "波波螺",
+          "圣剑-X"
+          ],
+          "teams": [
+          "地水王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "地震",
+          "type": "地",
+          "pp": 3,
+          "power": "100(物攻)",
+          "effect": "地系超高威物攻必杀！"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "水系对等威力必杀。"
+          },
+          {
+          "name": "岩石风暴",
+          "type": "岩",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "岩系AOE输出。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅防御。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "地震",
+          "type": "地",
+          "pp": 3,
+          "power": "100(物攻)",
+          "effect": "消波块加持下低能耗100威物攻核弹。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "水系爆发。"
+          },
+          {
+          "name": "岩石风暴",
+          "type": "岩",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "AOE补盲。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "生存保障。"
+        }
+          ]
+        }
+        }
+    },
 
     // 菇菇丁系列 (NO.174~176)
     { id:174, name: '菇菇丁',
-      image:'https://patchwiki.biligame.com/images/rocom/d/df/t98utjcp899ymqdm8bvpapuoajiri1k.png',ename:'MushroomBaby',  attribute:['ground','grass'],eggGroup:['plant'],heightMin:0.25,heightMax:0.35,weightMin:1.1,weightMax:2.76,stage:1,region:'-',trait: '多人宿舍 — 自己的能量可以超过能量上限。',evolvesTo:[175],evolvesFrom:null,desc:'最小的蘑菇精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/df/t98utjcp899ymqdm8bvpapuoajiri1k.png',ename:'MushroomBaby',  attribute:['ground','grass'],eggGroup:['plant'],heightMin:0.25,heightMax:0.35,weightMin:1.1,weightMax:2.76,stage:1,region:'-',trait: '多人宿舍 — 自己的能量可以超过能量上限。',evolvesTo:[175],evolvesFrom:null,desc:'最小的蘑菇精灵。',
+        battle: {
+          "trait": "超能宿舍储能",
+          "tier": "T2",
+          "recommend": "PVP地系储能型。能量可超出上限意味着能连续放大招，非常灵活。",
+          "pairing": [
+          "多菇丁",
+          "嗜波螺",
+          "迪莫"
+          ],
+          "teams": [
+          "储能队",
+          "地系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "地系基础输出。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "岩系物攻。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升攒能量。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化自身。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "超能量后可连续释放多次。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "物攻选项。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "快速堆能量超上限。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后爆发。"
+        }
+          ]
+        }
+        }
+    },
     { id:175, name: '多菇丁',
-      image:'https://patchwiki.biligame.com/images/rocom/d/df/t98utjcp899ymqdm8bvpapuoajiri1k.png',ename:'MultiMushroom',attribute:['ground','grass'],eggGroup:['plant'],heightMin:0.6,heightMax:0.7,weightMin:5.4,weightMax:6.8,stage:2,region:'-',trait: '多人宿舍 — 自己的能量可以超过能量上限。',evolvesTo:[176],evolvesFrom:174,desc:'身上长满多个蘑菇头。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/df/t98utjcp899ymqdm8bvpapuoajiri1k.png',ename:'MultiMushroom',attribute:['ground','grass'],eggGroup:['plant'],heightMin:0.6,heightMax:0.7,weightMin:5.4,weightMax:6.8,stage:2,region:'-',trait: '多人宿舍 — 自己的能量可以超过能量上限。',evolvesTo:[176],evolvesFrom:174,desc:'身上长满多个蘑菇头。',
+        battle: {
+          "trait": "多菇丁进阶",
+          "tier": "T2",
+          "recommend": "PVP地系储能主力。进化后能量池更大，连发能力更强。",
+          "pairing": [
+          "菇菇丁",
+          "嗜波螺"
+          ],
+          "teams": [
+          "储能队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          " name": "岩石风暴",
+          "type": "岩",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "岩系AOE输出。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "地系魔攻增强。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "岩系物攻。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升。"
+        }
+          ],
+          "pvp": [
+          {
+          " name": "岩石风暴",
+          "type": "岩",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "AOE连发神器——多人宿舍允许超限能量。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "单体主攻。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物理备选。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "快速充能。"
+        }
+          ]
+        }
+        }
+    },
     { id:176, name: '九幽菇',
       image:'https://patchwiki.biligame.com/images/rocom/d/df/t98utjcp899ymqdm8bvpapuoajiri1k.png',ename:'NineDarkMushroom',attribute:['ground','grass'],eggGroup:['plant'],heightMin:1.55,heightMax:1.65,weightMin:42.0,weightMax:58.0,stage:3,region:'-',trait: '多人宿舍 — 自己的能量可以超过能量上限。',evolvesTo:null,evolvesFrom:175,desc:'来自九幽深处的神秘蘑菇。' },
 
@@ -1115,30 +3021,715 @@ const RocoData = {
     { id:189, name: '棋骑士',ename: 'ChessKnight',
       image:'https://rocom.game-walkthrough.com/pokemon/NO.189_棋骑士（白子）.webp',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:43.06,weightMax:60.09, stage: 2, region: '-', trait: '腾挪 — 攻击技能应对1次后，回满状态，变为棋绮后。', forms: ['白子', '黑子'], evolvesTo: [190,191,192], evolvesFrom: 188, desc: '骑士棋子的进化，可向多个职业发展。' },
     { id:190, name: '棋齐垒',ename: 'ChessFortress',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.190_棋齐垒（白子）.webp', attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.45,heightMax:1.71,weightMin:58.01,weightMax:70.05, stage: 3, region: '-', trait: '保卫 — 防御技能应对2次后，回满状态，变为棋绮后。', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '堡垒型的棋子战士。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.190_棋齐垒（白子）.webp', attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.45,heightMax:1.71,weightMin:58.01,weightMax:70.05, stage: 3, region: '-', trait: '保卫 — 防御技能应对2次后，回满状态，变为棋绮后。', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '堡垒型的棋子战士。',
+        battle: {
+          "trait": "保卫变身防御",
+          "tier": "T2",
+          "recommend": "PVP武系坦克。防御技能成功应对2次后满血变身棋绮，无限循环。",
+          "pairing": [
+          "武者鸡",
+          "豪炎战神",
+          "圣剑-X"
+          ],
+          "teams": [
+          "武系坦克队",
+          "变身流"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "岩系物攻作为防御应对。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅提升防御触发保卫。"
+          },
+          {
+          "name": "十字劈",
+          "type": "武",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "武系高威物攻。"
+          },
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升双防强化生存。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御应对触发保卫计数。"
+          },
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "双防提升增加容错。"
+          },
+          {
+          "name": "十字劈",
+          "type": "武",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "变身后的主力输出。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物理副输出。"
+        }
+          ]
+        }
+        }
+    },
     { id:191, name: '棋祈督',ename: 'ChessBishop',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.191_棋祈督（白子）.webp',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:38.07,weightMax:47.05, stage: 3, region: '-', trait: '好象坏象 — 状态技能应对1次后，回满状态，变为棋绮后。', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '主教型的棋子法师。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.191_棋祈督（白子）.webp',  attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:0.98,heightMax:1.35,weightMin:38.07,weightMax:47.05, stage: 3, region: '-', trait: '好象坏象 — 状态技能应对1次后，回满状态，变为棋绮后。', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '主教型的棋子法师。',
+        battle: {
+          "trait": "好象坏象变身",
+          "tier": "T1",
+          "recommend": "PVP武系状态变身坦克。状态技能应对成功1次就回满变棋绮后，无限循环！",
+          "pairing": [
+          "棋绮后",
+          "武者鸡",
+          "棋齐垒"
+          ],
+          "teams": [
+          "武系变身队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升双防触发好象坏象计数。"
+          },
+          {
+          "name": "十字劈",
+          "type": "武",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "变身后的主攻。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物攻补充。"
+          },
+          {
+          "name": "冥想",
+          "type": "超能",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升特防应对。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御应对→触发好象坏象→回满变棋绮。"
+          },
+          {
+          "name": "十字劈",
+          "type": "武",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "变身后主力输出。"
+          },
+          {
+          "name": "冥想",
+          "type": "超能",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防提升增加应对成功率。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物攻补刀。"
+        }
+          ]
+        }
+        }
+    },
     { id:192, name: '棋绮后',ename: 'ChessQueen',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.192_棋绮后（白子）.webp',   attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.66,heightMax:1.81,weightMin:30.01,weightMax:41.02, stage: 3, region: '-', trait: '渗透 — 己方精灵每使用1次武系或地系技能，自己入场时获得攻防+5%。', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '女王型的最强棋子精灵。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.192_棋绮后（白子）.webp',   attribute: ['fighting','ground'],eggGroup: ['fairy'], heightMin:1.66,heightMax:1.81,weightMin:30.01,weightMax:41.02, stage: 3, region: '-', trait: '渗透 — 己方精灵每使用1次武系或地系技能，自己入场时获得攻防+5%。', forms: ['白子', '黑子'], evolvesTo: null, evolvesFrom: 189, desc: '女王型的最强棋子精灵。',
+        battle: {
+          "trait": "渗透叠加增伤",
+          "tier": "T1",
+          "recommend": "PVP武系渗透叠伤王牌。队友频繁使用武/地技能=自己入场时攻防越来越高。",
+          "pairing": [
+          "棋祈督",
+          "炽心勇狮",
+          "豪炎战神"
+          ],
+          "teams": [
+          "武地渗透队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          " name": "十字劈",
+          "type": "武",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "武系高威物攻——渗透加成后更高！"
+          },
+          {
+          "name": "地震",
+          "type": "地",
+          "pp": 3,
+          "power": "95(物攻)",
+          "effect": "地系超高威物攻同样享受渗透。"
+          },
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "自身强化。"
+          },
+          {
+          "name": "硬撑",
+          "type": "普通",
+          "pp": 3,
+          "power": "50(物攻)",
+          "effect": "低能耗应对触发渗透计数。"
+        }
+          ],
+          "pvp": [
+          {
+          " name": "地震",
+          "type": "地",
+          "pp": 3,
+          "power": "95(物攻)",
+          "effect": "渗透叠满后一击必杀级伤害。"
+          },
+          {
+          "name": "十字劈",
+          "type": "武",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "武系主攻同样享受渗透。"
+          },
+          {
+          "name": "硬撑",
+          "type": "普通",
+          "pp": 3,
+          "power": "50(物攻)",
+          "effect": "低成本应对给队友叠渗透层数。"
+          },
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "自我强化。"
+        }
+          ]
+        }
+        }
+    },
 
     // 奔波鼠 → 流浪鼠 (NO.193~194)
     { id:193, name: '奔波鼠',
       image:'https://patchwiki.biligame.com/images/rocom/d/d0/qc6wa2f2bpo8uv28uf5hmgw5lmy3evv.png',ename: 'RunningMouse',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.193_奔波鼠.webp',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.46,heightMax:0.6,weightMin:3.71,weightMax:6.4, stage: 1, region: '-', trait: '奔波命 — 使用防御技能后，回合结束时脱离。', evolvesTo: [194], evolvesFrom: null, desc: '四处奔波的小老鼠。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.193_奔波鼠.webp',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.46,heightMax:0.6,weightMin:3.71,weightMax:6.4, stage: 1, region: '-', trait: '奔波命 — 使用防御技能后，回合结束时脱离。', evolvesTo: [194], evolvesFrom: null, desc: '四处奔波的小老鼠。',
+        battle: {
+          "trait": "奔波命折返",
+          "tier": "T2",
+          "recommend": "PVP地系折返型。使用防御技能后自动脱离——完美的换人节点控制者。",
+          "pairing": [
+          "流浪鼠",
+          "迪莫",
+          "帕尔萨斯"
+          ],
+          "teams": [
+          "折返控制队",
+          "地系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御后自动脱离换人。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "地系输出。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "主动安全退场。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后防御脱离。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御→回合末自动脱离（奔波命核心）。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "主动退场配合奔波命。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "出场时打一套再脱离。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后再防御脱离。"
+        }
+          ]
+        }
+        }
+    },
     { id:194, name: '流浪鼠',
-      image:'https://patchwiki.biligame.com/images/rocom/d/d0/qc6wa2f2bpo8uv28uf5hmgw5lmy3evv.png',ename: 'WanderMouse',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.88,heightMax:1.23,weightMin:59.6,weightMax:74.3, stage: 2, region: '-', trait: '奔波命 — 使用防御技能后，回合结束时脱离。', evolvesTo: null, evolvesFrom: 193, desc: '流浪天涯的鼠族精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/d0/qc6wa2f2bpo8uv28uf5hmgw5lmy3evv.png',ename: 'WanderMouse',  attribute: 'ground',eggGroup: ['animal'], heightMin:0.88,heightMax:1.23,weightMin:59.6,weightMax:74.3, stage: 2, region: '-', trait: '奔波命 — 使用防御技能后，回合结束时脱离。', evolvesTo: null, evolvesFrom: 193, desc: '流浪天涯的鼠族精灵。',
+        battle: {
+          "trait": "流浪鼠进阶",
+          "tier": "T2",
+          "recommend": "PVP奔波命中转主力。进化后属性更高，折返控制更稳。",
+          "pairing": [
+          "奔波鼠",
+          "绒光优优"
+          ],
+          "teams": [
+          "折返控制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          " name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "岩系物攻。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "地系魔攻。"
+          },
+          {
+          " name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御触发奔波命脱离。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "主动退场。"
+        }
+          ],
+          "pvp": [
+          {
+          " name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御后自动脱离——完美中转。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "物攻输出。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "主动退场。"
+          },
+          {
+          "name": "流沙",
+          "type": "地",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "魔攻选择。"
+        }
+          ]
+        }
+        }
+    },
 
     // 呆小路 → 舞动路路 → 白发路路 (NO.195~197)
     { id:195, name: '呆小路',
-      image:'https://patchwiki.biligame.com/images/rocom/b/be/4zu0yqt23bt4cva2bswky1q5ivje1tw.png',ename: 'DullLuLu',     attribute: ['grass','cute'],eggGroup: ['animal','humanoid'], heightMin:0.58,heightMax:0.83,weightMin:4.5,weightMax:5.8, stage: 1, region: '-', trait: '营养液泡 — 获得增益时，额外获得层数+2。', evolvesTo: [196], evolvesFrom: null, desc: '呆萌的小鹿精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/b/be/4zu0yqt23bt4cva2bswky1q5ivje1tw.png',ename: 'DullLuLu',     attribute: ['grass','cute'],eggGroup: ['animal','humanoid'], heightMin:0.58,heightMax:0.83,weightMin:4.5,weightMax:5.8, stage: 1, region: '-', trait: '营养液泡 — 获得增益时，额外获得层数+2。', evolvesTo: [196], evolvesFrom: null, desc: '呆萌的小鹿精灵。',
+        battle: {
+          "trait": "营养液泡增益放大",
+          "tier": "T2",
+          "recommend": "PVE草系增益放大。每次增益额外+2层=Buff效率翻倍以上。",
+          "pairing": [
+          "舞动路路",
+          "格兰球",
+          "针叶巡林"
+          ],
+          "teams": [
+          "草增益队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "草系先手攻击。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸取生命（持续增益）。"
+          },
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "双防提升触发营养液泡。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化自身大幅触发营养液泡。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "核心——强化时营养液泡额外+2层增益！"
+          },
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "增益后高层数输出。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航来源。"
+          },
+          {
+          "name": "健美",
+          "type": "武",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御增益触发营养液泡。"
+        }
+          ]
+        }
+        }
+    },
     { id:196, name: '舞动路路',
-      image:'https://patchwiki.biligame.com/images/rocom/b/be/4zu0yqt23bt4cva2bswky1q5ivje1tw.png',ename: 'DanceLuLu',    attribute: ['grass','cute'],eggGroup: ['animal','humanoid'], heightMin:0.69,heightMax:0.99,weightMin:7.4,weightMax:9.1, stage: 2, region: '-', trait: '营养液泡 — 获得增益时，额外获得层数+2。', evolvesTo: [197], evolvesFrom: 195, desc: '喜欢跳舞的路路。' },
+      image:'https://patchwiki.biligame.com/images/rocom/b/be/4zu0yqt23bt4cva2bswky1q5ivje1tw.png',ename: 'DanceLuLu',    attribute: ['grass','cute'],eggGroup: ['animal','humanoid'], heightMin:0.69,heightMax:0.99,weightMin:7.4,weightMax:9.1, stage: 2, region: '-', trait: '营养液泡 — 获得增益时，额外获得层数+2。', evolvesTo: [197], evolvesFrom: 195, desc: '喜欢跳舞的路路。',
+        battle: {
+          "trait": "舞动路路进阶",
+          "tier": "T2",
+          "recommend": "PVP草系增益中转。进化后属性更高，增益叠加更快。",
+          "pairing": [
+          "呆小路",
+          "白发路路",
+          "格兰球"
+          ],
+          "teams": [
+          "草增益队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "草系物攻增强。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "60(魔攻)",
+          "effect": "草系AOE。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅强化触发营养液泡。"
+          },
+          {
+          "name": "甜美香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方也是给自己叠buff。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后层数爆炸式增长。"
+          },
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "高层数增益后输出爆表。"
+          },
+          {
+          "name": "甜美香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方同时触发营养液泡。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "60(魔攻)",
+          "effect": "AOE清场。"
+        }
+          ]
+        }
+        }
+    },
     { id:197, name: '白发路路',
-      image:'https://patchwiki.biligame.com/images/rocom/b/be/4zu0yqt23bt4cva2bswky1q5ivje1tw.png',ename: 'WhiteHairLuLu',attribute: ['grass','cute'],eggGroup: ['animal','humanoid'], heightMin:0.89,heightMax:1.27,weightMin:15.5,weightMax:21.6, stage: 3, region: '-', trait: '营养液泡 — 获得增益时，额外获得层数+2。', evolvesTo: null, evolvesFrom: 196, desc: '白发苍苍的路路长者。' },
+      image:'https://patchwiki.biligame.com/images/rocom/b/be/4zu0yqt23bt4cva2bswky1q5ivje1tw.png',ename: 'WhiteHairLuLu',attribute: ['grass','cute'],eggGroup: ['animal','humanoid'], heightMin:0.89,heightMax:1.27,weightMin:15.5,weightMax:21.6, stage: 3, region: '-', trait: '营养液泡 — 获得增益时，额外获得层数+2。', evolvesTo: null, evolvesFrom: 196, desc: '白发苍苍的路路长者。',
+        battle: {
+          "trait": "白发路路草王",
+          "tier": "T1",
+          "recommend": "PVP草系增益终极形态。营养液泡让每个增益都翻倍生效，后期属性膨胀恐怖。",
+          "pairing": [
+          "舞动路路",
+          "针叶巡林",
+          "绿耳松鼠"
+          ],
+          "teams": [
+          "草增益王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "木叶旋风",
+          "type": "草",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "草系超高威物攻必杀。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "大范围AOE。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "核心强化技——营养液泡×2层数。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "大量吸血续航。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "木叶旋风",
+          "type": "草",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "满增益后一击必杀。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "每次强化=正常2倍以上的增益层数！"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "高层数AOE。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "恐怖吸血量。"
+        }
+          ]
+        }
+        }
+    },
 
     // 逗逗 → 气球猫 → 梦想三三 (NO.198~200)
     { id:198, name: '逗逗',
-      image:'https://patchwiki.biligame.com/images/rocom/2/27/5mkpc1wb4947ua7m9efws2u0sdgfgvq.png',  ename: 'DouDou',       attribute: 'cute',eggGroup: ['monster','fairy'], heightMin:0.3,heightMax:0.4,weightMin:0.45,weightMax:1.53, stage: 1, region: '-', trait: '鼓气 — 使用能耗为3的技能时，获得攻防+20%。', evolvesTo: [199], evolvesFrom: null, desc: '爱逗人开心的精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/2/27/5mkpc1wb4947ua7m9efws2u0sdgfgvq.png',  ename: 'DouDou',       attribute: 'cute',eggGroup: ['monster','fairy'], heightMin:0.3,heightMax:0.4,weightMin:0.45,weightMax:1.53, stage: 1, region: '-', trait: '鼓气 — 使用能耗为3的技能时，获得攻防+20%。', evolvesTo: [199], evolvesFrom: null, desc: '爱逗人开心的精灵。',
+        battle: {
+          "trait": "鼓气萌系成长",
+          "tier": "T2",
+          "recommend": "PVP萌系成长型。每用一个3能耗技能就获得攻防+20%，越打越强。",
+          "pairing": [
+          "古钟蛇",
+          "寒音蛇",
+          "艾莉儿"
+          ],
+          "teams": [
+          "萌系成长队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "治愈之光",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "治疗队友+触发鼓气攻防+20%。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方+鼓气成长。"
+          },
+          {
+          "name": "祈愿",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复生命+鼓气成长。"
+          },
+          {
+          "name": "光之壁",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防提升+鼓气成长。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "治愈之光",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "3能耗完美触发鼓气+攻防20%。"
+          },
+          {
+          "name": "光之壁",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防提升+鼓气双重收益。"
+          },
+          {
+          "name": "祈愿",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航+鼓气成长。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱+鼓气叠加。"
+        }
+          ]
+        }
+        }
+    },
     { id:199, name: '气球猫',
       image:'https://patchwiki.biligame.com/images/rocom/2/27/5mkpc1wb4947ua7m9efws2u0sdgfgvq.png',ename: 'BalloonCat',   attribute: 'cute',eggGroup: ['animal','fairy'], heightMin:0.41,heightMax:0.59,weightMin:0.95,weightMax:2.15, stage: 2, region: '-', trait: '鼓气 — 使用能耗为3的技能时，获得攻防+20%。', evolvesTo: [200], evolvesFrom: 198, desc: '像气球一样飘浮的猫咪。' },
     { id:200, name: '梦想三三',
@@ -1194,27 +3785,635 @@ const RocoData = {
 
     // 小箱怪 → 迷迷箱怪 (NO.210~211)
     { id:210, name: '小箱怪',
-      image:'https://patchwiki.biligame.com/images/rocom/0/0a/ocy3pzt2cn0mmx85cm8is2ulwy8s2ii.png',ename: 'LittleBoxMonster',attribute:['machine','illusion'],eggGroup:['fairy'],heightMin:0.34,heightMax:0.46,weightMin:4.45,weightMax:6.81,stage:1,region:'-',trait: '虚假宝箱 — 自己力竭时，敌方获得攻防+20%。',evolvesTo:[211],evolvesFrom:null,desc:'像小箱子一样的怪物。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/0a/ocy3pzt2cn0mmx85cm8is2ulwy8s2ii.png',ename: 'LittleBoxMonster',attribute:['machine','illusion'],eggGroup:['fairy'],heightMin:0.34,heightMax:0.46,weightMin:4.45,weightMax:6.81,stage:1,region:'-',trait: '虚假宝箱 — 自己力竭时，敌方获得攻防+20%。',evolvesTo:[211],evolvesFrom:null,desc:'像小箱子一样的怪物。',
+        battle: {
+          "trait": "虚假宝箱诅咒",
+          "tier": "T3",
+          "recommend": "PVP机械献祭流。自己力竭时敌方获得攻防+20%——看似负面实则为队友创造机会。",
+          "pairing": [
+          "声波缇塔",
+          "贝古斯",
+          "圣剑-X"
+          ],
+          "teams": [
+          "机械献祭队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方特防。"
+          },
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "机械系物攻输出。"
+          },
+          {
+          "name": "自爆",
+          "type": "普通",
+          "pp": 3,
+          "power": "150(物攻)",
+          "effect": "超高威力但自身力竭触发虚假宝箱。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御多撑回合。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "自爆",
+          "type": "普通",
+          "pp": 3,
+          "power": "150(物攻)",
+          "effect": "核弹级输出+触发虚假宝箱buff。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防铺垫自爆伤害。"
+          },
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "常规输出。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "延长存活时间。"
+        }
+          ]
+        }
+        }
+    },
     { id:211, name: '迷迷箱怪',
-      image:'https://patchwiki.biligame.com/images/rocom/0/0a/ocy3pzt2cn0mmx85cm8is2ulwy8s2ii.png',ename: 'MysteryBoxMonster',attribute:['machine','illusion'],eggGroup:['fairy'],heightMin:0.64,heightMax:0.72,weightMin:18.02,weightMax:24.4,stage:2,region:'-',trait: '虚假宝箱 — 自己力竭时，敌方获得攻防+20%。',evolvesTo:null,evolvesFrom:210,desc:'迷雾缭绕的箱怪。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/0a/ocy3pzt2cn0mmx85cm8is2ulwy8s2ii.png',ename: 'MysteryBoxMonster',attribute:['machine','illusion'],eggGroup:['fairy'],heightMin:0.64,heightMax:0.72,weightMin:18.02,weightMax:24.4,stage:2,region:'-',trait: '虚假宝箱 — 自己力竭时，敌方获得攻防+20%。',evolvesTo:null,evolvesFrom:210,desc:'迷雾缭绕的箱怪。',
+        battle: {
+          "trait": "虚假宝箱献祭",
+          "tier": "T2",
+          "recommend": "PVP机械献祭中转。小箱怪的进化版，力竭时给敌方debuff为队友创造收割机会。",
+          "pairing": [
+          "小箱怪",
+          "声波缇塔",
+          "贝古斯"
+          ],
+          "teams": [
+          "机械献祭队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "机械系物攻增强。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防提高自爆/切割伤害。"
+          },
+          {
+          "name": "自爆",
+          "type": "普通",
+          "pp": 3,
+          "power": "150(物攻)",
+          "effect": "核弹输出+虚假宝箱。"
+          },
+          {
+          "name": "电磁场",
+          "type": "电",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地铺设。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "自爆",
+          "type": "普通",
+          "pp": 3,
+          "power": "150(物攻)",
+          "effect": "核弹+触发虚假宝箱debuff。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防铺垫。"
+          },
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "常规输出。"
+          },
+          {
+          "name": "电磁场",
+          "type": "电",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地辅助。"
+        }
+          ]
+        }
+        }
+    },
 
     // 古钟蛇 → 寒音蛇 (NO.212~213)
-    { id:212, name: '古钟蛇',ename: 'AncientBellSnake',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:0.95,heightMax:1.1,weightMin:6.9,weightMax:7.8,stage:2,region:'-',trait: '拨浪鼓 — 己方精灵每使用1次状态技能，自己入场时毒系和萌系技能威力+10。',forms:['本来的样子','本命年的样子'],evolvesTo:[213],evolvesFrom:null,desc:'背负古钟的蛇类精灵。' },
+    { id:212, name: '古钟蛇',ename: 'AncientBellSnake',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:0.95,heightMax:1.1,weightMin:6.9,weightMax:7.8,stage:2,region:'-',trait: '拨浪鼓 — 己方精灵每使用1次状态技能，自己入场时毒系和萌系技能威力+10。',forms:['本来的样子','本命年的样子'],evolvesTo:[213],evolvesFrom:null,desc:'背负古钟的蛇类精灵。',
+        battle: {
+          "trait": "拨浪鼓毒萌增幅",
+          "tier": "T2",
+          "recommend": "PVP毒萌混合增幅。队友使用状态技能越多，自己的毒/萌技能威力越高。",
+          "pairing": [
+          "寒音蛇",
+          "逗逗",
+          "红绒十字"
+          ],
+          "teams": [
+          "毒萌增幅队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "全场施毒——拨浪鼓增伤后更痛。"
+          },
+          {
+          "name": "治愈之光",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "萌系治疗+拨浪鼓增伤。"
+          },
+          {
+          "name": "溶解",
+          "type": "毒",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "毒系输出。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱+拨浪鼓计数。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "治愈之光",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "萌系治疗——拨浪鼓叠满后治疗量可观。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "铺毒+触发拨浪鼓。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱同时给队友叠拨浪鼓层数。"
+          },
+          {
+          "name": "溶解",
+          "type": "毒",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "毒系输出。"
+        }
+          ]
+        }
+        }
+    },
     { id:213, name: '寒音蛇',ename: 'ColdSoundSnake',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.213_寒音蛇（本来的样子）.webp',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:1.85,heightMax:2.0,weightMin:65.0,weightMax:78.0,stage:3,region:'-',trait: '拨浪鼓 — 己方精灵每使用1次状态技能，自己入场时毒系和萌系技能威力+10。',forms:['本来的样子','本命年的样子'],evolvesTo:null,evolvesFrom:212,desc:'发出寒音的蛇类终极形态。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.213_寒音蛇（本来的样子）.webp',attribute:['cute','poison'],eggGroup:['amphibian','animal'],heightMin:1.85,heightMax:2.0,weightMin:65.0,weightMax:78.0,stage:3,region:'-',trait: '拨浪鼓 — 己方精灵每使用1次状态技能，自己入场时毒系和萌系技能威力+10。',forms:['本来的样子','本命年的样子'],evolvesTo:null,evolvesFrom:212,desc:'发出寒音的蛇类终极形态。',
+        battle: {
+          "trait": "寒音蛇终极",
+          "tier": "T1",
+          "recommend": "PVP毒萌增幅王牌。最终形态+满拨浪鼓层数=毒/萌技能威力翻倍以上！",
+          "pairing": [
+          "古钟蛇",
+          "逗逗",
+          "红绒十字"
+          ],
+          "teams": [
+          "毒萌增幅王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "剧毒风暴",
+          "type": "毒",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "毒系高威AOE——拨浪鼓加持后毁灭级。"
+          },
+          {
+          "name": "圣光治愈",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "强力单体治疗——拨浪鼓翻倍治疗量。"
+          },
+          {
+          "name": "治愈咏叹调",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "全体治疗。"
+          },
+          {
+          "name": "腐蚀强酸",
+          "type": "毒",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "持续毒伤。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "剧毒风暴",
+          "type": "毒",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "满拨浪鼓180+威力的毒系核弹。"
+          },
+          {
+          "name": "圣光治愈",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "翻倍治疗量保命。"
+          },
+          {
+          "name": "治愈咏叹调",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "全队续航。"
+          },
+          {
+          "name": "腐蚀强酸",
+          "type": "毒",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "压血线。"
+        }
+          ]
+        }
+        }
+    },
 
     // 矮脚爬爬 (NO.214)
     { id:214, name: '矮脚爬爬',
       image:'https://patchwiki.biligame.com/images/rocom/4/4f/40765c203k2jjtugv9tbciczhr4jmxv.png',ename: 'ShortLegCrawl',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.214_矮脚爬爬.webp', attribute: 'bug',eggGroup: ['insect'], heightMin:0.28,heightMax:0.44,weightMin:3.3,weightMax:4.2, stage: 1, region: '-', trait: '振奋虫心 — 主动击败敌方后，己方队伍获得5次随机奉献。', evolvesTo: null, evolvesFrom: null, desc: '腿特别短的虫族精灵。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.214_矮脚爬爬.webp', attribute: 'bug',eggGroup: ['insect'], heightMin:0.28,heightMax:0.44,weightMin:3.3,weightMax:4.2, stage: 1, region: '-', trait: '振奋虫心 — 主动击败敌方后，己方队伍获得5次随机奉献。', evolvesTo: null, evolvesFrom: null, desc: '腿特别短的虫族精灵。',
+        battle: {
+          "trait": "振奋虫心击杀奖励",
+          "tier": "T2",
+          "recommend": "PVP虫系击杀奖励。每次主动击杀敌人给全队5次随机奉献——滚雪球利器。",
+          "pairing": [
+          "恶魔红钻",
+          "黄蜂后",
+          "花影羚羊"
+          ],
+          "teams": [
+          "虫系击杀队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "虫群集体攻击。"
+          },
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "35(物攻)",
+          "effect": "低能耗补刀触发虫心。"
+          },
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御存活到击杀。"
+          },
+          {
+          "name": "蛛丝束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "限制敌方行动。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场等待击杀机会。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "群体伤害抢击杀。"
+          },
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "35(物攻)",
+          "effect": "低能耗收尾触发振奋虫心。"
+          },
+          {
+          "name": "蛛丝束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "控制留人。"
+        }
+          ]
+        }
+        }
+    },
 
     // 恶魔红钻 → 火尾瓦特 → 火尾战士 → 烈火守护 (NO.215~218)
     { id:215, name: '恶魔红钻',
-      image:'https://patchwiki.biligame.com/images/rocom/4/4f/40765c203k2jjtugv9tbciczhr4jmxv.png',ename: 'DevilRedDiamond',attribute:['bug','dark'],eggGroup:['monster'],heightMin:1.32,heightMax:1.55,weightMin:42.5,weightMax:62.0,stage:1,region:'-',trait: '振奋虫心 — 主动击败敌方后，己方队伍获得5次随机奉献。',evolvesTo:[216],evolvesFrom:null,desc:'红色钻晶恶魔精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/4f/40765c203k2jjtugv9tbciczhr4jmxv.png',ename: 'DevilRedDiamond',attribute:['bug','dark'],eggGroup:['monster'],heightMin:1.32,heightMax:1.55,weightMin:42.5,weightMax:62.0,stage:1,region:'-',trait: '振奋虫心 — 主动击败敌方后，己方队伍获得5次随机奉献。',evolvesTo:[216],evolvesFrom:null,desc:'红色钻晶恶魔精灵。',
+        battle: {
+          "trait": "恶魔红钻进阶",
+          "tier": "T2",
+          "recommend": "PVP虫暗击杀核心。进化后属性更高，击杀触发5次奉献的收益更大。",
+          "pairing": [
+          "矮脚爬爬",
+          "黄蜂后",
+          "芋香巨角蛛"
+          ],
+          "teams": [
+          "虫暗击杀队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系高威魔攻抢击杀。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "群体伤害。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "高威补刀。"
+          },
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守保命。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系主攻抢击杀→触发振奋虫心。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "毒系追击。"
+          },
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守等击杀时机。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "群体补刀。"
+        }
+          ]
+        }
+        }
+    },
     { id:216, name: '火尾瓦特',
-      image:'https://patchwiki.biligame.com/images/rocom/1/1d/9mmja7l04ln5fe2fn5dhql2nrh0tq4f.png',ename: 'FireTailWatt',  attribute:'fire',eggGroup:['monster'],heightMin:0.64,heightMax:0.92,weightMin:18.5,weightMax:21.2,stage:2,region:'-',trait: '蒸汽膨胀 — 己方精灵每使用1次火系技能，自己入场时获得全技能威力+10。',evolvesTo:[217],evolvesFrom:215,desc:'尾部燃烧火焰的瓦特精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/1/1d/9mmja7l04ln5fe2fn5dhql2nrh0tq4f.png',ename: 'FireTailWatt',  attribute:'fire',eggGroup:['monster'],heightMin:0.64,heightMax:0.92,weightMin:18.5,weightMax:21.2,stage:2,region:'-',trait: '蒸汽膨胀 — 己方精灵每使用1次火系技能，自己入场时获得全技能威力+10。',evolvesTo:[217],evolvesFrom:215,desc:'尾部燃烧火焰的瓦特精灵。',
+        battle: {
+          "trait": "蒸汽膨胀火系叠伤",
+          "tier": "T2",
+          "recommend": "PVP火系叠伤中转。队友频繁用火系技能=自己入场时全技能威力不断增长。",
+          "pairing": [
+          "火尾战士",
+          "火焰猿",
+          "豪炎战神"
+          ],
+          "teams": [
+          "火系叠伤队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "蒸汽膨胀加持后的火系输出。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "低能耗触发蒸汽膨胀。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避辅助。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "火系物攻。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "蒸汽膨胀叠满后威力爆炸。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "低能耗填充。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "物攻也享受蒸汽膨胀。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避保命。"
+        }
+          ]
+        }
+        }
+    },
     { id:217, name: '火尾战士',
-      image:'https://patchwiki.biligame.com/images/rocom/1/1d/9mmja7l04ln5fe2fn5dhql2nrh0tq4f.png',ename: 'FireTailWarrior',attribute:'fire',eggGroup:['monster'],heightMin:0.76,heightMax:1.09,weightMin:48.5,weightMax:58.6,stage:3,region:'-',trait: '蒸汽膨胀 — 己方精灵每使用1次火系技能，自己入场时获得全技能威力+10。',evolvesTo:[218],evolvesFrom:216,desc:'火焰之尾的战士形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/1/1d/9mmja7l04ln5fe2fn5dhql2nrh0tq4f.png',ename: 'FireTailWarrior',attribute:'fire',eggGroup:['monster'],heightMin:0.76,heightMax:1.09,weightMin:48.5,weightMax:58.6,stage:3,region:'-',trait: '蒸汽膨胀 — 己方精灵每使用1次火系技能，自己入场时获得全技能威力+10。',evolvesTo:[218],evolvesFrom:216,desc:'火焰之尾的战士形态。',
+        battle: {
+          "trait": "火尾战士终极",
+          "tier": "T1",
+          "recommend": "PVP火系叠伤王牌。最终形态+满蒸汽膨胀=全技能威力+50%~100%，每招都是大招。",
+          "pairing": [
+          "火尾瓦特",
+          "炽心勇狮",
+          "豪炎战神"
+          ],
+          "teams": [
+          "火系叠伤王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "105(魔攻)",
+          "effect": "蒸汽膨胀后200+威力的火系核弹。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "稳定高威输出——膨胀后170+。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "物攻140+威力。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避等膨胀叠满。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "105(魔攻)",
+          "effect": "满膨胀210威力——毁灭性打击。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "170威力稳定输出。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避等队友叠蒸汽膨胀。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "140威力物攻。"
+        }
+          ]
+        }
+        }
+    },
     { id:218, name: '烈火守护',
       image:'https://patchwiki.biligame.com/images/rocom/1/1d/9mmja7l04ln5fe2fn5dhql2nrh0tq4f.png',ename: 'BlazingGuardian',attribute:'fire',eggGroup:['monster'],heightMin:0.99,heightMax:1.42,weightMin:76.5,weightMax:87.5,stage:3,region:'-',trait: '蒸汽膨胀 — 己方精灵每使用1次火系技能，自己入场时获得全技能威力+10。',evolvesTo:null,evolvesFrom:217,desc:'守护烈火的最终形态。' },
 
@@ -1272,21 +4471,478 @@ const RocoData = {
     { id:229, name: '缇塔',
       image:'https://patchwiki.biligame.com/images/rocom/3/3a/lhlbu3zg39lvfpso57ww4iks9u2snxm.png',  ename: 'Tiita',         attribute: 'machine',eggGroup: ['mech'], heightMin:0.65,heightMax:0.75,weightMin:38.2,weightMax:45.2, stage: 1, region: '-', trait: '向心力 — 1号位和2号位技能获得传动1和威力+30。', evolvesTo: [230], evolvesFrom: null, desc: '机械构造的缇塔精灵。' },
     { id:230, name: '声波缇塔',
-      image:'https://patchwiki.biligame.com/images/rocom/3/3a/lhlbu3zg39lvfpso57ww4iks9u2snxm.png',ename: 'SoundwaveTiita',attribute:'machine',eggGroup: ['mech'], heightMin:1.05,heightMax:1.2,weightMin:71.5,weightMax:78.5, stage: 2, region: '-', trait: '向心力 — 1号位和2号位技能获得传动1和威力+30。', evolvesTo: null, evolvesFrom: 229, desc: '能操控声波的机械缇塔。' },
+      image:'https://patchwiki.biligame.com/images/rocom/3/3a/lhlbu3zg39lvfpso57ww4iks9u2snxm.png',ename: 'SoundwaveTiita',attribute:'machine',eggGroup: ['mech'], heightMin:1.05,heightMax:1.2,weightMin:71.5,weightMax:78.5, stage: 2, region: '-', trait: '向心力 — 1号位和2号位技能获得传动1和威力+30。', evolvesTo: null, evolvesFrom: 229, desc: '能操控声波的机械缇塔。',
+        battle: {
+          "trait": "向心力速攻核心",
+          "tier": "T1",
+          "recommend": "PVP机械向心力王牌。1号位和2号位技能自动获得传动和增伤，放高威技能在这两位置即可。",
+          "pairing": [
+          "小箱怪",
+          "贝古斯",
+          "螺旋帕帕"
+          ],
+          "teams": [
+          "机械速攻队",
+          "向心力核心"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "放在1号位享受向心力加成！"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "2号位同样获得传动+30%威力。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "备用电系输出。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防辅助。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "1号位必带——传动1+130%威力。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "2号位备选——传动1+104%威力。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "范围AOE压制。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防削减提高全队伤害。"
+        }
+          ]
+        }
+        }
+    },
 
     // 小鹬 → 鄙目鹬 → 高脚鹬 (NO.231~233)
     { id:231, name: '小鹬',
-      image:'https://patchwiki.biligame.com/images/rocom/6/63/f0h0ppr6wbkwlg961g5mnqenog6ai1j.png',  ename: 'LittleSandpiper',attribute:'flying',eggGroup: ['flying'], heightMin:0.25,heightMax:0.36,weightMin:1.4,weightMax:2.2, stage: 1, region: '-', trait: '起飞加速 — 本场战斗首次使用的技能获得迅捷。', evolvesTo: [232], evolvesFrom: null, desc: '小巧的鹬鸟。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/63/f0h0ppr6wbkwlg961g5mnqenog6ai1j.png',  ename: 'LittleSandpiper',attribute:'flying',eggGroup: ['flying'], heightMin:0.25,heightMax:0.36,weightMin:1.4,weightMax:2.2, stage: 1, region: '-', trait: '起飞加速 — 本场战斗首次使用的技能获得迅捷。', evolvesTo: [232], evolvesFrom: null, desc: '小巧的鹬鸟。',
+        battle: {
+          "trait": "起飞加速首技先手",
+          "tier": "T2",
+          "recommend": "PVP翼系速攻型。本场首次使用的技能自动获得迅捷——第一招必定先手。",
+          "pairing": [
+          "鄙目鹬",
+          "高脚鹬",
+          "噼啪鸟"
+          ],
+          "teams": [
+          "翼系速攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "空气切割",
+          "type": "翼",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "首技迅捷先手！"
+          },
+          {
+          "name": "翼刃斩",
+          "type": "翼",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "翼系物攻。"
+          },
+          {
+          "name": "翅膀攻击",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "翼系常规输出。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "安全退场。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "空气切割",
+          "type": "翼",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "起飞加速保证首技先手压制。"
+          },
+          {
+          "name": "翼刃斩",
+          "type": "翼",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "后续稳定物攻。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场重置起飞加速。"
+          },
+          {
+          "name": "翅膀攻击",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "常规输出。"
+        }
+          ]
+        }
+        }
+    },
     { id:232, name: '鄙目鹬',
-      image:'https://patchwiki.biligame.com/images/rocom/6/63/f0h0ppr6wbkwlg961g5mnqenog6ai1j.png',ename: 'DespiseEyeSandpiper',attribute:'flying',eggGroup:['flying'],heightMin:0.67,heightMax:0.96,weightMin:6.75,weightMax:8.9,stage:2,region:'-',trait: '起飞加速 — 本场战斗首次使用的技能获得迅捷。',evolvesTo:[233],evolvesFrom:231,desc:'眼神犀利的鹬鸟。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/63/f0h0ppr6wbkwlg961g5mnqenog6ai1j.png',ename: 'DespiseEyeSandpiper',attribute:'flying',eggGroup:['flying'],heightMin:0.67,heightMax:0.96,weightMin:6.75,weightMax:8.9,stage:2,region:'-',trait: '起飞加速 — 本场战斗首次使用的技能获得迅捷。',evolvesTo:[233],evolvesFrom:231,desc:'眼神犀利的鹬鸟。',
+        battle: {
+          "trait": "起飞加速进阶",
+          "tier": "T2",
+          "recommend": "PVP翼系速攻中转。进化后属性更高，首技先手压制力更强。",
+          "pairing": [
+          "小鹬",
+          "高脚鹬",
+          "螺旋帕帕"
+          ],
+          "teams": [
+          "翼系速攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "多段物攻——首技迅捷。"
+          },
+          {
+          "name": "空气切割",
+          "type": "翼",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "高速先手。"
+          },
+          {
+          "name": "翼刃斩",
+          "type": "翼",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "高威物攻。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场重置。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "首技迅捷多段先手压制。"
+          },
+          {
+          "name": "空气切割",
+          "type": "翼",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "极速先手。"
+          },
+          {
+          "name": "翼刃斩",
+          "type": "翼",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "稳定主攻。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "重置加速。"
+        }
+          ]
+        }
+        }
+    },
     { id:233, name: '高脚鹬',
-      image:'https://patchwiki.biligame.com/images/rocom/6/63/f0h0ppr6wbkwlg961g5mnqenog6ai1j.png',ename: 'HighLegSandpiper',attribute:'flying',eggGroup:['flying'],heightMin:0.81,heightMax:1.16,weightMin:18.0,weightMax:24.91,stage:3,region:'-',trait: '起飞加速 — 本场战斗首次使用的技能获得迅捷。',evolvesTo:null,evolvesFrom:232,desc:'腿特别长的鹬鸟。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/63/f0h0ppr6wbkwlg961g5mnqenog6ai1j.png',ename: 'HighLegSandpiper',attribute:'flying',eggGroup:['flying'],heightMin:0.81,heightMax:1.16,weightMin:18.0,weightMax:24.91,stage:3,region:'-',trait: '起飞加速 — 本场战斗首次使用的技能获得迅捷。',evolvesTo:null,evolvesFrom:232,desc:'腿特别长的鹬鸟。',
+        battle: {
+          "trait": "高脚鹬终极",
+          "tier": "T2",
+          "recommend": "PVP翼系速攻王牌。最终形态属性优秀，首技先手的战术价值极高。",
+          "pairing": [
+          "鄙目鹬",
+          "小鹬",
+          "噼啪鸟"
+          ],
+          "teams": [
+          "翼系速攻王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "翼系高威物攻——首技迅捷先手！"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "多段物攻增强。"
+          },
+          {
+          "name": "空中支援",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "翼系魔攻。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "重置加速。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "首技迅捷先手高威压制。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "多段追击。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场重置起飞加速循环利用。"
+          },
+          {
+          "name": "空中支援",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "魔攻选项。"
+        }
+          ]
+        }
+        }
+    },
 
     // 甜筒系列 - 多口味 (NO.234~236)
     { id:234, name: '脆筒甜甜',
-      image:'https://patchwiki.biligame.com/images/rocom/9/99/hkgrj5vqlslmwxcq1hw8rkaoijy2wc9.png',ename: 'CrispyTubeSweet', attribute:'ice',eggGroup: ['fairy'], heightMin:0.3,heightMax:0.4,weightMin:1.8,weightMax:3.8, stage: 1, region: '-', trait: '加个雪球 — 使敌方获得冻结时，也会使其获得2层冻结。', evolvesTo: [235], evolvesFrom: null, desc: '脆筒冰淇淋造型的甜点精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/99/hkgrj5vqlslmwxcq1hw8rkaoijy2wc9.png',ename: 'CrispyTubeSweet', attribute:'ice',eggGroup: ['fairy'], heightMin:0.3,heightMax:0.4,weightMin:1.8,weightMax:3.8, stage: 1, region: '-', trait: '加个雪球 — 使敌方获得冻结时，也会使其获得2层冻结。', evolvesTo: [235], evolvesFrom: null, desc: '脆筒冰淇淋造型的甜点精灵。',
+        battle: {
+          "trait": "加个雪球冰冻控",
+          "tier": "T2",
+          "recommend": "PVP冰系深度冻结。使敌方冻结时额外叠2层冻结=解冻难度翻倍。",
+          "pairing": [
+          "香草甜甜",
+          "雪影娃娃",
+          "布鲁斯"
+          ],
+          "teams": [
+          "冰冻控制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "冰系AOE+概率冻结。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "50(魔攻)",
+          "effect": "多段冰系输出。"
+          },
+          {
+          "name": "冰冻之风",
+          "type": "冰",
+          "pp": 4,
+          "power": "45(魔攻)",
+          "effect": "减速+冻结概率。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "防止被降能力。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "AOE冻结+加个雪球额外2层=极难解冻。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "50(魔攻)",
+          "effect": "多段输出增加冻结概率。"
+          },
+          {
+          "name": "冰冻之风",
+          "type": "冰",
+          "pp": 4,
+          "power": "45(魔攻)",
+          "effect": "减速控制铺垫。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "自保。"
+        }
+          ]
+        }
+        }
+    },
     { id:235, name: '香草甜甜',
-      image:'https://patchwiki.biligame.com/images/rocom/9/99/hkgrj5vqlslmwxcq1hw8rkaoijy2wc9.png',ename: 'VanillaSweet',   attribute:'ice',eggGroup: ['fairy'], heightMin:0.4,heightMax:0.6,weightMin:5.15,weightMax:7.8, stage: 2, region: '-', trait: '加个雪球 — 使敌方获得冻结时，也会使其获得2层冻结。', forms: ['杨桃饰品','蓝莓饰品'], evolvesTo: [236], evolvesFrom: 234, desc: '香草味的甜甜精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/99/hkgrj5vqlslmwxcq1hw8rkaoijy2wc9.png',ename: 'VanillaSweet',   attribute:'ice',eggGroup: ['fairy'], heightMin:0.4,heightMax:0.6,weightMin:5.15,weightMax:7.8, stage: 2, region: '-', trait: '加个雪球 — 使敌方获得冻结时，也会使其获得2层冻结。', forms: ['杨桃饰品','蓝莓饰品'], evolvesTo: [236], evolvesFrom: 234, desc: '香草味的甜甜精灵。',
+        battle: {
+          "trait": "香草甜甜进阶",
+          "tier": "T2",
+          "recommend": "PVP冰冻控制中转。进化后属性更高，加个雪球的冻结压制力更强。",
+          "pairing": [
+          "脆筒甜甜",
+          "雪顶布鲁斯",
+          "雪影娃娃"
+          ],
+          "teams": [
+          "冰冻控制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "绝对零度",
+          "type": "冰",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "冰系高威魔法——高概率触发加个雪球。"
+          },
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "AOE冻结。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "多段输出。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "状态保护。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "绝对零度",
+          "type": "冰",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "单体高威冻结——加个雪球后几乎无法解冻。"
+          },
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "AOE冻结覆盖全场。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "多段输出。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "保护自身。"
+        }
+          ]
+        }
+        }
+    },
     { id:236, name: '圣代甜甜',
       image:'https://patchwiki.biligame.com/images/rocom/9/99/hkgrj5vqlslmwxcq1hw8rkaoijy2wc9.png',ename: 'SundaeSweet',   attribute:'ice',eggGroup: ['fairy'], heightMin:0.7,heightMax:1.0,weightMin:16.5,weightMax:22.75, stage: 3, region: '-', trait: '加个雪球 — 使敌方获得冻结时，也会使其获得2层冻结。', forms: ['樱桃草莓','樱桃抹茶','蓝莓巧克力','蓝莓草莓','蓝莓抹茶','杨桃巧克力','杨桃草莓','杨桃抹茶'], evolvesTo: null, evolvesFrom: 235, desc: '圣代造型！多达8种口味形态！' },
 
@@ -1308,63 +4964,1671 @@ const RocoData = {
     { id:242, name: '胆小鳗鱼',
       image:'https://patchwiki.biligame.com/images/rocom/6/65/sexctmvdy5pnj2fgqdue7sovqn9cw4z.png',ename: 'TimidEel',     attribute: ['electric','water'],eggGroup: ['ocean'], heightMin:0.74,heightMax:1.07,weightMin:17.5,weightMax:26.85, stage: 1, region: '-', trait: '生物电 — 携带的电系技能获得迸发：能耗-2。', evolvesTo: [243], evolvesFrom: null, desc: '胆小怕事的鳗鱼。' },
     { id:243, name: '闪电鳗鱼',
-      image:'https://patchwiki.biligame.com/images/rocom/6/65/sexctmvdy5pnj2fgqdue7sovqn9cw4z.png',ename: 'LightningEel',  attribute: ['electric','water'],eggGroup:['ocean'], heightMin:0.83,heightMax:1.19,weightMin:68.9,weightMax:76.5, stage: 2, region: '-', trait: '生物电 — 携带的电系技能获得迸发：能耗-2。', evolvesTo: null, evolvesFrom: 242, desc: '释放闪电的鳗鱼。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/65/sexctmvdy5pnj2fgqdue7sovqn9cw4z.png',ename: 'LightningEel',  attribute: ['electric','water'],eggGroup:['ocean'], heightMin:0.83,heightMax:1.19,weightMin:68.9,weightMax:76.5, stage: 2, region: '-', trait: '生物电 — 携带的电系技能获得迸发：能耗-2。', evolvesTo: null, evolvesFrom: 242, desc: '释放闪电的鳗鱼。',
+        battle: {
+          "trait": "电系迸发输出",
+          "tier": "T2",
+          "recommend": "PVE电水混合输出。电系技能低能耗高频率释放，配合水系控制。",
+          "pairing": [
+          "迪莫",
+          "蓝漪水灵",
+          "酷拉"
+          ],
+          "teams": [
+          "电系队",
+          "水系联攻"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "电系魔攻核心输出。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "水系高威力必杀。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "稳定水系输出。"
+          },
+          {
+          "name": "电磁场",
+          "type": "电",
+          "pp": 3,
+          "power": "-",
+          "effect": "铺设电磁场强化电系输出。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "主攻技能，生物电降低能耗。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "爆发收割。"
+          },
+          {
+          "name": "电磁场",
+          "type": "电",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地强化。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "副输出补刀。"
+        }
+          ]
+        }
+        }
+    },
 
     // 水母系列 (NO.244~245)
     { id:244, name: '翡翠水母',
-      image:'https://patchwiki.biligame.com/images/rocom/f/f3/qtg8mg0mxy7370rpc9eohcwcgsw0k05.png',ename: 'EmeraldJellyfish',attribute:['water','poison'],eggGroup: ['ocean','soft'], heightMin:0.49,heightMax:0.7,weightMin:31.5,weightMax:36.8, stage: 2, region: '-', trait: '扩散侵蚀 — 使用水系技能后，敌方获得中毒，获得层数等于中毒印记层数的2倍。', evolvesTo: [245], evolvesFrom: null, desc: '翡翠色的透明水母。' },
+      image:'https://patchwiki.biligame.com/images/rocom/f/f3/qtg8mg0mxy7370rpc9eohcwcgsw0k05.png',ename: 'EmeraldJellyfish',attribute:['water','poison'],eggGroup: ['ocean','soft'], heightMin:0.49,heightMax:0.7,weightMin:31.5,weightMax:36.8, stage: 2, region: '-', trait: '扩散侵蚀 — 使用水系技能后，敌方获得中毒，获得层数等于中毒印记层数的2倍。', evolvesTo: [245], evolvesFrom: null, desc: '翡翠色的透明水母。',
+        battle: {
+          "trait": "水毒扩散控场",
+          "tier": "T2",
+          "recommend": "PVE水毒持续伤害流。水系攻击+毒系持续DOT叠层。",
+          "pairing": [
+          "毒王",
+          "幽冥蛇",
+          "紫冥狐"
+          ],
+          "teams": [
+          "毒系队",
+          "持续伤害队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "水系高威输出触发中毒。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "大范围施加中毒层数。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "稳定水系输出。"
+          },
+          {
+          "name": "腐蚀之触",
+          "type": "毒",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "毒系伤害加深印记。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "快速叠毒层数。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "输出同时触发扩散侵蚀。"
+          },
+          {
+          "name": "腐蚀之触",
+          "type": "毒",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "持续压血线。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升生存能力。"
+        }
+          ]
+        }
+        }
+    },
     { id:245, name: '琉璃水母',
-      image:'https://patchwiki.biligame.com/images/rocom/f/f3/qtg8mg0mxy7370rpc9eohcwcgsw0k05.png',ename: 'GlazeJellyfish', attribute:['water','poison'],eggGroup: ['ocean','soft'], heightMin:0.9,heightMax:1.28,weightMin:48.0,weightMax:53.0, stage: 3, region: '-', trait: '扩散侵蚀 — 使用水系技能后，敌方获得中毒，获得层数等于中毒印记层数的2倍。', evolvesTo: null, evolvesFrom: 244, desc: '琉璃光泽的美丽水母。' },
+      image:'https://patchwiki.biligame.com/images/rocom/f/f3/qtg8mg0mxy7370rpc9eohcwcgsw0k05.png',ename: 'GlazeJellyfish', attribute:['water','poison'],eggGroup: ['ocean','soft'], heightMin:0.9,heightMax:1.28,weightMin:48.0,weightMax:53.0, stage: 3, region: '-', trait: '扩散侵蚀 — 使用水系技能后，敌方获得中毒，获得层数等于中毒印记层数的2倍。', evolvesTo: null, evolvesFrom: 244, desc: '琉璃光泽的美丽水母。',
+        battle: {
+          "trait": "水毒终极形态",
+          "tier": "T2",
+          "recommend": "PVP水毒双修输出。最终形态属性更高，扩散侵蚀叠毒效率极强。",
+          "pairing": [
+          "毒王",
+          "幽冥蛇",
+          "紫冥狐"
+          ],
+          "teams": [
+          "毒系队",
+          "混合控制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "水系核心输出。"
+          },
+          {
+          "name": "剧毒风暴",
+          "type": "毒",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威力毒系AOE。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "全场叠毒。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "稳定副输出。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "剧毒风暴",
+          "type": "毒",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "毒系爆发AOE。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "100(魔攻)",
+          "effect": "主攻触发扩散。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "铺毒铺垫。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "站场生存。"
+        }
+          ]
+        }
+        }
+    },
 
     // 裘洛系列 (NO.246~248)
     { id:246, name: '裘洛',
-      image:'https://patchwiki.biligame.com/images/rocom/9/9c/ai2ivunxg0fjwnzy552j6bsq1nh5qr4.png',  ename: 'Qiuluo',        attribute: 'poison',eggGroup: ['animal','fairy','mech'], heightMin:0.7,heightMax:1.0,weightMin:7.5,weightMax:12.5, stage: 1, region: '-', trait: '蚀刻 — 回合结束时，敌方每2层中毒转化为1层中毒印记。', evolvesTo: [247], evolvesFrom: null, desc: '半机械半动物的裘洛精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/9c/ai2ivunxg0fjwnzy552j6bsq1nh5qr4.png',  ename: 'Qiuluo',        attribute: 'poison',eggGroup: ['animal','fairy','mech'], heightMin:0.7,heightMax:1.0,weightMin:7.5,weightMax:12.5, stage: 1, region: '-', trait: '蚀刻 — 回合结束时，敌方每2层中毒转化为1层中毒印记。', evolvesTo: [247], evolvesFrom: null, desc: '半机械半动物的裘洛精灵。',
+        battle: {
+          "trait": "中毒转化印记",
+          "tier": "T3",
+          "recommend": "PVE毒系过渡形态。蚀刻将中毒转化为印记积累。",
+          "pairing": [
+          "毒王",
+          "翡翠水母",
+          "紫冥狐"
+          ],
+          "teams": [
+          "毒系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "毒系基础物攻。"
+          },
+          {
+          "name": "毒雾",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "给敌方施加中毒。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升。"
+          },
+          {
+          "name": "溶解",
+          "type": "毒",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "毒系魔攻输出。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "毒雾",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "快速叠毒触发蚀刻。"
+          },
+          {
+          "name": "溶解",
+          "type": "毒",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "魔攻输出。"
+          },
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "40(物攻)",
+          "effect": "物理补刀。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场。"
+        }
+          ]
+        }
+        }
+    },
     { id:247, name: '裘力',
-      image:'https://patchwiki.biligame.com/images/rocom/9/9c/ai2ivunxg0fjwnzy552j6bsq1nh5qr4.png',  ename: 'Qiuli',         attribute: 'poison',eggGroup: ['animal','fairy','mech'], heightMin:0.81,heightMax:1.16,weightMin:14.07,weightMax:18.02, stage: 2, region: '-', trait: '蚀刻 — 回合结束时，敌方每2层中毒转化为1层中毒印记。', evolvesTo: [248], evolvesFrom: 246, desc: '更有力量的裘洛进化。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/9c/ai2ivunxg0fjwnzy552j6bsq1nh5qr4.png',  ename: 'Qiuli',         attribute: 'poison',eggGroup: ['animal','fairy','mech'], heightMin:0.81,heightMax:1.16,weightMin:14.07,weightMax:18.02, stage: 2, region: '-', trait: '蚀刻 — 回合结束时，敌方每2层中毒转化为1层中毒印记。', evolvesTo: [248], evolvesFrom: 246, desc: '更有力量的裘洛进化。',
+        battle: {
+          "trait": "中毒转化进阶",
+          "tier": "T2",
+          "recommend": "PVP毒系中转。进化后属性提升，蚀刻效率更高。",
+          "pairing": [
+          "毒王",
+          "裘卡",
+          "紫冥狐"
+          ],
+          "teams": [
+          "毒系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "溶解",
+          "type": "毒",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "毒系魔攻提升。"
+          },
+          {
+          "name": "毒雾",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "施加中毒。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "高威力毒系物攻。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "毒雾",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "铺毒触发蚀刻。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "物攻爆发。"
+          },
+          {
+          "name": "溶解",
+          "type": "毒",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "魔攻副输出。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守。"
+        }
+          ]
+        }
+        }
+    },
     { id:248, name: '裘卡',
-      image:'https://patchwiki.biligame.com/images/rocom/9/9c/ai2ivunxg0fjwnzy552j6bsq1nh5qr4.png',  ename: 'Qiuka',         attribute: 'poison',eggGroup: ['animal','fairy'], heightMin:1.25,heightMax:1.79,weightMin:49.5,weightMax:58.6, stage: 3, region: '-', trait: '蚀刻 — 回合结束时，敌方每2层中毒转化为1层中毒印记。', evolvesTo: null, evolvesFrom: 247, desc: '裘洛系列的最终形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/9c/ai2ivunxg0fjwnzy552j6bsq1nh5qr4.png',  ename: 'Qiuka',         attribute: 'poison',eggGroup: ['animal','fairy'], heightMin:1.25,heightMax:1.79,weightMin:49.5,weightMax:58.6, stage: 3, region: '-', trait: '蚀刻 — 回合结束时，敌方每2层中毒转化为1层中毒印记。', evolvesTo: null, evolvesFrom: 247, desc: '裘洛系列的最终形态。',
+        battle: {
+          "trait": "毒系终极形态",
+          "tier": "T2",
+          "recommend": "PVP毒系主力输出。最终形态配合蚀刻机制快速叠加中毒印记。",
+          "pairing": [
+          "毒王",
+          "紫冥狐",
+          "琉璃水母"
+          ],
+          "teams": [
+          "纯毒系队",
+          "持续伤害队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "剧毒风暴",
+          "type": "毒",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "毒系高威AOE必杀。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "毒系物攻爆发。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "全场叠毒触发蚀刻。"
+          },
+          {
+          "name": "腐蚀强酸",
+          "type": "毒",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "毒系持续伤害。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "剧毒风暴",
+          "type": "毒",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "AOE爆发。"
+          },
+          {
+          "name": "毒雾弥漫",
+          "type": "毒",
+          "pp": 3,
+          "power": "-",
+          "effect": "快速叠毒。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "单体爆发。"
+          },
+          {
+          "name": "腐蚀强酸",
+          "type": "毒",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "持续压血线。"
+        }
+          ]
+        }
+        }
+    },
 
     // 可爱猿 → 炽热猿 → 火焰猿 (NO.249~251)
     { id:249, name: '可爱猿',
-      image:'https://patchwiki.biligame.com/images/rocom/e/e0/1xsbef59im08o1aui67cvgqp9nr1a58.png',ename: 'CuteApe',       attribute: 'fire',eggGroup: ['humanoid','monster'], heightMin:0.69,heightMax:0.98,weightMin:21.0,weightMax:31.5, stage: 1, region: '-', trait: '散热 — 初始能量为0，入场前己方精灵每放1次火系技能，回复3能量。', evolvesTo: [250], evolvesFrom: null, desc: '可爱热情的猿猴精灵。赛季限定精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/e/e0/1xsbef59im08o1aui67cvgqp9nr1a58.png',ename: 'CuteApe',       attribute: 'fire',eggGroup: ['humanoid','monster'], heightMin:0.69,heightMax:0.98,weightMin:21.0,weightMax:31.5, stage: 1, region: '-', trait: '散热 — 初始能量为0，入场前己方精灵每放1次火系技能，回复3能量。', evolvesTo: [250], evolvesFrom: null, desc: '可爱热情的猿猴精灵。赛季限定精灵。',
+        battle: {
+          "trait": "火系能量积攒",
+          "tier": "T3",
+          "recommend": "PVE火系过渡。散热特性需要队友先放火系技能攒能量。",
+          "pairing": [
+          "烈焰诺诺",
+          "豪炎战神",
+          "武者鸡"
+          ],
+          "teams": [
+          "火系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "火系基础输出。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "火系物攻。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方命中率。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "攒能量用火系输出。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "物理备选。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "干扰敌方。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守。"
+        }
+          ]
+        }
+        }
+    },
     { id:250, name: '炽热猿',
-      image:'https://patchwiki.biligame.com/images/rocom/e/e0/1xsbef59im08o1aui67cvgqp9nr1a58.png',ename: 'BlazingApe',    attribute: 'fire',eggGroup: ['humanoid','monster'], heightMin:0.71,heightMax:1.02,weightMin:46.5,weightMax:63.5, stage: 2, region: '-', trait: '散热 — 初始能量为0，入场前己方精灵每放1次火系技能，回复3能量。', evolvesTo: [251], evolvesFrom: 249, desc: '浑身炽热的猿猴。' },
+      image:'https://patchwiki.biligame.com/images/rocom/e/e0/1xsbef59im08o1aui67cvgqp9nr1a58.png',ename: 'BlazingApe',    attribute: 'fire',eggGroup: ['humanoid','monster'], heightMin:0.71,heightMax:1.02,weightMin:46.5,weightMax:63.5, stage: 2, region: '-', trait: '散热 — 初始能量为0，入场前己方精灵每放1次火系技能，回复3能量。', evolvesTo: [251], evolvesFrom: 249, desc: '浑身炽热的猿猴。',
+        battle: {
+          "trait": "散热中转形态",
+          "tier": "T2",
+          "recommend": "PVP火系副C。进化后属性提升，散热回能更快启动。",
+          "pairing": [
+          "火焰猿",
+          "烈焰诺诺",
+          "豪炎战神"
+          ],
+          "teams": [
+          "火系队",
+          "能量循环队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "火系高威输出。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "火系物攻。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "低能耗火系技攒能量。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避干扰。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "主攻技能。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "物攻爆发。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "50(物攻)",
+          "effect": "低能耗铺垫。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "生存干扰。"
+        }
+          ]
+        }
+        }
+    },
     { id:251, name: '火焰猿',
-      image:'https://patchwiki.biligame.com/images/rocom/e/e0/1xsbef59im08o1aui67cvgqp9nr1a58.png',ename: 'FlameApe',       attribute: 'fire',eggGroup: ['humanoid','monster'], heightMin:1.68,heightMax:1.9,weightMin:124.5,weightMax:136.5, stage: 3, region: '-', trait: '散热 — 初始能量为0，入场前己方精灵每放1次火系技能，回复3能量。', evolvesTo: null, evolvesFrom: 250, desc: '燃烧着熊熊烈火的猿王。' },
+      image:'https://patchwiki.biligame.com/images/rocom/e/e0/1xsbef59im08o1aui67cvgqp9nr1a58.png',ename: 'FlameApe',       attribute: 'fire',eggGroup: ['humanoid','monster'], heightMin:1.68,heightMax:1.9,weightMin:124.5,weightMax:136.5, stage: 3, region: '-', trait: '散热 — 初始能量为0，入场前己方精灵每放1次火系技能，回复3能量。', evolvesTo: null, evolvesFrom: 250, desc: '燃烧着熊熊烈火的猿王。',
+        battle: {
+          "trait": "火系猿王终极",
+          "tier": "T2",
+          "recommend": "PVP火系主力。火焰猿为最终形态，满能量后连续释放大火力技能。",
+          "pairing": [
+          "豪炎战神",
+          "烈焰诺诺",
+          "炽热猿"
+          ],
+          "teams": [
+          "纯火系队",
+          "高爆队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "120(魔攻)",
+          "effect": "火系超高威必杀。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "稳定高威火系输出。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "火系物攻爆发。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避减伤。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "120(魔攻)",
+          "effect": "满能量一发入魂。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "稳定主攻。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "物理备选。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "生存保障。"
+        }
+          ]
+        }
+        }
+    },
 
     // 布鲁斯系列 (NO.252~254)
     { id:252, name: '布鲁斯',
-      image:'https://patchwiki.biligame.com/images/rocom/0/03/i3lomx5rtgtrhun9j9o2cky82nj7koy.png',ename: 'Bruce',         attribute: 'ice',eggGroup: ['ocean','soft'], heightMin:0.53,heightMax:0.76,weightMin:2.4,weightMax:4.6, stage: 2, region: '-', trait: '冰钻 — 敌方携带技能总能耗每有1点，自己攻击时威力+10%。', evolvesTo: [253,254], evolvesFrom: null, desc: '北极熊形态的布鲁斯精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/03/i3lomx5rtgtrhun9j9o2cky82nj7koy.png',ename: 'Bruce',         attribute: 'ice',eggGroup: ['ocean','soft'], heightMin:0.53,heightMax:0.76,weightMin:2.4,weightMax:4.6, stage: 2, region: '-', trait: '冰钻 — 敌方携带技能总能耗每有1点，自己攻击时威力+10%。', evolvesTo: [253,254], evolvesFrom: null, desc: '北极熊形态的布鲁斯精灵。',
+        battle: {
+          "trait": "冰钻反制坦克",
+          "tier": "T2",
+          "recommend": "PVE冰系反制型。敌方高能耗阵容时威力爆炸。",
+          "pairing": [
+          "雪影娃娃",
+          "冰龙王",
+          "魄月狼王"
+          ],
+          "teams": [
+          "冰系队",
+          "反制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "冰系多段输出。"
+          },
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "冰系高威AOE。"
+          },
+          {
+          "name": "冰冻打击",
+          "type": "冰",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "冰系物攻。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "防止能力被降低。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威输出受冰钻加成。"
+          },
+          {
+          "name": "冰雹",
+          "type": "冰",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "多段稳定输出。"
+          },
+          {
+          "name": "冰冻打击",
+          "type": "冰",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "物理选择。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守反降。"
+        }
+          ]
+        }
+        }
+    },
     { id:253, name: '雪顶布鲁斯',
-      image:'https://patchwiki.biligame.com/images/rocom/0/03/i3lomx5rtgtrhun9j9o2cky82nj7koy.png',ename: 'SnowTopBruce',attribute:'ice',eggGroup: ['ocean','soft'], heightMin:0.58,heightMax:0.83,weightMin:12.8,weightMax:15.6, stage: 3, region: '-', trait: '冰钻 — 敌方携带技能总能耗每有1点，自己攻击时威力+10%。', evolvesTo: null, evolvesFrom: 252, desc: '头顶积雪的北极熊形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/03/i3lomx5rtgtrhun9j9o2cky82nj7koy.png',ename: 'SnowTopBruce',attribute:'ice',eggGroup: ['ocean','soft'], heightMin:0.58,heightMax:0.83,weightMin:12.8,weightMax:15.6, stage: 3, region: '-', trait: '冰钻 — 敌方携带技能总能耗每有1点，自己攻击时威力+10%。', evolvesTo: null, evolvesFrom: 252, desc: '头顶积雪的北极熊形态。',
+        battle: {
+          "trait": "冰钻高威形态",
+          "tier": "T2",
+          "recommend": "PVP冰系物攻手。雪顶布鲁斯偏向物攻路线，冰钻加成下威力极高。",
+          "pairing": [
+          "冰钻布鲁斯",
+          "雪影娃娃",
+          "冰龙王"
+          ],
+          "teams": [
+          "冰系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "冰系高威魔法。"
+          },
+          {
+          "name": "冰冻之风",
+          "type": "冰",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "冰系减速输出。"
+          },
+          {
+          "name": "碎冰击",
+          "type": "冰",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "冰系强力物攻。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "状态保护。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "碎冰击",
+          "type": "冰",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "物攻主力，冰钻增伤显著。"
+          },
+          {
+          "name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "魔攻爆发。"
+          },
+          {
+          "name": "冰冻之风",
+          "type": "冰",
+          "pp": 4,
+          "power": "65(魔攻)",
+          "effect": "减速控制。"
+          },
+          {
+          "name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "防弱化。"
+        }
+          ]
+        }
+        }
+    },
     { id:254, name: '冰钻布鲁斯',
-      image:'https://patchwiki.biligame.com/images/rocom/0/03/i3lomx5rtgtrhun9j9o2cky82nj7koy.png',ename: 'IceDrillBruce', attribute:'ice',eggGroup: ['ocean','soft'], heightMin:1.21,heightMax:1.72,weightMin:49.5,weightMax:58.6, stage: 3, region: '-', trait: '冰钻 — 敌方携带技能总能耗每有1点，自己攻击时威力+10%。', evolvesTo: null, evolvesFrom: 252, desc: '冰钻武装的北极熊形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/03/i3lomx5rtgtrhun9j9o2cky82nj7koy.png',ename: 'IceDrillBruce', attribute:'ice',eggGroup: ['ocean','soft'], heightMin:1.21,heightMax:1.72,weightMin:49.5,weightMax:58.6, stage: 3, region: '-', trait: '冰钻 — 敌方携带技能总能耗每有1点，自己攻击时威力+10%。', evolvesTo: null, evolvesFrom: 252, desc: '冰钻武装的北极熊形态。',
+        battle: {
+          "trait": "冰钻武装终极",
+          "tier": "T2",
+          "recommend": "PVP冰系物攻王牌。冰钻布鲁斯是物攻取向的终极形态。",
+          "pairing": [
+          "雪顶布鲁斯",
+          "魄月狼王",
+          "冰龙王"
+          ],
+          "teams": [
+          "冰系物攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          " name": "冰钻旋风",
+          "type": "冰",
+          "pp": 3,
+          "power": "100(物攻)",
+          "effect": "冰系超高威物攻必杀。"
+          },
+          {
+          " name": "碎冰击",
+          "type": "冰",
+          "pp": 3,
+          "power": "90(物攻)",
+          "effect": "冰系强力物攻。"
+          },
+          {
+          " name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "冰系魔攻AOE。"
+          },
+          {
+          " name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "状态保护。"
+        }
+          ],
+          "pvp": [
+          {
+          " name": "冰钻旋风",
+          "type": "冰",
+          "pp": 3,
+          "power": "100(物攻)",
+          "effect": "物攻必杀，冰钻极致增伤。"
+          },
+          {
+          " name": "碎冰击",
+          "type": "冰",
+          "pp": 3,
+          "power": "90(物攻)",
+          "effect": "稳定物攻主输出。"
+          },
+          {
+          " name": "暴风雪",
+          "type": "冰",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "魔攻副输出。"
+          },
+          {
+          " name": "白雾",
+          "type": "冰",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守保护。"
+        }
+          ]
+        }
+        }
+    },
 
     // 治愈兔 → 红丝绒 → 红绒十字 (NO.255~257)
     { id:255, name: '治愈兔',
-      image:'https://patchwiki.biligame.com/images/rocom/a/aa/rngx23e2gk0fv954dvqfy4imdotkztj.png',ename: 'HealRabbit',    attribute: ['fire','cute'],eggGroup: ['animal','fairy'], heightMin:0.57,heightMax:0.82,weightMin:12.03,weightMax:14.42, stage: 1, region: '-', trait: '仁心 — 敌方受到灼烧伤害时，自己回复等量生命。', evolvesTo: [256], evolvesFrom: null, desc: '拥有治愈能力的兔子。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/aa/rngx23e2gk0fv954dvqfy4imdotkztj.png',ename: 'HealRabbit',    attribute: ['fire','cute'],eggGroup: ['animal','fairy'], heightMin:0.57,heightMax:0.82,weightMin:12.03,weightMax:14.42, stage: 1, region: '-', trait: '仁心 — 敌方受到灼烧伤害时，自己回复等量生命。', evolvesTo: [256], evolvesFrom: null, desc: '拥有治愈能力的兔子。',
+        battle: {
+          "trait": "灼烧回血治疗",
+          "tier": "T2",
+          "recommend": "PVE火萌治疗型。灼烧敌人同时回复自身生命，攻守一体。",
+          "pairing": [
+          "可爱猿",
+          "烈焰诺诺",
+          "艾莉儿"
+          ],
+          "teams": [
+          "火萌队",
+          "治疗续航队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "火系输出施加灼烧。"
+          },
+          {
+          "name": "治愈之光",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复己方生命。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方双攻。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "火系物攻。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "灼烧触发仁心回血。"
+          },
+          {
+          "name": "治愈之光",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "治疗队友。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "物攻灼烧源。"
+        }
+          ]
+        }
+        }
+    },
     { id:256, name: '红丝绒',
-      image:'https://patchwiki.biligame.com/images/rocom/a/aa/rngx23e2gk0fv954dvqfy4imdotkztj.png',ename: 'RedVelvet',     attribute: ['fire','cute'],eggGroup: ['animal','fairy'], heightMin:0.68,heightMax:0.97,weightMin:22.4,weightMax:28.6, stage: 2, region: '-', trait: '仁心 — 敌方受到灼烧伤害时，自己回复等量生命。', evolvesTo: [257], evolvesFrom: 255, desc: '毛色如红丝绒的兔子。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/aa/rngx23e2gk0fv954dvqfy4imdotkztj.png',ename: 'RedVelvet',     attribute: ['fire','cute'],eggGroup: ['animal','fairy'], heightMin:0.68,heightMax:0.97,weightMin:22.4,weightMax:28.6, stage: 2, region: '-', trait: '仁心 — 敌方受到灼烧伤害时，自己回复等量生命。', evolvesTo: [257], evolvesFrom: 255, desc: '毛色如红丝绒的兔子。',
+        battle: {
+          "trait": "仁心进阶治疗",
+          "tier": "T2",
+          "recommend": "PVP火萌辅助治疗。进化后治疗量提升，灼烧回血更可观。",
+          "pairing": [
+          "红绒十字",
+          "治愈兔",
+          "艾莉儿"
+          ],
+          "teams": [
+          "火萌队",
+          "治疗队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "高威火系灼烧输出。"
+          },
+          {
+          "name": "治愈乐章",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "大范围治疗队友。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅降低敌方输出。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "稳定灼烧源。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "高威灼烧回大量血。"
+          },
+          {
+          "name": "治愈乐章",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "团队治疗核心。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "强力削弱。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "低能耗灼烧。"
+        }
+          ]
+        }
+        }
+    },
     { id:257, name: '红绒十字',
-      image:'https://patchwiki.biligame.com/images/rocom/a/aa/rngx23e2gk0fv954dvqfy4imdotkztj.png',ename: 'RedVelvetCross',attribute:['fire','cute'],eggGroup: ['animal','fairy'], heightMin:1.04,heightMax:1.49,weightMin:32.5,weightMax:36.8, stage: 3, region: '-', trait: '仁心 — 敌方受到灼烧伤害时，自己回复等量生命。', evolvesTo: null, evolvesFrom: 256, desc: '红十字标记的治愈大师兔。' },
+      image:'https://patchwiki.biligame.com/images/rocom/a/aa/rngx23e2gk0fv954dvqfy4imdotkztj.png',ename: 'RedVelvetCross',attribute:['fire','cute'],eggGroup: ['animal','fairy'], heightMin:1.04,heightMax:1.49,weightMin:32.5,weightMax:36.8, stage: 3, region: '-', trait: '仁心 — 敌方受到灼烧伤害时，自己回复等量生命。', evolvesTo: null, evolvesFrom: 256, desc: '红十字标记的治愈大师兔。',
+        battle: {
+          "trait": "红十字治愈大师",
+          "tier": "T1",
+          "recommend": "PVP火萌顶级治疗。最终形态治疗能力极强，灼烧+回血的循环非常恶心。",
+          "pairing": [
+          "红丝绒",
+          "艾莉儿",
+          "豪炎战神"
+          ],
+          "teams": [
+          "火萌治疗队",
+          "灼烧循环队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "烈焰净化",
+          "type": "火",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "火系高威输出+灼烧。"
+          },
+          {
+          "name": "圣光治愈",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "强力单体治疗。"
+          },
+          {
+          "name": "治愈咏叹调",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "全体治愈回复。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "全面削弱敌方。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "烈焰净化",
+          "type": "火",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "高威灼烧触发仁心。"
+          },
+          {
+          "name": "圣光治愈",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "关键治疗保命。"
+          },
+          {
+          "name": "治愈咏叹调",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "全队续航。"
+          },
+          {
+          "name": "甜蜜香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "废掉敌方输出。"
+        }
+          ]
+        }
+        }
+    },
 
     // 乌达系列 - 极昼/极夜形态 (NO.258~260)
-    { id:258, name: '乌达',  ename: 'Wuda',          attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.44,heightMax:0.58,weightMin:4.6,weightMax:6.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [259], evolvesFrom: null, desc: '随昼夜变化的石头精灵。' },
+    { id:258, name: '乌达',  ename: 'Wuda',          attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.44,heightMax:0.58,weightMin:4.6,weightMax:6.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [259], evolvesFrom: null, desc: '随昼夜变化的石头精灵。',
+        battle: {
+          "trait": "暗火双形态初始",
+          "tier": "T3",
+          "recommend": "PVE暗火过渡形态。极昼/极夜两种形态切换。",
+          "pairing": [
+          "迷你乌",
+          "乌拉塔",
+          "豪炎战神"
+          ],
+          "teams": [
+          "暗火队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暗影拳",
+          "type": "暗",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "暗系物攻。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "火系输出。"
+          },
+          {
+          "name": "沙尘暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "造成持续伤害。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暗影拳",
+          "type": "暗",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "暗系物理输出。"
+          },
+          {
+          "name": "火焰射击",
+          "type": "火",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "火系魔法输出。"
+          },
+          {
+          "name": "沙尘暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "环境压制。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守。"
+        }
+          ]
+        }
+        }
+    },
     { id:259, name: '迷你乌',ename: 'MiniWuda',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.259_迷你乌（极昼的样子）.webp',      attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.97,heightMax:1.2,weightMin:27.9,weightMax:39.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [260], evolvesFrom: 258, desc: '乌达的小型版。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.259_迷你乌（极昼的样子）.webp',      attribute: ['dark','fire'],eggGroup: ['monster'], heightMin:0.97,heightMax:1.2,weightMin:27.9,weightMax:39.1, stage: 1, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: [260], evolvesFrom: 258, desc: '乌达的小型版。',
+        battle: {
+          "trait": "迷你乌暗火中转",
+          "tier": "T3",
+          "recommend": "PVP暗火过渡。小型版属性较低，等待进化乌拉塔。",
+          "pairing": [
+          "乌达",
+          "乌拉塔",
+          "豪炎战神"
+          ],
+          "teams": [
+          "暗火队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系魔攻。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "火系高威输出。"
+          },
+          {
+          "name": "沙石暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地伤害。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系主攻。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "火系主攻。"
+          },
+          {
+          "name": "沙石暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "环境压制。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "生存。"
+        }
+          ]
+        }
+        }
+    },
     { id:260, name: '乌拉塔',ename: 'WulataTower',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.260_乌拉塔（极昼的样子）.webp',   attribute: ['dark','fire'],eggGroup: ['monster'], heightMin: 1.10, heightMax: 1.32, weightMin: 48, weightMax: 65, stage: 3, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: null, evolvesFrom: 259, desc: '塔一般巨大的乌达终极形态。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.260_乌拉塔（极昼的样子）.webp',   attribute: ['dark','fire'],eggGroup: ['monster'], heightMin: 1.10, heightMax: 1.32, weightMin: 48, weightMax: 65, stage: 3, region: '-', trait: '-', forms: ['极昼的样子','极夜的样子'], evolvesTo: null, evolvesFrom: 259, desc: '塔一般巨大的乌达终极形态。',
+        battle: {
+          "trait": "暗火巨塔终极",
+          "tier": "T2",
+          "recommend": "PVP暗火双修坦克。乌拉塔体型巨大耐久高，暗火双系覆盖面广。",
+          "pairing": [
+          "迷你乌",
+          "豪炎战神",
+          "幽冥蛇"
+          ],
+          "teams": [
+          "暗火混合队",
+          "坦克队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "黑暗冲击",
+          "type": "暗",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "暗系高威输出。"
+          },
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "火系超高威必杀。"
+          },
+          {
+          "name": "沙石暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "场地持续伤害。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "岩系物攻补充。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "火系爆发必杀。"
+          },
+          {
+          "name": "黑暗冲击",
+          "type": "暗",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "暗系主攻。"
+          },
+          {
+          "name": "沙石暴",
+          "type": "地",
+          "pp": 3,
+          "power": "-",
+          "effect": "环境压制。"
+          },
+          {
+          "name": "岩崩",
+          "type": "岩",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物攻补盲。"
+        }
+          ]
+        }
+        }
+    },
 
     // 螺旋帕帕 → 帕帕斯卡 (NO.261~262)
     { id:261, name: '螺旋帕帕',
       image:'https://patchwiki.biligame.com/images/rocom/2/2e/8sya38cbx002fydqgo0u3z0r4wzcmh9.png',ename: 'HelixPapa',
-      image:'https://rocom.game-walkthrough.com/pokemon/NO.261_螺旋帕帕.webp',   attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:0.35,heightMax:0.45,weightMin:2.08,weightMax:4.35, stage: 2, region: '-', trait: '翼轴 — 1号位技能获得迅捷和传动1。', evolvesTo: [262], evolvesFrom: null, desc: '螺旋桨造型的帕帕精灵。' },
+      image:'https://rocom.game-walkthrough.com/pokemon/NO.261_螺旋帕帕.webp',   attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:0.35,heightMax:0.45,weightMin:2.08,weightMax:4.35, stage: 2, region: '-', trait: '翼轴 — 1号位技能获得迅捷和传动1。', evolvesTo: [262], evolvesFrom: null, desc: '螺旋桨造型的帕帕精灵。',
+        battle: {
+          "trait": "翼轴速攻机械",
+          "tier": "T2",
+          "recommend": "PVP机械翼系速攻。1号位技能获得迅捷+传动，先手输出能力强。",
+          "pairing": [
+          "帕帕斯卡",
+          "圣剑-X",
+          "贝古斯"
+          ],
+          "teams": [
+          "机械队",
+          "速攻队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "机械系物攻，适合放1号位触发翼轴。"
+          },
+          {
+          "name": "翼刃斩",
+          "type": "翼",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "翼系高速物攻。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方特防。"
+          },
+          {
+          "name": "空中支援",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "翼系魔攻输出。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "1号位触发迅捷传动，高速先手。"
+          },
+          {
+          "name": "翼刃斩",
+          "type": "翼",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "翼系追击。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防铺垫。"
+          },
+          {
+          "name": "空中支援",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(魔攻)",
+          "effect": "魔攻选项。"
+        }
+          ]
+        }
+        }
+    },
     { id:262, name: '帕帕斯卡',
-      image:'https://patchwiki.biligame.com/images/rocom/2/2e/8sya38cbx002fydqgo0u3z0r4wzcmh9.png',ename: 'PapaSkas',    attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:1.05,heightMax:1.47,weightMin:48.7,weightMax:60.1, stage: 3, region: '-', trait: '翼轴 — 1号位技能获得迅捷和传动1。', evolvesTo: null, evolvesFrom: 261, desc: '螺旋帕帕的进化形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/2/2e/8sya38cbx002fydqgo0u3z0r4wzcmh9.png',ename: 'PapaSkas',    attribute: ['machine','flying'],eggGroup: ['flying','mech'], heightMin:1.05,heightMax:1.47,weightMin:48.7,weightMax:60.1, stage: 3, region: '-', trait: '翼轴 — 1号位技能获得迅捷和传动1。', evolvesTo: null, evolvesFrom: 261, desc: '螺旋帕帕的进化形态。',
+        battle: {
+          "trait": "翼轴终极速攻",
+          "tier": "T1",
+          "recommend": "PVP机械翼系王牌。1号位技能自动迅捷+传动，放最强技能在1号位即可。",
+          "pairing": [
+          "螺旋帕帕",
+          "圣剑-X",
+          "贝古斯"
+          ],
+          "teams": [
+          "机械翼王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "螺旋风暴",
+          "type": "机械",
+          "pp": 3,
+          "power": "90(物攻)",
+          "effect": "机械超高威物攻必杀——翼轴加持下先手+传动！"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "翼系高威物攻。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅破防。"
+          },
+          {
+          "name": "空中支援",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "翼系魔攻。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "螺旋风暴",
+          "type": "机械",
+          "pp": 3,
+          "power": "90(物攻)",
+          "effect": "1号位必带——翼轴=迅捷+传动+90威物攻核弹。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "翼系追击。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防-2提高全队伤害。"
+          },
+          {
+          "name": "空中支援",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(魔攻)",
+          "effect": "魔攻选项。"
+        }
+          ]
+        }
+        }
+    },
 
     // 机械方方系列 (NO.263~265) - 注意: 已移除妖精组
     { id:263, name: '机械方方',
-      image:'https://patchwiki.biligame.com/images/rocom/0/0b/pgpg5oimlp3vj22sforlyu0o5mlenw8.png',ename: 'MechSquareSquare',attribute:'machine',eggGroup:['mech'], heightMin:0.42,heightMax:0.6,weightMin:8.0,weightMax:11.0, stage: 1, region: '-', trait: '盲拧 — 回合开始时，技能顺序打乱，4号位的技能能耗-4。', evolvesTo: [264], evolvesFrom: null, desc: '方形身体的机械生命体。（注意:公测已移除妖精组）' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/0b/pgpg5oimlp3vj22sforlyu0o5mlenw8.png',ename: 'MechSquareSquare',attribute:'machine',eggGroup:['mech'], heightMin:0.42,heightMax:0.6,weightMin:8.0,weightMax:11.0, stage: 1, region: '-', trait: '盲拧 — 回合开始时，技能顺序打乱，4号位的技能能耗-4。', evolvesTo: [264], evolvesFrom: null, desc: '方形身体的机械生命体。（注意:公测已移除妖精组）',
+        battle: {
+          "trait": "盲拧随机低耗",
+          "tier": "T2",
+          "recommend": "PVP机械随机型。4号位技能能耗-4=大招变平A，但顺序随机看脸。",
+          "pairing": [
+          "多彩方方",
+          "立方人",
+          "贝古斯"
+          ],
+          "teams": [
+          "机械队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "放在4号位享受能耗-4！"
+          },
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "常规输出。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "65(魔攻)",
+          "effect": "电系AOE。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "4号位=几乎免费的95威大招（盲拧）。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "65(魔攻)",
+          "effect": "AOE补盲。"
+          },
+          {
+          "name": "螺旋切割",
+          "type": "机械",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "物攻填充。"
+          },
+          {
+          "name": "金属音波",
+          "type": "机械",
+          "pp": 3,
+          "power": "-",
+          "effect": "破防铺垫。"
+        }
+          ]
+        }
+        }
+    },
     { id:264, name: '多彩方方',
       image:'https://patchwiki.biligame.com/images/rocom/0/0b/pgpg5oimlp3vj22sforlyu0o5mlenw8.png',ename: 'ColorfulSquareSquare',attribute:'machine',eggGroup:['mech'],heightMin:0.68,heightMax:0.97,weightMin:23.77,weightMax:34.6,stage:2,region:'-',trait: '盲拧 — 回合开始时，技能顺序打乱，4号位的技能能耗-4。',evolvesTo:[265],evolvesFrom:263,desc:'多彩配色的方方进化。' },
     { id:265, name: '立方人',
@@ -1410,15 +6674,321 @@ const RocoData = {
       },
 
     { id:272, name: '噼啪鸟',
-      image:'https://patchwiki.biligame.com/images/rocom/5/5f/67uopai58qg98apg0dci57gi1bgxhn4.png',ename: 'CrackBird',     attribute: ['electric','flying'],eggGroup: ['flying'], heightMin:2.0,heightMax:2.15,weightMin:89.5,weightMax:127.5, stage: 2, region: '-', trait: '连续负荷 — 自己技能的迸发效果延长1回合。', evolvesTo: null, evolvesFrom: null, desc: '发出噼啪声响的鸟类。' },
+      image:'https://patchwiki.biligame.com/images/rocom/5/5f/67uopai58qg98apg0dci57gi1bgxhn4.png',ename: 'CrackBird',     attribute: ['electric','flying'],eggGroup: ['flying'], heightMin:2.0,heightMax:2.15,weightMin:89.5,weightMax:127.5, stage: 2, region: '-', trait: '连续负荷 — 自己技能的迸发效果延长1回合。', evolvesTo: null, evolvesFrom: null, desc: '发出噼啪声响的鸟类。',
+        battle: {
+          "trait": "电系迸发延长",
+          "tier": "T2",
+          "recommend": "PVP电翼速攻。连续负荷让迸发效果延长一回合，持续压制力强。",
+          "pairing": [
+          "酷拉",
+          "闪电鳗鱼",
+          "帕尔萨斯"
+          ],
+          "teams": [
+          "电系队",
+          "速攻压制队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "电系核心输出，迸发延长1回合。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "翼系多段物攻。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "电系范围输出。"
+          },
+          {
+          "name": "空气切割",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "翼系高速先手。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "雷电交织",
+          "type": "电",
+          "pp": 4,
+          "power": "80(魔攻)",
+          "effect": "主攻技能，连续负荷让迸发翻倍持续时间。"
+          },
+          {
+          "name": "电磁脉冲",
+          "type": "电",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "范围压制。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "物理多段输出。"
+          },
+          {
+          "name": "空气切割",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "高速先手补刀。"
+        }
+          ]
+        }
+        }
+    },
     { id:273, name: '深蓝鲸',
-      image:'https://patchwiki.biligame.com/images/rocom/4/4c/eonvrfjw5xrztsmkzmwz4eutdi7oban.png',ename: 'DeepBlueWhale', attribute: 'water',eggGroup: ['ocean','monster'], heightMin:2.0,heightMax:2.65,weightMin:645.0,weightMax:700.0, stage: 3, isBoss:true, region: '-', trait: '倾轧 — 携带的技能受能耗变化效果的影响翻倍。', evolvesTo: null, evolvesFrom: null, desc: '深海中的巨型蓝鲸！首领级精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/4c/eonvrfjw5xrztsmkzmwz4eutdi7oban.png',ename: 'DeepBlueWhale', attribute: 'water',eggGroup: ['ocean','monster'], heightMin:2.0,heightMax:2.65,weightMin:645.0,weightMax:700.0, stage: 3, isBoss:true, region: '-', trait: '倾轧 — 携带的技能受能耗变化效果的影响翻倍。', evolvesTo: null, evolvesFrom: null, desc: '深海中的巨型蓝鲸！首领级精灵。',
+        battle: {
+          "trait": "BOSS级倾轧水盾",
+          "tier": "T1",
+          "recommend": "PVE水系超级坦克。首领级精灵种族值极高，倾轧让能耗变化效果翻倍。",
+          "pairing": [
+          "蓝漪水灵",
+          "圣剑-X",
+          "深海守护者"
+          ],
+          "teams": [
+          "水系坦克队",
+          "BOSS挑战"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "巨浪滔天",
+          "type": "水",
+          "pp": 3,
+          "power": "130(魔攻)",
+          "effect": "BOSS级水系超必杀。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "高威力水系输出。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "超大减免护盾。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅回复生命。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "巨浪滔天",
+          "type": "水",
+          "pp": 3,
+          "power": "130(魔攻)",
+          "effect": "毁灭性水系必杀。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "稳定高威输出。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "超强防护。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "恐怖回血量。"
+        }
+          ]
+        }
+        }
+    },
 
     // 格兰种子 → 格兰花 → 格兰球 (NO.274~276)
     { id:274, name: '格兰种子',
-      image:'https://patchwiki.biligame.com/images/rocom/d/d3/b3jzacefc99rb5kz2yh5ta03dq5rd2e.png',ename: 'GranSeed',     attribute: 'grass',eggGroup: ['plant'], heightMin:0.4,heightMax:0.57,weightMin:3.5,weightMax:5.4, stage: 1, region: '-', trait: '生长 — 回合结束时，回复12%生命。', evolvesTo: [275], evolvesFrom: null, desc: '格兰花的种子形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/d3/b3jzacefc99rb5kz2yh5ta03dq5rd2e.png',ename: 'GranSeed',     attribute: 'grass',eggGroup: ['plant'], heightMin:0.4,heightMax:0.57,weightMin:3.5,weightMax:5.4, stage: 1, region: '-', trait: '生长 — 回合结束时，回复12%生命。', evolvesTo: [275], evolvesFrom: null, desc: '格兰花的种子形态。',
+        battle: {
+          "trait": "生长回血草系",
+          "tier": "T3",
+          "recommend": "PVE草系续航过渡。每回合自动回复12%生命，生存能力不错。",
+          "pairing": [
+          "格兰花",
+          "格兰球",
+          "针叶巡林"
+          ],
+          "teams": [
+          "草系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "草系先手攻击。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸血+配合生长双重回血。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+          },
+          {
+          "name": "甜美香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱敌方。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "主攻技能。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸血续航+生长回血叠加。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场靠生长回血。"
+          },
+          {
+          "name": "甜美香气",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "削弱。"
+        }
+          ]
+        }
+        }
+    },
     { id:275, name: '格兰花',
-      image:'https://patchwiki.biligame.com/images/rocom/d/d3/b3jzacefc99rb5kz2yh5ta03dq5rd2e.png',ename: 'GranFlower',    attribute: 'grass',eggGroup: ['plant'], heightMin:0.48,heightMax:0.68,weightMin:6.5,weightMax:7.8, stage: 2, region: '-', trait: '生长 — 回合结束时，回复12%生命。', evolvesTo: [276], evolvesFrom: 274, desc: '格兰种子开出的花。' },
+      image:'https://patchwiki.biligame.com/images/rocom/d/d3/b3jzacefc99rb5kz2yh5ta03dq5rd2e.png',ename: 'GranFlower',    attribute: 'grass',eggGroup: ['plant'], heightMin:0.48,heightMax:0.68,weightMin:6.5,weightMax:7.8, stage: 2, region: '-', trait: '生长 — 回合结束时，回复12%生命。', evolvesTo: [276], evolvesFrom: 274, desc: '格兰种子开出的花。',
+        battle: {
+          "trait": "格兰花进阶",
+          "tier": "T2",
+          "recommend": "PVP草系续航中转。进化后属性更高，生长回血更可观。",
+          "pairing": [
+          "格兰种子",
+          "格兰球",
+          "白发路路"
+          ],
+          "teams": [
+          "草系续航队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "55(物攻)",
+          "effect": "草系物攻增强。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "AOE输出。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "大量吸血。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化自身。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "55(物攻)",
+          "effect": "稳定主攻。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "恐怖吸血量+生长12%每回合。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "AOE清场。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后更站得住。"
+        }
+          ]
+        }
+        }
+    },
     { id:276, name: '格兰球',
       image:'https://patchwiki.biligame.com/images/rocom/d/d3/b3jzacefc99rb5kz2yh5ta03dq5rd2e.png',ename: 'GranBall',      attribute: 'grass',eggGroup: ['plant','fairy'], heightMin:0.81,heightMax:1.16,weightMin:12.5,weightMax:16.5, stage: 3, region: '-', trait: '生长 — 回合结束时，回复12%生命。', evolvesTo: null, evolvesFrom: 275, desc: '格兰花结出的球形果实形态。' },
 
@@ -1624,29 +7194,716 @@ const RocoData = {
 
     // 犀角鸟 (NO.310)
     { id:310, name: '犀角鸟',
-      image:'https://patchwiki.biligame.com/images/rocom/6/6a/81qhw7nwi52la93w31dkqwhrzwgqiqw.png',ename: 'RhinoHornBird', attribute: 'light',eggGroup: ['animal'], heightMin:0.32,heightMax:0.4,weightMin:9.6,weightMax:11.5, stage: 2, hasShiny:true, region: '-', trait: '月光审判 — 攻击时，若敌方血脉是首领血脉，技能威力+100%。', evolvesTo: null, evolvesFrom: null, desc: '长有犀牛角的鸟类。存在异色形态。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/6a/81qhw7nwi52la93w31dkqwhrzwgqiqw.png',ename: 'RhinoHornBird', attribute: 'light',eggGroup: ['animal'], heightMin:0.32,heightMax:0.4,weightMin:9.6,weightMax:11.5, stage: 2, hasShiny:true, region: '-', trait: '月光审判 — 攻击时，若敌方血脉是首领血脉，技能威力+100%。', evolvesTo: null, evolvesFrom: null, desc: '长有犀牛角的鸟类。存在异色形态。',
+        battle: {
+          "trait": "月光审判BOSS杀手",
+          "tier": "T2",
+          "recommend": "PVE/PVP光系BOSS克制手。对首领血脉敌人威力翻倍，挑战本必备。",
+          "pairing": [
+          "迪莫",
+          "艾莉儿",
+          "深蓝鲸"
+          ],
+          "teams": [
+          "BOSS挑战队",
+          "光系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "光刃",
+          "type": "光",
+          "pp": 3,
+          "power": "110(物攻)",
+          "effect": "对首领血脉220%威力！核心必杀。"
+          },
+          {
+          "name": "放晴",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "光系技能威力+50%。"
+          },
+          {
+          "name": "闪光",
+          "type": "光",
+          "pp": 4,
+          "power": "-",
+          "effect": "降低敌方命中率。"
+          },
+          {
+          "name": "超导",
+          "type": "电",
+          "pp": 4,
+          "power": "90(魔攻)",
+          "effect": "电系补刀输出。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "光刃",
+          "type": "光",
+          "pp": 3,
+          "power": "110(物攻)",
+          "effect": "打首领220%威力，非首领也稳定110物攻。"
+          },
+          {
+          "name": "放晴",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后续光系技能。"
+          },
+          {
+          "name": "超导",
+          "type": "电",
+          "pp": 4,
+          "power": "90(魔攻)",
+          "effect": "低能耗电系补刀。"
+          },
+          {
+          "name": "闪光",
+          "type": "光",
+          "pp": 4,
+          "power": "-",
+          "effect": "闪避保命。"
+        }
+          ]
+        }
+        }
+    },
 
     // 光纤兽 → 疾光千兽 (NO.311~312)
     { id:311, name: '光纤兽',
-      image:'https://patchwiki.biligame.com/images/rocom/6/6a/81qhw7nwi52la93w31dkqwhrzwgqiqw.png',ename: 'FiberBeast',    attribute: 'light',eggGroup: ['animal','mech'], heightMin:0.7,heightMax:0.85,weightMin:31.5,weightMax:37.8, stage: 1, region: '-', trait: '月光审判 — 攻击时，若敌方血脉是首领血脉，技能威力+100%。', evolvesTo: [312], evolvesFrom: null, desc: '光纤构成的兽类精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/6a/81qhw7nwi52la93w31dkqwhrzwgqiqw.png',ename: 'FiberBeast',    attribute: 'light',eggGroup: ['animal','mech'], heightMin:0.7,heightMax:0.85,weightMin:31.5,weightMax:37.8, stage: 1, region: '-', trait: '月光审判 — 攻击时，若敌方血脉是首领血脉，技能威力+100%。', evolvesTo: [312], evolvesFrom: null, desc: '光纤构成的兽类精灵。',
+        battle: {
+          "trait": "月光审判BOSS杀手",
+          "tier": "T2",
+          "recommend": "PVE/PVP光系首领克制。对首领血脉敌人威力翻倍——BOSS挑战必备。",
+          "pairing": [
+          "疾光千兽",
+          "迪莫",
+          "犀角鸟"
+          ],
+          "teams": [
+          "BOSS挑战队",
+          "光系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "光刃",
+          "type": "光",
+          "pp": 3,
+          "power": "100(物攻)",
+          "effect": "对首领血脉200%威力核心必杀。"
+          },
+          {
+          "name": "放晴",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "光系强化+50%。"
+          },
+          {
+          "name": "闪光",
+          "type": "光",
+          "pp": 4,
+          "power": "-",
+          "effect": "降低敌方命中。"
+          },
+          {
+          "name": "超导",
+          "type": "电",
+          "pp": 4,
+          "power": "85(魔攻)",
+          "effect": "电系补刀。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "光刃",
+          "type": "光",
+          "pp": 3,
+          "power": "100(物攻)",
+          "effect": "打首领200%威力，非首领也100威稳定输出。"
+          },
+          {
+          "name": "超导",
+          "type": "电",
+          "pp": 4,
+          "power": "85(魔攻)",
+          "effect": "低能耗电系补刀。"
+          },
+          {
+          "name": "放晴",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后续光刃。"
+          },
+          {
+          "name": "闪光",
+          "type": "光",
+          "pp": 4,
+          "power": "-",
+          "effect": "闪避保命。"
+        }
+          ]
+        }
+        }
+    },
     { id:312, name: '疾光千兽',
-      image:'https://patchwiki.biligame.com/images/rocom/6/6a/81qhw7nwi52la93w31dkqwhrzwgqiqw.png',ename: 'SpeedLightThousandBeast',attribute:'light',eggGroup:['animal'],heightMin:1.75,heightMax:2.1,weightMin:112.9,weightMax:165.0,stage:3,region:'-',trait: '月光审判 — 攻击时，若敌方血脉是首领血脉，技能威力+100%。',evolvesTo:null,evolvesFrom:311,desc: '疾驰如光的千足兽！战令宠，无法孵蛋。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/6a/81qhw7nwi52la93w31dkqwhrzwgqiqw.png',ename: 'SpeedLightThousandBeast',attribute:'light',eggGroup:['animal'],heightMin:1.75,heightMax:2.1,weightMin:112.9,weightMax:165.0,stage:3,region:'-',trait: '月光审判 — 攻击时，若敌方血脉是首领血脉，技能威力+100%。',evolvesTo:null,evolvesFrom:311,desc: '疾驰如光的千足兽！战令宠，无法孵蛋。',
+        battle: {
+          "trait": "疾光千兽终极",
+          "tier": "T1",
+          "recommend": "PVP光系BOSS杀手王牌。最终形态+月光审判=对首领260%以上威力！",
+          "pairing": [
+          "光纤兽",
+          "迪莫",
+          "艾莉儿"
+          ],
+          "teams": [
+          "光系王牌队",
+          "BOSS挑战"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "圣光裁决",
+          "type": "光",
+          "pp": 3,
+          "power": "115(物攻)",
+          "effect": "光系究极必杀——首领血脉230%威力！"
+          },
+          {
+          "name": "光刃",
+          "type": "光",
+          "pp": 3,
+          "power": "110(物攻)",
+          "effect": "高威稳定输出——首领220%威力。"
+          },
+          {
+          "name": "放晴",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅强化光系。"
+          },
+          {
+          "name": "漫反射",
+          "type": "普通",
+          "pp": 3,
+          "power": "-",
+          "effect": "多属性强化。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "圣光裁决",
+          "type": "光",
+          "pp": 3,
+          "power": "115(物攻)",
+          "effect": "对首领230%威力的光系核弹。"
+          },
+          {
+          "name": "光刃",
+          "type": "光",
+          "pp": 3,
+          "power": "110(物攻)",
+          "effect": "220%威力稳定爆发。"
+          },
+          {
+          "name": "放晴",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化后伤害爆炸。"
+          },
+          {
+          "name": "漫反射",
+          "type": "普通",
+          "pp": 3,
+          "power": "-",
+          "effect": "多属性强化增加灵活性。"
+        }
+          ]
+        }
+        }
+    },
 
     // 果冻系列 (NO.313~316)
     { id:313, name: '果冻',
-      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',  ename: 'Jelly',         attribute: 'water',eggGroup: ['magic','soft'], heightMin:0.3,heightMax:0.36,weightMin:4.35,weightMax:5.6, stage: 1, region: '-', trait: '茶多酚 — 离场后，更换入场的精灵回复20%生命且免疫寄生。', evolvesTo: null, evolvesFrom: null, desc: 'Q弹Q弹的果冻精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',  ename: 'Jelly',         attribute: 'water',eggGroup: ['magic','soft'], heightMin:0.3,heightMax:0.36,weightMin:4.35,weightMax:5.6, stage: 1, region: '-', trait: '茶多酚 — 离场后，更换入场的精灵回复20%生命且免疫寄生。', evolvesTo: null, evolvesFrom: null, desc: 'Q弹Q弹的果冻精灵。',
+        battle: {
+          "trait": "茶多酚换人治疗",
+          "tier": "T2",
+          "recommend": "PVP水系中转治疗。每次离场都给换入的队友回20%血+免疫寄生——完美中转。",
+          "pairing": [
+          "抹茶布丁",
+          "蓝漪水灵",
+          "深蓝鲸"
+          ],
+          "teams": [
+          "换人治疗队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "水系稳定输出。"
+          },
+          {
+          "name": "泡泡围困",
+          "type": "水",
+          "pp": 3,
+          "power": "50(魔攻)",
+          "effect": "控制+伤害。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "减免伤害。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "主动退场触发茶多酚。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "主动退场→队友入场回20%血+免疫寄生！"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "70(魔攻)",
+          "effect": "出场时打一套再退场。"
+          },
+          {
+          "name": "泡泡围困",
+          "type": "水",
+          "pp": 3,
+          "power": "50(魔攻)",
+          "effect": "控制留人。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "生存保障。"
+        }
+          ]
+        }
+        }
+    },
     { id:314, name: '抹茶布丁',
-      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',ename: 'MatchaPudding', attribute: ['water','grass'],eggGroup: ['soft'], heightMin:0.39,heightMax:0.51,weightMin:6.21,weightMax:7.9, stage: 2, region: '-', trait: '茶多酚 — 离场后，更换入场的精灵回复20%生命且免疫寄生。', evolvesTo: null, evolvesFrom: null, desc: '抹茶味布丁精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',ename: 'MatchaPudding', attribute: ['water','grass'],eggGroup: ['soft'], heightMin:0.39,heightMax:0.51,weightMin:6.21,weightMax:7.9, stage: 2, region: '-', trait: '茶多酚 — 离场后，更换入场的精灵回复20%生命且免疫寄生。', evolvesTo: null, evolvesFrom: null, desc: '抹茶味布丁精灵。',
+        battle: {
+          "trait": "抹茶布丁进阶",
+          "tier": "T2",
+          "recommend": "PVP换人治疗中转。进化后属性更高，茶多酚治疗效果更好。",
+          "pairing": [
+          "果冻",
+          "椰浆布丁",
+          "红绒十字"
+          ],
+          "teams": [
+          "换人治疗队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威水系必杀。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "75(魔攻)",
+          "effect": "稳定输出。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复生命。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场触发茶多酚。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场治疗20%+免疫寄生——循环利用。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威爆发。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "自身续航。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "75(魔攻)",
+          "effect": "稳定输出。"
+        }
+          ]
+        }
+        }
+    },
     { id:315, name: '椰浆布丁',
-      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',ename: 'CoconutPudding',attribute: ['water','ice'],eggGroup: ['soft'], heightMin:0.39,heightMax:0.51,weightMin:6.21,weightMax:7.9, stage: 2, region: '-', trait: '吉利丁片 — 离场后，更换入场的精灵获得双防+20%且免疫冻结。', evolvesTo: null, evolvesFrom: null, desc: '椰浆味布丁精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',ename: 'CoconutPudding',attribute: ['water','ice'],eggGroup: ['soft'], heightMin:0.39,heightMax:0.51,weightMin:6.21,weightMax:7.9, stage: 2, region: '-', trait: '吉利丁片 — 离场后，更换入场的精灵获得双防+20%且免疫冻结。', evolvesTo: null, evolvesFrom: null, desc: '椰浆味布丁精灵。',
+        battle: {
+          "trait": "吉利丁片双防Buff",
+          "tier": "T2",
+          "recommend": "PVP换人增益型。离场给换入者双防+20%+免疫冻结——对抗冰系的绝佳中转。",
+          "pairing": [
+          "抹茶布丁",
+          "熔岩布丁",
+          "布鲁斯"
+          ],
+          "teams": [
+          "换人增益队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威水系输出。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "强力防护。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复生命。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场触发吉利丁片。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场→换入者双防+20%+免疫冻结！"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威输出。"
+          },
+          {
+          "name": "水幕护盾",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场。"
+          },
+          {
+          "name": "海洋祝福",
+          "type": "水",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航。"
+        }
+          ]
+        }
+        }
+    },
     { id:316, name: '熔岩布丁',
-      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',ename: 'LavaPudding',   attribute: ['water','fire'],eggGroup: ['soft'], heightMin:0.39,heightMax:0.51,weightMin:6.21,weightMax:7.9, stage: 2, region: '-', trait: '美拉德反应 — 离场后，更换入场的精灵获得双攻+20%且免疫灼烧。', evolvesTo: null, evolvesFrom: null, desc: '熔岩味的热辣布丁精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/9/92/5pgbduguoappstj95ppzcb6rlxzs4f1.png',ename: 'LavaPudding',   attribute: ['water','fire'],eggGroup: ['soft'], heightMin:0.39,heightMax:0.51,weightMin:6.21,weightMax:7.9, stage: 2, region: '-', trait: '美拉德反应 — 离场后，更换入场的精灵获得双攻+20%且免疫灼烧。', evolvesTo: null, evolvesFrom: null, desc: '熔岩味的热辣布丁精灵。',
+        battle: {
+          "trait": "美拉德反应攻击Buff",
+          "tier": "T2",
+          "recommend": "PVP换人攻击增益型。离场给换入者双攻+20%+免疫灼烧——进攻型中转最佳。",
+          "pairing": [
+          "椰浆布丁",
+          "火尾战士",
+          "火焰猿"
+          ],
+          "teams": [
+          "换人增益队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威水系必杀。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "75(魔攻)",
+          "effect": "稳定输出。"
+          },
+          {
+          "name": "气泡束缚",
+          "type": "水",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "控制+伤害。"
+          },
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场触发美拉德反应。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "折返",
+          "type": "翼",
+          "pp": 4,
+          "power": "-",
+          "effect": "退场→换入者双攻+20%+免疫灼烧！进攻型中转。"
+          },
+          {
+          "name": "激流冲击",
+          "type": "水",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "高威输出。"
+          },
+          {
+          "name": "气泡束缚",
+          "type": "水",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "控制。"
+          },
+          {
+          "name": "水流冲击",
+          "type": "水",
+          "pp": 4,
+          "power": "75(魔攻)",
+          "effect": "稳定副输出。"
+        }
+          ]
+        }
+        }
+    },
 
     // 星尘虫系列 (NO.317~319)
     { id:317, name: '星尘虫',
-      image:'https://patchwiki.biligame.com/images/rocom/c/c9/fgbjyux6bdbk4uikkoew7jeicbzy47t.png',ename: 'StardustBug',   attribute: 'bug',eggGroup: ['insect'], heightMin:0.15,heightMax:0.2,weightMin:0.45,weightMax:1.4, stage: 1, region: '-', trait: '契约的形状 — 根据捕捉所用的咕噜球，入场时获得不同效果。', evolvesTo: [318], evolvesFrom: null, desc: '星尘构成的小虫子。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/c9/fgbjyux6bdbk4uikkoew7jeicbzy47t.png',ename: 'StardustBug',   attribute: 'bug',eggGroup: ['insect'], heightMin:0.15,heightMax:0.2,weightMin:0.45,weightMax:1.4, stage: 1, region: '-', trait: '契约的形状 — 根据捕捉所用的咕噜球，入场时获得不同效果。', evolvesTo: [318], evolvesFrom: null, desc: '星尘构成的小虫子。',
+        battle: {
+          "trait": "契约虫系灵活",
+          "tier": "T2",
+          "recommend": "PVP虫系灵活型。不同咕噜球捕捉带来不同入场效果，策略多变。",
+          "pairing": [
+          "落星虫",
+          "黄蜂后",
+          "矮脚爬爬"
+          ],
+          "teams": [
+          "虫系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "虫群集体攻击。"
+          },
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "35(物攻)",
+          "effect": "毒系低能耗输出。"
+          },
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "提升防御。"
+          },
+          {
+          "name": "蛛丝束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "限制行动。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场等待契约效果。"
+          },
+          {
+          "name": "虫群冲锋",
+          "type": "虫",
+          "pp": 4,
+          "power": "-",
+          "effect": "群体伤害。"
+          },
+          {
+          "name": "毒针",
+          "type": "毒",
+          "pp": 4,
+          "power": "35(物攻)",
+          "effect": "低能耗补刀。"
+          },
+          {
+          "name": "蛛丝束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "控制留人。"
+        }
+          ]
+        }
+        }
+    },
     { id:318, name: '落星虫',
-      image:'https://patchwiki.biligame.com/images/rocom/c/c9/fgbjyux6bdbk4uikkoew7jeicbzy47t.png',ename: 'FallenStarBug', attribute: 'bug',eggGroup: ['insect'], heightMin:0.35,heightMax:0.4,weightMin:1.25,weightMax:2.25, stage: 2, region: '-', trait: '契约的形状 — 根据捕捉所用的咕噜球，入场时获得不同效果。', evolvesTo: [319], evolvesFrom: 317, desc: '陨落的星尘虫进化。' },
+      image:'https://patchwiki.biligame.com/images/rocom/c/c9/fgbjyux6bdbk4uikkoew7jeicbzy47t.png',ename: 'FallenStarBug', attribute: 'bug',eggGroup: ['insect'], heightMin:0.35,heightMax:0.4,weightMin:1.25,weightMax:2.25, stage: 2, region: '-', trait: '契约的形状 — 根据捕捉所用的咕噜球，入场时获得不同效果。', evolvesTo: [319], evolvesFrom: 317, desc: '陨落的星尘虫进化。',
+        battle: {
+          "trait": "落星虫进阶",
+          "tier": "T2",
+          "recommend": "PVP虫系契约中转。进化后属性更高，契约效果更强。",
+          "pairing": [
+          "星尘虫",
+          "恶魔红钻",
+          "黄蜂后"
+          ],
+          "teams": [
+          "虫系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "虫群风暴",
+          "type": "虫",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "虫系AOE增强。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "高威毒系物攻。"
+          },
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "大幅防御。"
+          },
+          {
+          "name": "蛛网束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "强控限制。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "甲壳守护",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守等待契约触发。"
+          },
+          {
+          "name": "虫群风暴",
+          "type": "虫",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "AOE群体压制。"
+          },
+          {
+          "name": "剧毒之牙",
+          "type": "毒",
+          "pp": 3,
+          "power": "60(物攻)",
+          "effect": "单体高威追击。"
+          },
+          {
+          "name": "蛛网束缚",
+          "type": "虫",
+          "pp": 3,
+          "power": "-",
+          "effect": "强控留人。"
+        }
+          ]
+        }
+        }
+    },
     { id:319, name: '陨星虫',
       image:'https://patchwiki.biligame.com/images/rocom/c/c9/fgbjyux6bdbk4uikkoew7jeicbzy47t.png',ename: 'MeteoriteBug',  attribute: 'bug',eggGroup: ['insect'], heightMin:0.65,heightMax:0.8,weightMin:5.6,weightMax:6.8, stage: 3, region: '-', trait: '契约的形状 — 根据捕捉所用的咕噜球，入场时获得不同效果。', evolvesTo: null, evolvesFrom: 318, desc: '如陨星般坠落的虫族终极形态。' },
 
@@ -1742,11 +7999,241 @@ const RocoData = {
 
     // 粉星仔 → 粉耳星兔 → 落陨星兔 (NO.335~337)
     { id:335, name: '粉星仔',
-      image:'https://patchwiki.biligame.com/images/rocom/6/68/taalud8zowwtufk65ucpbes8xqsminq.png',ename: 'PinkStarBaby',  attribute: 'illusion',eggGroup: ['flying','fairy'], heightMin:0.39,heightMax:0.5,weightMin:9.8,weightMax:12.8, stage: 1, region: '-', trait: '双向光速 — 在场时，所有回合结束时触发，触发次数+1。', evolvesTo: [336], evolvesFrom: null, desc: '粉色星星的小兔子。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/68/taalud8zowwtufk65ucpbes8xqsminq.png',ename: 'PinkStarBaby',  attribute: 'illusion',eggGroup: ['flying','fairy'], heightMin:0.39,heightMax:0.5,weightMin:9.8,weightMax:12.8, stage: 1, region: '-', trait: '双向光速 — 在场时，所有回合结束时触发，触发次数+1。', evolvesTo: [336], evolvesFrom: null, desc: '粉色星星的小兔子。',
+        battle: {
+          "trait": "回合末加速触发",
+          "tier": "T2",
+          "recommend": "PVE幻系速触。双向光速让回合末效果额外触发一次，叠Buff极快。",
+          "pairing": [
+          "粉耳星兔",
+          "星光狮",
+          "迪莫"
+          ],
+          "teams": [
+          "幻系队",
+          "速触队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "幻系高威输出触发星陨。"
+          },
+          {
+          "name": "幻影斩",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "幽灵系物攻。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "翼系多段伤害。"
+          },
+          {
+          "name": "光之壁",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防大幅提升。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "主攻，双向光速双重触发。"
+          },
+          {
+          "name": "幻影斩",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "幽灵物攻补盲。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "60(物攻)",
+          "effect": "多段物理输出。"
+          },
+          {
+          "name": "光之壁",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守强化。"
+        }
+          ]
+        }
+        }
+    },
     { id:336, name: '粉耳星兔',
-      image:'https://patchwiki.biligame.com/images/rocom/6/68/taalud8zowwtufk65ucpbes8xqsminq.png',ename: 'PinkEarStarRabbit',attribute:'illusion',eggGroup:['flying'],heightMin:0.55,heightMax:0.75,weightMin:16.82,weightMax:23.81,stage:2,region:'-',trait: '双向光速 — 在场时，所有回合结束时触发，触发次数+1。',evolvesTo:[337],evolvesFrom:335,desc: '粉色耳朵的星兔。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/68/taalud8zowwtufk65ucpbes8xqsminq.png',ename: 'PinkEarStarRabbit',attribute:'illusion',eggGroup:['flying'],heightMin:0.55,heightMax:0.75,weightMin:16.82,weightMax:23.81,stage:2,region:'-',trait: '双向光速 — 在场时，所有回合结束时触发，触发次数+1。',evolvesTo:[337],evolvesFrom:335,desc: '粉色耳朵的星兔。',
+        battle: {
+          "trait": "双向光速进阶",
+          "tier": "T2",
+          "recommend": "PVP幻系速触中转。进化后属性更高，触发效率更强。",
+          "pairing": [
+          "粉星仔",
+          "落陨星兔",
+          "星光狮"
+          ],
+          "teams": [
+          "幻系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "幻系高威输出提升。"
+          },
+          {
+          "name": "幻影斩",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "幽灵物攻增强。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "65(物攻)",
+          "effect": "翼系多段伤害。"
+          },
+          {
+          "name": "祈愿",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复生命值。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "高威主攻双重触发。"
+          },
+          {
+          "name": "幻影斩",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "物攻爆发。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "65(物攻)",
+          "effect": "多段物理。"
+          },
+          {
+          "name": "祈愿",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航恢复。"
+        }
+          ]
+        }
+        }
+    },
     { id:337, name: '落陨星兔',
-      image:'https://patchwiki.biligame.com/images/rocom/6/68/taalud8zowwtufk65ucpbes8xqsminq.png',ename: 'FallenMeteorStarRabbit',attribute:['illusion','ghost'],eggGroup:['flying'],heightMin:0.55,heightMax:0.75,weightMin:16.82,weightMax:23.81,stage:3,region:'-',trait: '陨落 — 在场时，双方回合结束时触发的效果，触发次数-1。',evolvesTo:null,evolvesFrom:336,desc: '如流星般坠落的星兔。' },
+      image:'https://patchwiki.biligame.com/images/rocom/6/68/taalud8zowwtufk65ucpbes8xqsminq.png',ename: 'FallenMeteorStarRabbit',attribute:['illusion','ghost'],eggGroup:['flying'],heightMin:0.55,heightMax:0.75,weightMin:16.82,weightMax:23.81,stage:3,region:'-',trait: '陨落 — 在场时，双方回合结束时触发的效果，触发次数-1。',evolvesTo:null,evolvesFrom:336,desc: '如流星般坠落的星兔。',
+        battle: {
+          "trait": "陨落抑制触发(版本热门)",
+          "tier": "T1",
+          "recommend": "PVP幻灵终极抑制。陨落特性减少双方回合末触发次数，克制各类触发流！与双向光速完全相反的策略定位——专杀触发流。",
+          "pairing": [
+          "粉耳星兔",
+          "星光狮",
+          "魄月狼王"
+          ],
+          "teams": [
+          "触发流克星队",
+          "幻灵混合队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "幻系超高威必杀。"
+          },
+          {
+          "name": "幻影裂空",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "幽灵系强力物攻。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "翼系多段高威输出。"
+          },
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系魔攻补盲。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "幻系爆发必杀。"
+          },
+          {
+          "name": "幻影裂空",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "85(物攻)",
+          "effect": "幽灵物攻主力。"
+          },
+          {
+          "name": "陨落力场",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "-",
+          "effect": "展开力场抑制双方回合末触发（核心策略技）。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "物理多段追击。"
+        }
+          ]
+        }
+        }
+    },
 
     // 布瓜蝌 → 上岸蛙 (NO.338~339)
     { id:338, name: '布瓜蝌',
@@ -1755,25 +8242,634 @@ const RocoData = {
       image:'https://patchwiki.biligame.com/images/rocom/1/1f/cf0waszkpt8lgc5625l1bv71wgbxlrm.png',ename: 'LandFrog',      attribute: 'illusion',eggGroup: ['amphibian'], heightMin:0.65,heightMax:0.87,weightMin:5.8,weightMax:8.1, stage: 2, region: '-', trait: '张弛有度 — 周末时自己获得双攻+40%，其他时间获得双防+40%。', evolvesTo: null, evolvesFrom: 338, desc: '上岸生活的青蛙。' },
 
     { id:340, name: '火红尾',
-      image:'https://patchwiki.biligame.com/images/rocom/0/00/gknyb1qbbno2vnvcvyb4p9a0o9y1owp.png',ename: 'FireRedTail',   attribute: 'fire',eggGroup: ['animal'], heightMin:0.72,heightMax:0.98,weightMin:17.5,weightMax:30.5, stage: 2, region: '-', trait: '天通地明 — 攻击时，若敌方血脉是污染血脉，技能威力+100%。', evolvesTo: null, evolvesFrom: null, desc: '红色尾巴的火焰精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/00/gknyb1qbbno2vnvcvyb4p9a0o9y1owp.png',ename: 'FireRedTail',   attribute: 'fire',eggGroup: ['animal'], heightMin:0.72,heightMax:0.98,weightMin:17.5,weightMax:30.5, stage: 2, region: '-', trait: '天通地明 — 攻击时，若敌方血脉是污染血脉，技能威力+100%。', evolvesTo: null, evolvesFrom: null, desc: '红色尾巴的火焰精灵。',
+        battle: {
+          "trait": "天通地明污染克星",
+          "tier": "T2",
+          "recommend": "PVE火系污染克制手。对污染血脉敌人威力翻倍。",
+          "pairing": [
+          "火焰猿",
+          "烈焰诺诺",
+          "豪炎战神"
+          ],
+          "teams": [
+          "污染克制队",
+          "火系队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "对污染血脉160%威力！"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "火系物攻爆发。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "低能耗火系输出。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "降低敌方命中率。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "80(魔攻)",
+          "effect": "打污染怪160%威力，常规也强。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "物攻选择。"
+          },
+          {
+          "name": "火花喷射",
+          "type": "火",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "低能耗铺垫。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "干扰保命。"
+        }
+          ]
+        }
+        }
+    },
     { id:341, name: '雅丹鬃',
-      image:'https://patchwiki.biligame.com/images/rocom/0/00/gknyb1qbbno2vnvcvyb4p9a0o9y1owp.png',ename: 'YardangMane',  attribute: 'fire',eggGroup: ['animal'], heightMin:1.7,heightMax:2.06,weightMin:49.5,weightMax:71.2, stage: 3, region: '-', trait: '天通地明 — 攻击时，若敌方血脉是污染血脉，技能威力+100%。', evolvesTo: null, evolvesFrom: null, desc: '雅丹地貌般的鬃毛精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/0/00/gknyb1qbbno2vnvcvyb4p9a0o9y1owp.png',ename: 'YardangMane',  attribute: 'fire',eggGroup: ['animal'], heightMin:1.7,heightMax:2.06,weightMin:49.5,weightMax:71.2, stage: 3, region: '-', trait: '天通地明 — 攻击时，若敌方血脉是污染血脉，技能威力+100%。', evolvesTo: null, evolvesFrom: null, desc: '雅丹地貌般的鬃毛精灵。',
+        battle: {
+          "trait": "天通地明污染克星",
+          "tier": "T1",
+          "recommend": "PVP火系污染血脉克制王牌。最终形态+对污染怪翻倍=毁灭性输出。",
+          "pairing": [
+          "火红尾",
+          "豪炎战神",
+          "火焰猿"
+          ],
+          "teams": [
+          "污染克制王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "对污染血脉220%威力火系核弹！"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "180%威力稳定输出。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "150%威力物攻。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避保命。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "烈焰地狱",
+          "type": "火",
+          "pp": 3,
+          "power": "110(魔攻)",
+          "effect": "打污染怪220%威力——一击必杀级别。"
+          },
+          {
+          "name": "火焰放射",
+          "type": "火",
+          "pp": 3,
+          "power": "90(魔攻)",
+          "effect": "180%威力稳定爆发。"
+          },
+          {
+          "name": "烟幕",
+          "type": "火",
+          "pp": 3,
+          "power": "-",
+          "effect": "闪避等污染怪出现。"
+          },
+          {
+          "name": "烈焰冲撞",
+          "type": "火",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "150%威力物攻选择。"
+        }
+          ]
+        }
+        }
+    },
 
     // 春团 → 春兔 → 春花兔 (NO.342~344)
     { id:342, name: '春团',
-      image:'https://patchwiki.biligame.com/images/rocom/4/4e/geoo47p9iq6pyh1xko113u2z8bqcz09.png',  ename: 'SpringBall',    attribute: 'grass',eggGroup: ['animal','fairy'], heightMin:0.35,heightMax:0.51,weightMin:2.1,weightMax:3.6, stage: 1, region: '-', trait: '系统发育 — 获得能量或生命时，会将等量的能量或生命随机分配给场下的精灵。', evolvesTo: [343], evolvesFrom: null, desc: '春天团子般的精灵。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/4e/geoo47p9iq6pyh1xko113u2z8bqcz09.png',  ename: 'SpringBall',    attribute: 'grass',eggGroup: ['animal','fairy'], heightMin:0.35,heightMax:0.51,weightMin:2.1,weightMax:3.6, stage: 1, region: '-', trait: '系统发育 — 获得能量或生命时，会将等量的能量或生命随机分配给场下的精灵。', evolvesTo: [343], evolvesFrom: null, desc: '春天团子般的精灵。',
+        battle: {
+          "trait": "系统发育分享型",
+          "tier": "T2",
+          "recommend": "PVP草系团队辅助。自己获得的收益自动分享给场下队友——团队增益器。",
+          "pairing": [
+          "春兔",
+          "春花兔",
+          "白发路路"
+          ],
+          "teams": [
+          "草系辅助队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "草系基础攻击。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸血——吸到的血也分给队友！"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化——强化效果也分享场下。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防御提升。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "吸血续航同时喂养场下队友。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化自己=间接强化全队。"
+          },
+          {
+          "name": "飞叶快刀",
+          "type": "草",
+          "pp": 4,
+          "power": "45(物攻)",
+          "effect": "输出触发系统发育。"
+          },
+          {
+          "name": "硬化",
+          "type": "岩",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守站场持续分享。"
+        }
+          ]
+        }
+        }
+    },
     { id:343, name: '春兔',
-      image:'https://patchwiki.biligame.com/images/rocom/4/4e/geoo47p9iq6pyh1xko113u2z8bqcz09.png',  ename: 'SpringRabbit',  attribute: 'grass',eggGroup: ['animal','fairy'], heightMin:0.61,heightMax:0.87,weightMin:6.8,weightMax:8.5, stage: 2, region: '-', trait: '系统发育 — 获得能量或生命时，会将等量的能量或生命随机分配给场下的精灵。', evolvesTo: [344], evolvesFrom: 342, desc: '春天的小兔子。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/4e/geoo47p9iq6pyh1xko113u2z8bqcz09.png',  ename: 'SpringRabbit',  attribute: 'grass',eggGroup: ['animal','fairy'], heightMin:0.61,heightMax:0.87,weightMin:6.8,weightMax:8.5, stage: 2, region: '-', trait: '系统发育 — 获得能量或生命时，会将等量的能量或生命随机分配给场下的精灵。', evolvesTo: [344], evolvesFrom: 342, desc: '春天的小兔子。',
+        battle: {
+          "trait": "春兔进阶",
+          "tier": "T2",
+          "recommend": "PVP系统发育中转。进化后分享效率更高，团队收益更大。",
+          "pairing": [
+          "春团",
+          "春花兔",
+          "针叶巡林"
+          ],
+          "teams": [
+          "草系辅助队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "55(物攻)",
+          "effect": "草系物攻增强。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "AOE输出。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "大量吸血分享队友。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化分享全队。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "高效吸血+系统发育分享。"
+          },
+          {
+          "name": "藤鞭抽击",
+          "type": "草",
+          "pp": 3,
+          "power": "55(物攻)",
+          "effect": "稳定主攻。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化全队共享。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "55(魔攻)",
+          "effect": "AOE清场。"
+        }
+          ]
+        }
+        }
+    },
     { id:344, name: '春花兔',
-      image:'https://patchwiki.biligame.com/images/rocom/4/4e/geoo47p9iq6pyh1xko113u2z8bqcz09.png',ename: 'SpringFlowerRabbit',attribute:'grass',eggGroup:['animal','fairy'],heightMin:0.85,heightMax:1.15,weightMin:18.5,weightMax:33.5,stage:3,region:'-',trait: '系统发育 — 获得能量或生命时，会将等量的能量或生命随机分配给场下的精灵。',evolvesTo:null,evolvesFrom:343,desc: '春花烂漫时节的兔子。' },
+      image:'https://patchwiki.biligame.com/images/rocom/4/4e/geoo47p9iq6pyh1xko113u2z8bqcz09.png',ename: 'SpringFlowerRabbit',attribute:'grass',eggGroup:['animal','fairy'],heightMin:0.85,heightMax:1.15,weightMin:18.5,weightMax:33.5,stage:3,region:'-',trait: '系统发育 — 获得能量或生命时，会将等量的能量或生命随机分配给场下的精灵。',evolvesTo:null,evolvesFrom:343,desc: '春花烂漫时节的兔子。',
+        battle: {
+          "trait": "春花兔终极辅助",
+          "tier": "T1",
+          "recommend": "PVP草系团队辅助王牌。最终形态+系统发育=每次强化/回血都是全队收益！",
+          "pairing": [
+          "春兔",
+          "春团",
+          "白发路路"
+          ],
+          "teams": [
+          "草系辅助王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "木叶旋风",
+          "type": "草",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "草系高威物攻必杀。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "大范围AOE。"
+          },
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "巨量吸血分享全队。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "强化效果全队共享！"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "寄生种子",
+          "type": "草",
+          "pp": 3,
+          "power": "-",
+          "effect": "恐怖吸血+系统发育=全队回血引擎。"
+          },
+          {
+          "name": "木叶旋风",
+          "type": "草",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "高威输出。"
+          },
+          {
+          "name": "愿力强化",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "一次强化=全队受益。"
+          },
+          {
+          "name": "飞叶风暴",
+          "type": "草",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "AOE清场。"
+        }
+          ]
+        }
+        }
+    },
 
     // 幽星光 → 曜星光 → 暮星辰 (NO.345~347)
     { id:345, name: '幽星光',
-      image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'GhostStarlight', attribute: 'illusion',eggGroup: ['fairy'], heightMin:0.4,heightMax:0.55,weightMin:0.6,weightMax:1.65, stage: 2, region: '-', trait: '守望星 — 触发星陨时消耗一半层数，仍造成满层伤害。', evolvesTo: [346], evolvesFrom: null, desc: '幽暗中的星光。' },
+      image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'GhostStarlight', attribute: 'illusion',eggGroup: ['fairy'], heightMin:0.4,heightMax:0.55,weightMin:0.6,weightMax:1.65, stage: 2, region: '-', trait: '守望星 — 触发星陨时消耗一半层数，仍造成满层伤害。', evolvesTo: [346], evolvesFrom: null, desc: '幽暗中的星光。',
+        battle: {
+          "trait": "守望星半价满伤",
+          "tier": "T1",
+          "recommend": "PVP幻系星陨效率型。触发星陨只消耗一半层数却造成满层伤害——性价比爆表。",
+          "pairing": [
+          "曜星光",
+          "暮星辰",
+          "粉耳星兔"
+          ],
+          "teams": [
+          "幻系星陨队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "幻系输出——守望星让层数消耗减半！"
+          },
+          {
+          "name": "幻影斩",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "幽灵物攻。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "多段物攻。"
+          },
+          {
+          "name": "光之壁",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "特防提升。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "75(魔攻)",
+          "effect": "守望星核心——半层消耗=双倍使用次数！"
+          },
+          {
+          "name": "幻影斩",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "幽灵物攻补盲。"
+          },
+          {
+          "name": "翼刃风暴",
+          "type": "翼",
+          "pp": 4,
+          "power": "55(物攻)",
+          "effect": "物理多段输出。"
+          },
+          {
+          "name": "光之壁",
+          "type": "光",
+          "pp": 3,
+          "power": "-",
+          "effect": "防守保星陨层数。"
+        }
+          ]
+        }
+        }
+    },
     { id:346, name: '曜星光',
-      image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'ShiningStarlight',attribute: ['illusion','flying'],eggGroup: ['fairy'], heightMin:0.88,heightMax:1.05,weightMin:3.0,weightMax:4.5, stage: 3, region: '-', trait: '守望星 — 触发星陨时消耗一半层数，仍造成满层伤害。', evolvesTo: [347], evolvesFrom: 345, desc: '耀眼光芒的星辰。' },
+      image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'ShiningStarlight',attribute: ['illusion','flying'],eggGroup: ['fairy'], heightMin:0.88,heightMax:1.05,weightMin:3.0,weightMax:4.5, stage: 3, region: '-', trait: '守望星 — 触发星陨时消耗一半层数，仍造成满层伤害。', evolvesTo: [347], evolvesFrom: 345, desc: '耀眼光芒的星辰。',
+        battle: {
+          "trait": "曜星光进阶",
+          "tier": "T1",
+          "recommend": "PVP幻系星陨王牌。进化后守望星效率更高，星陨层数用不完。",
+          "pairing": [
+          "幽光大",
+          "暮星辰",
+          "粉星仔"
+          ],
+          "teams": [
+          "幻系星陨王牌队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "高威幻系——半消耗满伤害。"
+          },
+          {
+          "name": "幻影裂空",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "幽灵强力物攻。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "翼系多段高威。"
+          },
+          {
+          "name": "祈愿",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "回复生命。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "星陨冲击",
+          "type": "幻",
+          "pp": 3,
+          "power": "85(魔攻)",
+          "effect": "守望星+高威=半消耗造成85威满伤害！"
+          },
+          {
+          "name": "幻影裂空",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "75(物攻)",
+          "effect": "物攻主力。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "65(物攻)",
+          "effect": "物理多段追击。"
+          },
+          {
+          "name": "祈愿",
+          "type": "萌",
+          "pp": 3,
+          "power": "-",
+          "effect": "续航恢复。"
+        }
+          ]
+        }
+        }
+    },
     { id:347, name: '暮星辰',
-      image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'DuskStar',     attribute: ['illusion','flying'],eggGroup: ['fairy'], heightMin:1.85,heightMax:2.05,weightMin:7.5,weightMax:10.5, stage: 3, region: '-', trait: '守望星 — 触发星陨时消耗一半层数，仍造成满层伤害。', evolvesTo: null, evolvesFrom: 346,       desc: '暮色中最亮的星辰。' },
+      image:'https://patchwiki.biligame.com/images/rocom/8/88/f8eryhmo33y1cnnw7vl63hn3khncqhe.png',ename: 'DuskStar',     attribute: ['illusion','flying'],eggGroup: ['fairy'], heightMin:1.85,heightMax:2.05,weightMin:7.5,weightMax:10.5, stage: 3, region: '-', trait: '守望星 — 触发星陨时消耗一半层数，仍造成满层伤害。', evolvesTo: null, evolvesFrom: 346,       desc: '暮色中最亮的星辰。',
+        battle: {
+          "trait": "暮星辰终极形态",
+          "tier": "T0",
+          "recommend": "PVP幻系版本答案。守望星+最终形态=无限星陨循环，每次只花半层数。与粉星仔/落陨星兔形成完整体系。",
+          "pairing": [
+          "曜星光",
+          "幽光大",
+          "星光狮"
+          ],
+          "teams": [
+          "幻系版本答案队"
+          ],
+          "skills": {
+          "pve": [
+          {
+          "name": "星陨裁决",
+          "type": "幻",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "幻系究极必杀——守望星半层消耗满伤害！"
+          },
+          {
+          "name": "幻影裂空",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "幽灵究极物攻。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "翼系高威多段。"
+          },
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系魔攻补盲。"
+        }
+          ],
+          "pvp": [
+          {
+          "name": "星陨裁决",
+          "type": "幻",
+          "pp": 3,
+          "power": "95(魔攻)",
+          "effect": "暮星辰招牌——半消耗95威满伤害循环。"
+          },
+          {
+          "name": "幻影裂空",
+          "type": "幽灵",
+          "pp": 3,
+          "power": "80(物攻)",
+          "effect": "幽灵究极物攻。"
+          },
+          {
+          "name": "翼刃飓风",
+          "type": "翼",
+          "pp": 3,
+          "power": "70(物攻)",
+          "effect": "物理多段收割。"
+          },
+          {
+          "name": "暗影球",
+          "type": "暗",
+          "pp": 3,
+          "power": "70(魔攻)",
+          "effect": "暗系补盲。"
+        }
+          ]
+        }
+        }
+    },
   ],
 
 

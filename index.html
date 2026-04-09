@@ -1683,7 +1683,7 @@
                                     ? `<img src="${evo.image}" alt="${evo.name}" onerror="this.style.display='none'">`
                                     : '';
                                 return `
-                                <div class="evo-node" onclick="openModal(RocoData.getSpirit(${evo.id}))" onclick="event.stopPropagation();">
+                                <div class="evo-node" onclick="event.stopPropagation();openModal(RocoData.getSpirit(${evo.id}))">
                                     <div class="evo-avatar">${evoImg}<span class="avatar-fallback" style="${evo.image ? 'display:none' : ''}">${getSpiritEmoji(evo)}</span></div>
                                     <div class="evo-name">${evo.name}</div>
                                 </div>
@@ -1700,8 +1700,8 @@
                     <div class="detail-section">
                         <div class="section-title">⚔️ 配对打法</div>
                         ${(spirit.battle?.trait || (spirit.trait && spirit.trait !== '-')) ? `<div class="battle-trait"><span class="trait-label">✨ 核心特性</span><span class="trait-text">${spirit.trait && spirit.trait !== '-' ? spirit.trait : spirit.battle?.trait || ''}</span></div>` : ''}
-                        ${spirit.battle.recommend ? `<div class="battle-recommend">${spirit.battle.recommend}</div>` : ''}
-                        ${spirit.battle.pairing && spirit.battle.pairing.length > 0 ? `
+                        ${spirit.battle?.recommend ? `<div class="battle-recommend">${spirit.battle.recommend}</div>` : ''}
+                        ${spirit.battle?.pairing && spirit.battle.pairing.length > 0 ? `
                         <div class="battle-subsection">
                             <div class="battle-subtitle">🤝 推荐配对</div>
                             <div class="pairing-list">
@@ -1710,17 +1710,19 @@
                                     const pairImg = pairSpirit?.image
                                         ? `<img src="${pairSpirit.image}" alt="${p}">`
                                         : '';
+                                    const pairId = pairSpirit?.id || 0;
+                                    const isMissing = !pairSpirit;
                                     return `
-                                    <div class="pairing-chip" onclick="openModal(RocoData.spirits.find(s => s.id === ${pairSpirit?.id || 0}))">
+                                    <div class="pairing-chip"${isMissing ? ' title="该精灵暂未收录在图鉴中"' : ` onclick="openModal(RocoData.spirits.find(s=>s.id===${pairId}))"`} style="${isMissing ? 'opacity:0.5;cursor:not-allowed' : ''}">
                                         <div class="pairing-avatar">${pairImg}<span class="avatar-fallback" style="${pairSpirit?.image ? 'display:none' : ''}">${p.charAt(0)}</span></div>
-                                        <span class="pairing-name">${p}</span>
+                                        <span class="pairing-name">${p}${isMissing ? ' (暂缺)' : ''}</span>
                                     </div>
                                     `;
                                 }).join('')}
                             </div>
                         </div>
                         ` : ''}
-                        ${spirit.battle.teams && spirit.battle.teams.length > 0 ? `
+                        ${spirit.battle?.teams && spirit.battle.teams.length > 0 ? `
                         <div class="battle-subsection">
                             <div class="battle-subtitle">🏆 推荐阵容</div>
                             <div class="teams-tags">
@@ -1728,7 +1730,7 @@
                             </div>
                         </div>
                         ` : ''}
-                        ${spirit.battle.skills ? `
+                        ${spirit.battle?.skills ? `
                         <div class="battle-subsection">
                             <div class="battle-subtitle">🎯 技能搭配</div>
                             ${spirit.battle.skills.pve ? `
